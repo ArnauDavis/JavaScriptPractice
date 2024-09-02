@@ -8,3 +8,14 @@
         console.log(false)
     }
 }
+
+//You are given two interior angles (in degrees) of a triangle.
+//Write a function to return the 3rd.
+
+function otherAngle(a, b) {
+  if( a >= 0 && b >= 0 && a+b <= 180){
+    console.log(180-a-b)
+  } else{
+    console.log('impossible numbers')
+  }
+}
