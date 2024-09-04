@@ -57,3 +57,25 @@ function canCharFight(temperature){
         console.log('gotta put a sweater on')
     }
 }
+
+
+
+//Your pokemon party order which is a list of pokemon has been leaked to Misty. 
+//Please create a function that reverses your list and prints it to the console. 
+
+function reverseTheTeam(){
+    let startArray = ['pikachu','bulbasaur', 'darkrai', 'charmander']
+    console.log(startArray.reverse())
+
+}
+
+
+//You have joined an undeground pokemon leauge. In this league, trainers can use any number of pokemon. 
+//Print to the console "Pikachu I choose you" x times where x is the number of pokemon the trainer you are battling has in their party 
+
+numberOfTrainers = 10
+for(let i = 1; i <= numberOfTrainers; i++){
+    console.log('Pikachu I choose you')
+}
+
+
