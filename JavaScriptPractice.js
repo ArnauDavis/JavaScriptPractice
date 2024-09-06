@@ -117,3 +117,13 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`)
 
 
 
+//create a function that removes the first and last characters of a string
+ function removeChar(str){
+     return str.slice(1, -1)
+   }
+
+
+
+
+
+
