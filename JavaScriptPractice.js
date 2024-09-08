@@ -151,6 +151,26 @@ function basicOp(operation, value1, value2){
 console.log(basicOp("*",5,6))
 
 
+//Given a mixed array of number and string representations of integers, 
+//add up the non-string integers and subtract the total of the string integers. 
+
+
+function sortEmAddEm (arr){
+
+  let realNum = 0;
+  let realString = 0;
+  arr.forEach(element => {
+    if(typeof element === "number")
+      { realNum += element
+      } else if (typeof element === "string"){
+        let convurted = Number(element)
+        realString += convurted
+      }
+  })
+  return realNum - realString
+}
+
+
 
 
 
