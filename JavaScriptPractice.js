@@ -296,6 +296,17 @@ function solution(str, ending){
 }
 
 
+//I think this is better but I'm told it is wrong, I dunno how
+
+function solution(str, ending){
+  const partO = str.slice(-ending.length)
+  if(partO == ending){
+    return true
+  } else{
+    return false
+  }
+}
+
 
 
 
