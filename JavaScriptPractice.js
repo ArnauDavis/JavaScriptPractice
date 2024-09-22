@@ -307,6 +307,7 @@ function solution(str, ending){
   }
 }
 
+
 //Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
 function squareSum(arrayah){
@@ -314,6 +315,13 @@ function squareSum(arrayah){
   return finalAnswer
 }
 
+
+//Complete the solution so that it reverses the string passed into it. 
+
+function reversePhrase(str){
+  const rever = str.split('').reverse().join('')
+  return rever
+}
 
 
 
