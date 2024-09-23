@@ -316,6 +316,7 @@ function squareSum(arrayah){
 }
 
 
+
 //Complete the solution so that it reverses the string passed into it. 
 
 function reversePhrase(str){
@@ -323,6 +324,19 @@ function reversePhrase(str){
   return rever
 }
 
+
+
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+function sumTwoSmallestNumbers(numbers) {  
+  const smallest = Math.min(...numbers)
+  const smallestIndex = numbers.indexOf(smallest)
+  numbers.splice(smallestIndex,1)
+  const smallest2 = Math.min(...numbers)
+  const smallestIndex2 = numbers.indexOf(smallest2)
+  let finalAnswer = smallest + smallest2
+  return finalAnswer
+}
 
 
 
