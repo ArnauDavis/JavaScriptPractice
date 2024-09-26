@@ -364,5 +364,29 @@ function summation (num) {
 
 
 
+//Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers
+
+function countPositivesSumNegatives(input) {
+  if (!Array.isArray(input) || input.length === 0) {
+    return [];
+  } else {
+  let sum = 0
+  let secondSum = 0
+  input.forEach((number)=> {
+    if (number > 0){
+      sum += 1
+    }else if(number == 0){
+      return imagine =[]
+    } else {
+      secondSum += number
+    }
+  })
+  if((sum > 0 || secondSum < 0) || (sum > 0 && secondSum < 0)){
+    return [sum,secondSum] 
+  } else if (sum == 0 && secondSum == 0) {
+    return imagine = []
+  }
+}
+}
 
 
