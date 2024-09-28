@@ -390,6 +390,26 @@ function countPositivesSumNegatives(input) {
 }
 
 
+//Create a street fighter constructor that makes fighting game characters with 4 properties and 3 methods
+function Fighter(health,specialMove,taunt,win){
+    this.health = health;
+    this.specialMove = specialMove;
+    this.taunt = taunt;
+    this.win = win;
+    this.special = function(){
+        console.log(`Eat this! ${this.specialMove}!`)
+    };
+    this.getEm = function(){
+        console.log(`${this.taunt}`)
+    };
+    this.won = function(){
+        console.log(`${this.win}`)
+    }
+}
+
+let Alex = new Fighter(100,'Special Tornado','skill issue huh','you should practice more')
+
+
 
 
 
