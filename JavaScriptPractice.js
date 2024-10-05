@@ -532,3 +532,15 @@ function sortByLength (array) {
   array.sort((a, b)=>a.length-b.length)
   return array;
 }
+
+
+
+/*
+  In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+*/
+
+
+function filter_list(l) {
+  let gotEm = l.filter((element) => typeof element === 'number')
+  return gotEm
+}
