@@ -705,3 +705,18 @@ function makeNegative(num) {
   }
 }
 
+
+
+/*
+  Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+*/
+
+function invert(array) {
+  let sol = []
+  array.forEach((num)=> (sol.push(num * -1)))
+  return sol
+}
+
+
+
+
