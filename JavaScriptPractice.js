@@ -748,3 +748,13 @@ function peopleWithAgeDrink(old) {
 }
 
 
+
+//Given an array of integers, return a new array with each value doubled.
+
+function maps(x){
+  let y = []
+  x.forEach((aNum) =>y.push(aNum*2))
+  return y
+}
+
+
