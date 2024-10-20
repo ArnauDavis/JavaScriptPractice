@@ -758,3 +758,15 @@ function maps(x){
 }
 
 
+
+//Given an integral number, determine if it's a square number:
+var isSquare = function(n){
+  let checkThis = Math.sqrt(n)
+  if(checkThis%1 == 0 || n == 0){
+    return true
+  } else{
+  return false;
+  }
+}
+
+
