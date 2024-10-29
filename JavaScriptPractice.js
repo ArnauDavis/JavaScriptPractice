@@ -919,3 +919,30 @@ function lovefunc(flower1, flower2){
 
 
 
+//  Create a method to see whether the string is ALL CAPS.
+//  Examples (input -> output)
+ 
+//  "c" -> False
+//  "C" -> True
+//  "hello I AM DONALD" -> False
+//  "HELLO I AM DONALD" -> True
+//  "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+//  "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+ 
+//  In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter 
+//  so any string containing no letters at all is trivially considered to be in ALL CAPS.
+
+String.prototype.isUpperCase = function() {
+  let strAr = this.split('')
+  let hahaCounter = 0
+  for (let i = 0; i < strAr.length; i++){
+    if (strAr[i] === strAr[i].toLowerCase() && strAr[i] !== strAr[i].toUpperCase()){
+       hahaCounter += 1
+    }
+  }
+   if(hahaCounter >= 1){
+     return false
+   } else{
+     return true
+   }
+ }
