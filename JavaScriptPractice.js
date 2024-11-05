@@ -1032,3 +1032,59 @@ function betterThanAverage(classPoints, yourPoints) {
     return false
   }
 }
+
+
+
+// As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the 
+// numerical element that lies between the other two elements.
+
+// The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+
+// For example:
+
+// gimme([2, 3, 1]) => 0
+
+// 2 is the number that fits between 1 and 3 and the index of 2 in the input array is 0.
+
+// Another example (just to make sure it is clear):
+
+// gimme([5, 10, 14]) => 1
+
+
+function gimme (triplet) {
+  let fo = triplet[0]
+  let so = triplet[1]
+  let to = triplet[2]
+  let largest
+  let smallest
+  
+  
+  //this one for biggest
+  if(fo >= so && fo >= to){
+    largest = fo
+  }else if(so >= fo && so >= to){
+    largest = so
+  } else if (to >= fo && to >= so){
+    largest = to
+  }
+  
+  //this one for smallest
+    if(fo <= so && fo <= to){
+    smallest = fo
+  }else if(so <= fo && so <= to){
+    smallest = so
+  } else if (to <= fo && to <= so){
+    smallest = to
+  }
+  
+  let larger = triplet.indexOf(largest)
+  let smaller = triplet.indexOf(smallest)
+  
+  if ((larger == 2 && smaller == 1) || (larger == 1 && smaller == 2)){
+    return 0
+  } else if ((larger == 2 && smaller == 0) || (larger == 0 && smaller == 2)){
+    return 1
+  } else {
+    return 2
+  }
+  }
