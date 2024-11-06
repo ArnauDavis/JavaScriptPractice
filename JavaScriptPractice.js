@@ -1088,3 +1088,21 @@ function gimme (triplet) {
     return 2
   }
   }
+
+
+
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+// Examples
+
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+
+//     don't worry about uppercase vowels
+
+function shortcut (string) {
+  let answer = string.split('').filter((letter) => !['a','e','i','o','u'].includes(letter)).join('')
+  return answer
+}
+
