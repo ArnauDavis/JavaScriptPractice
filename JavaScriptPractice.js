@@ -1247,3 +1247,45 @@ function isTriangle(a,b,c){
     return false
   }
 }
+
+
+
+// When provided with a letter, return its position in the alphabet.
+
+// Input :: "a"
+
+// Output :: "Position of alphabet: 1"
+
+// Note: Only lowercased English letters are tested
+
+
+// function position(letter){
+//   let beta = 'abcdefghijklmnopqrstuvwxyz'.split('').indexOf(letter)+1
+//   return `Position of alphabet: ${beta}`
+// }
+
+
+
+// Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the 
+// input data is always a string, no need to verify it.
+// Examples
+
+// "Hi!"     ---> "Hi"
+// "Hi!!!"   ---> "Hi!!"
+// "!Hi"     ---> "!Hi"
+// "!Hi!"    ---> "!Hi"
+// "Hi! Hi!" ---> "Hi! Hi"
+// "Hi"      ---> "Hi"
+
+
+function remove (string) {
+  let firstCheck = string.split('')
+  let secondCheck = firstCheck.length - 1
+  
+  if(firstCheck[secondCheck] == '!'){
+    let removed = firstCheck.pop()
+  }
+  
+  let answer = firstCheck.join('')
+  return answer
+}
