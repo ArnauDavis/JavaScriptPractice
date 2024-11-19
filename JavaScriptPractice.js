@@ -1345,3 +1345,17 @@ function warnTheSheep(queue) {
   return cryWolf > 0 ? `Oi! Sheep number ${cryWolf}! You are about to be eaten by a wolf!` : `Pls go away and stop eating my sheep`
   
 }
+
+
+
+// You will be given an array and a limit value. You must check that all values in the array are below or 
+// equal to the limit value. If they are, return true. Else, return false.
+// You can assume all values in the array are numbers.
+
+function smallEnough(a, limit){
+  let checking = a.filter((num) => num > limit)
+  return checking.length >= 1 ? false : true
+}
+
+
+
