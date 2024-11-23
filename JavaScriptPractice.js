@@ -1419,3 +1419,31 @@ function findNextSquare(sq) {
     }
 }
 
+
+
+//  Given a string str, reverse it and omit all non-alphabetic characters.
+// Example
+
+// For str = "krishan", the output should be "nahsirk".
+
+// For str = "ultr53o?n", the output should be "nortlu".
+// Input/Output
+
+//     [input] string str
+
+// A string consists of lowercase latin letters, digits and symbols.
+
+//     [output] a string
+
+function reverseLetter(str) {
+  let check = str.split('').reverse()
+  
+  let answer = check.filter((lz) => lz == 'a' || lz == 'b' || lz == 'c' || lz == 'd' || lz == 'e' ||
+               lz == 'f' || lz == 'g' || lz == 'h' || lz == 'i' || lz == 'j' || lz == 'k' ||
+              lz == 'l' || lz == 'm' || lz == 'n' || lz == 'o' || lz == 'p' || lz == 'q' ||
+              lz == 'r' || lz == 's' || lz == 't' || lz == 'u' || lz == 'v' || lz == 'w' ||
+              lz == 'x' || lz == 'y' || lz == 'z')
+  
+return answer.join('')
+}
+
