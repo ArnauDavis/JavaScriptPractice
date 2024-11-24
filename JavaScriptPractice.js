@@ -1447,3 +1447,21 @@ function reverseLetter(str) {
 return answer.join('')
 }
 
+
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+function fakeBin(x){
+  let start = x.split('')
+  start.forEach((item, index) => {
+    if(item == '0' || item == '1' || item == '2' || item == '3' || item == '4'){
+      start[index] = 0
+    }else{
+      start[index] = 1
+    }
+  })
+    return start.join('')
+  }
+
