@@ -1588,3 +1588,24 @@ function addLength(str) {
     })
    return container
   }
+
+
+
+//   Given an array of integers your solution should find the smallest integer.
+
+// For example:
+
+//     Given [34, 15, 88, 2] your solution will return 2
+//     Given [34, -345, -1, 100] your solution will return -345
+
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+function findSmallestInt(arr) {
+  return arr.sort((a,b)=>{return a - b})[0]
+}
+
+// //here inside of the sort, we use a b to organize the numbers, 
+// // If the result is negative (i.e., a < b), it tells JavaScript that a should come before b in the sorted array.
+// // If the result is positive (i.e., a > b), it tells JavaScript that b should come before a.
+// // If the result is zero (i.e., a == b), the order of a and b doesn't change.
+// //[0] is just to pick the first number in the array which should be the smallest.
