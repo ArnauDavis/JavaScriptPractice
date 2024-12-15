@@ -1808,3 +1808,56 @@ function max(arr){
   arr.sort((a, b) => a - b)
   return arr[arr.length - 1]
 }
+
+
+
+// Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) 
+// that receive a list of integers as input, and return the largest and lowest number in that list, respectively. Each function returns one number.
+// Examples (Input -> Output)
+
+// * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+// * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+// * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+// * [5]                             -> min = 5, max = 5
+
+// function min(arr){
+//   arr.sort((a, b) => a - b)
+//   return arr[0]
+// }
+
+// function max(arr){
+//   arr.sort((a, b) => a - b)
+//   return arr[arr.length - 1]
+// }
+
+
+
+// The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
+
+// The two arrays are not empty and are the same length. Return the score for this array of answers, 
+// giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
+
+// If the score < 0, return 0.
+
+// For example:
+
+//     Correct answer    |    Student's answer   |   Result         
+//  ---------------------|-----------------------|-----------
+//  ["a", "a", "b", "b"]   ["a", "c", "b", "d"]  →     6
+//  ["a", "a", "c", "b"]   ["a", "a", "b", "" ]  →     7
+//  ["a", "a", "b", "c"]   ["a", "a", "b", "c"]  →     16
+//  ["b", "c", "b", "a"]   ["" , "a", "a", "c"]  →     0
+
+function checkExam(array1, array2) {
+  let score = 0
+  for(let i = 0; i < array1.length; i++){
+    if(array1[i] == array2[i]){
+      score += 4
+    }else if(array2[i] == ''){
+      score += 0
+    }else if(array1[i] != array2[i]){
+      score -= 1
+    }
+  }
+    return score < 0 ? 0 : score
+  }
