@@ -1915,3 +1915,29 @@ function sumMix(x){
   (acc,cur)=>acc+cur,0
   )
 }
+
+
+
+// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+// Examples:
+
+// * With `name` = "john"  => return "Hello, John!"
+// * With `name` = "aliCE" => return "Hello, Alice!"
+// * With `name` not given 
+//   or `name` = ""        => return "Hello, World!"
+
+function hello(name) {
+  if(!name || name == ''){
+    return 'Hello, World!'
+  }else{
+    let fix = name.toLowerCase().split('')
+    fix[0] = fix[0].toUpperCase()
+    let fixed = fix.join('')
+    return `Hello, ${fixed}!`
+  }
+}
+
+
