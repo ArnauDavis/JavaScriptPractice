@@ -1900,3 +1900,18 @@ function evenOrOdd(number) {
 function noSpace(x){
   return x.split('').filter((ele) => ele != ' ').join('')
 }
+
+
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+function sumMix(x){
+  let numArr = x.map(str => {
+    return parseInt(str, 10)
+  })
+  return numArr.reduce(
+  (acc,cur)=>acc+cur,0
+  )
+}
