@@ -2133,3 +2133,30 @@ function repeatStr (n, s) {
   return check.join('')
 }
 
+
+
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any 
+// elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+var uniqueInOrder=function(iterable){
+  let splitUp = iterable.toString().split('').filter((x)=> x != ',')
+  let contained = []
+    for(let i = 1; i < splitUp.length +1 ; i++){
+      if(splitUp[i-1] != splitUp[i]){
+        if(splitUp[i-1] == 1 || splitUp[i-1] == 2 || splitUp[i-1] == 3 || splitUp[i-1] == 4 || splitUp[i-1] == 5 || splitUp[i-1] == 6 || splitUp[i-1] == 7 || splitUp[i-1] == 8 || splitUp[i-1] == 9 || splitUp[i-1] == 0){
+          contained.push(Number(splitUp[i-1]))
+        }else{
+        contained.push(splitUp[i-1])
+        }
+      }
+    }
+  return contained
+}
+
+
