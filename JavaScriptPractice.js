@@ -2214,3 +2214,27 @@ String.prototype.toAlternatingCase = function () {
 
 
 
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// Example
+
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+function solution(string) {
+  let contained = string.split('')
+  contained.forEach((x,index,array)=>{
+    if(x == x.toLowerCase()){
+      array[index] = x
+    }else if (x == x.toUpperCase()){
+      array[index] = ` ${x}` 
+    }else{
+      array[index] = x
+    }
+  })
+  return contained.join('')
+}
+
+
+
+
