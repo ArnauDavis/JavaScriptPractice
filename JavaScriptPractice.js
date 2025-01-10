@@ -2365,6 +2365,21 @@ function getRealFloor(n) {
 
 
 
+// Your task is to write function factorial.
+
+// https://en.wikipedia.org/wiki/Factorial
+
+function factorial(n){
+  let holding = []
+  for(let i = n; i > 0; i--){
+    holding.push(i)
+  }
+  let answer = holding.reduce((acc,curr)=> acc * curr, 1)
+  return answer
+}
+
+
+
 
 
 
