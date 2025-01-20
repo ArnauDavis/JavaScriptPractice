@@ -2517,3 +2517,30 @@ function unusualFive() {
 function derive(coefficient,exponent) {
   return `${coefficient * exponent}x^${exponent-1}`
 }
+
+
+
+// You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+//     If the string's length is odd, return the middle character.
+//     If the string's length is even, return the middle 2 characters.
+
+// Examples:
+
+// "test" --> "es"
+// "testing" --> "t"
+// "middle" --> "dd"
+// "A" --> "A"
+
+function getMiddle(s) {
+  let rip = s.split('')
+  if(rip.length%2==0){
+    let p1 = rip[Math.floor(rip.length/2)-1]
+    let p2 = rip[rip.length/2]
+    return `${p1}${p2}`
+  }else{
+    let p1 = rip[Math.floor(rip.length/2)]
+    return `${p1}`
+  }
+}
+
