@@ -2588,3 +2588,43 @@ function past(h, m, s){
   return total
 }
 
+
+
+// Write a function that when given a URL as a string, parses out just the domain name and returns 
+// it as a string. For example:
+
+// * url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+// * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+// * url = "https://www.cnet.com"                -> domain name = cnet"
+
+function domainName(url){
+  if(url.includes('//')){
+    if(url.includes('www.')){
+      let p1 = url.split('www.')
+      let p2 = p1[1].split('.')
+      return p2[0]
+    }else{
+      let p1 = url.split('//')
+      let p2 = p1[1].split('.')
+      return p2[0]
+    }
+  }else{
+    if(url.includes('www.')){
+      let p1 = url.split('.')
+      return p1[1]
+    }else{
+      let p1 = url.split('.')
+      return p1[0]
+    }
+  }
+}
+
+//or
+
+function domainName(url){
+  url = url.replace("https://", '');
+  url = url.replace("http://", '');
+  url = url.replace("www.", '');
+  return url.split('.')[0];
+}
+
