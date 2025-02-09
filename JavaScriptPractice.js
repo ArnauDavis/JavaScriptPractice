@@ -2920,6 +2920,39 @@ function getCount(str) {
 
 
 
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+// Don't forget the space after the closing parentheses!
+
+function createPhoneNumber(numbers){
+  let p1 = numbers[0]
+  let p2 = numbers[1]
+  let p3 = numbers[2]
+  let p4 = numbers[3]
+  let p5 = numbers[4]
+  let p6 = numbers[5]
+  let p7 = numbers[6]
+  let p8 = numbers[7]
+  let p9 = numbers[8]
+  let p10 = numbers[9]
+  return `(${p1}${p2}${p3}) ${p4}${p5}${p6}-${p7}${p8}${p9}${p10}`
+}
+
+// //not my solution but I really liked this one
+// function createPhoneNumber(numbers){
+//   var format = "(xxx) xxx-xxxx";
+//   for(var i = 0; i < numbers.length; i++)
+//   {
+//     format = format.replace('x', numbers[i]);
+//   } 
+//   return format;
+// }
+
+
+
+
 
 
 
