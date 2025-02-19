@@ -3234,3 +3234,33 @@ const quarterOf = (month) => {
 const quarterOf2 = (month) => {
   return month <= 3? 1 : month <= 6? 2 : month <= 9? 3 : 4
 }	
+
+
+
+// When working with color values it can sometimes be useful to extract the individual red, green, and blue (RGB) component values for a color. Implement a function that meets these requirements:
+
+//     Accepts a case-insensitive hexadecimal color string as its parameter (ex. "#FF9933" or "#ff9933")
+//     Returns a Map<String, int> with the structure {r: 255, g: 153, b: 51} where r, g, and b range from 0 through 255
+
+// Note: your implementation does not need to support the shorthand form of hexadecimal notation (ie "#FFF")
+// Example
+
+// "#FF9933" --> {r: 255, g: 153, b: 51}
+
+function hexStringToRGB(hexString) {
+  let p1 = []
+  let hexString1 = hexString.slice(1)
+  for(let i = 0; i<= hexString1.length; i += 2){
+    if(i+1 >= hexString1.length){
+      
+    }else{
+      p1.push(hexString1.slice(i, i+2))
+    }
+  }
+  let p2 = p1.map((x)=>{
+    return parseInt(x, 16)
+  })
+  let answer = { r: p2[0], g: p2[1], b: p2[2] }
+  return answer
+}
+
