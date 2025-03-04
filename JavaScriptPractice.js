@@ -3402,4 +3402,20 @@ function bouncingBall(h,  bounce,  window) {
     return 1-2
   }
 }	
+
+
+
+// Garfield doesn’t like Mondays and neither do I, so here’s an easy one. You will take a number as an input, if the number can be divided by 5 and is greater than 
+// or equal to 5, return ‘5 dollar foot long’, if not, or the number is above 5, return ‘inflation is not going to like this one’, else if the number is below 5, 
+// return ‘you’re not old enough for this club’.	
+
+function Mondays(num){
+	if(num >= 5 && num%5 == 0){
+        return '5 dollar foot long’'
+    }else if (num >= 5 && num%5 != 0){
+        return 'inflation is not going to like this one’'
+    }else if(num < 5){
+        return 'you’re not old enough for this club’'
+    }
+}
 	
