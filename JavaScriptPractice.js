@@ -3475,4 +3475,39 @@ function printerError(s) {
   })
   return `${count}/${s.length}`
 }	
+
+
+
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+// Given a string s, return true if it is a palindrome, or false otherwise.
+
+// Example 1:
+
+// Input: s = "A man, a plan, a canal: Panama"
+// Output: true
+// Explanation: "amanaplanacanalpanama" is a palindrome.
+
+// Example 2:
+
+// Input: s = "race a car"
+// Output: false
+// Explanation: "raceacar" is not a palindrome.
+
+var isPalindrome = function(s) {
+  let p1 = []
+  let ch1 = ['q','w','e','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','1','2','3','4','5','6','7','8','9','0']
+  s.toLowerCase().split('').forEach((x)=>{
+      if(ch1.includes(x)==true){
+          p1.push(x)
+      }
+  })
+  let p2 = p1.join('')
+  let p3 = p1.reverse().join('')
+  if(p2 == p3){
+      return true
+  }else{
+      return false
+  }
+}	
 	
