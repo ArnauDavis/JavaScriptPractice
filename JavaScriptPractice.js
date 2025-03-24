@@ -3766,3 +3766,25 @@ function longest(s1, s2) {
 function cockroachSpeed(s) {
   return Math.floor(s/60/60*100000)
 }
+
+
+
+// Your function takes two arguments:
+
+//     current father's age (years)
+//     current age of his son (years)
+
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let d = dadYearsOld
+  let s = sonYearsOld
+  if(s*2<d){
+    return d - (s*2)
+  }else if(s*2>d){
+    return (s*2) - d
+  }else if (s*2==d){
+    return 0
+  }
+}	
+	
