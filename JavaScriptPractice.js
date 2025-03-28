@@ -3882,18 +3882,23 @@ function roundToNext5(n){
 
 // Simples!
 
+// function fixTheMeerkat(arr) {
+//  if(arr.includes('tail')==true){
+//    return ["head", "body", "tail"]
+//  }else if(arr.includes('tails')==true){
+//    return ["heads", "body", "tails"]
+//  }else if(arr.includes('bottom')==true){
+//    return ["top", "middle", "bottom"]
+//  }else if(arr.includes('torso')==true){
+//    return ["upper legs", "torso", "lower legs"]
+//  }else if(arr.includes('sky')==true){
+//    return ["sky", "rainbow", "ground"]
+//  }
+// }	
+	//figured it out, it's actually:
 function fixTheMeerkat(arr) {
- if(arr.includes('tail')==true){
-   return ["head", "body", "tail"]
- }else if(arr.includes('tails')==true){
-   return ["heads", "body", "tails"]
- }else if(arr.includes('bottom')==true){
-   return ["top", "middle", "bottom"]
- }else if(arr.includes('torso')==true){
-   return ["upper legs", "torso", "lower legs"]
- }else if(arr.includes('sky')==true){
-   return ["sky", "rainbow", "ground"]
- }
-}	
+ return [arr[2],arr[1],arr[0]]
+}
+	//they just wanted the array to be returned in a certain order, the wording is so bad here
 	
 	
