@@ -3951,6 +3951,19 @@ function capitalizeWord(word) {
   return word[0].toUpperCase()+word.slice(1);
 }	
 
+
+
+// Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!	
+
+function createArray(number) {
+    const newArray = [];
+	//fixed conditionals for loop
+    for (let counter = 1; counter <= number; counter++) {
+        newArray.push(counter);
+    }
+    return newArray;
+}
+
 	
 
 	
