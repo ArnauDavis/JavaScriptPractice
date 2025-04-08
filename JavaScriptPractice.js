@@ -15,11 +15,7 @@ function lottery(str){
        ans.push(x)
      }
    })
-  if(ans.length>0){
-    return ans.join('')
-  }else{
-    return 'One more run!'
-  }
+  return ans.length>0? ans.join('') : 'One more run!'
 }
 
 
