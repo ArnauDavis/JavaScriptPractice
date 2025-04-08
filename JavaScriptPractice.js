@@ -1,3 +1,29 @@
+// Your task is to write an update for a lottery machine. Its current version produces a sequence of random letters and integers (passed as a string to the function). 
+// Your code must filter out all letters and return unique integers as a string, in their order of first appearance. If there are no integers in the string return "One more run!"
+// Examples
+
+// "hPrBKWDH8yc6Lt5NQZWQ"  -->  "865"
+// "ynMAisVpHEqpqHBqTrwH"  -->  "One more run!"
+// "555"                   -->  "5"
+
+function lottery(str){
+   let c1 = str.split('')
+   let c2 = ['0','1','2','3','4','5','6','7','8','9']
+   let ans = []
+   c1.forEach((x)=>{
+     if(ans.includes(x)==false&&c2.includes(x)==true){
+       ans.push(x)
+     }
+   })
+  if(ans.length>0){
+    return ans.join('')
+  }else{
+    return 'One more run!'
+  }
+}
+
+
+
 //create a function that checks if a number is a factor of a base
  
  function checkForFactor (base, factor){
