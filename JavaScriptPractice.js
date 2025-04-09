@@ -1,3 +1,27 @@
+// This time no story, no theory. The examples below show you how to write function accum:
+// Examples:
+
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+function accum(s) {
+	let p1 = s.split('')
+  let ans = []
+  p1.forEach((x, index)=>{
+    let p2 = []
+    for(let i=0;i<index;i++){
+    p2.push(x.toLowerCase())
+  }
+    ans.push(`${x.toUpperCase()}${p2.join('')}`)
+  })
+  return ans.join('-')
+}
+
+
+
 // Your task is to write an update for a lottery machine. Its current version produces a sequence of random letters and integers (passed as a string to the function). 
 // Your code must filter out all letters and return unique integers as a string, in their order of first appearance. If there are no integers in the string return "One more run!"
 // Examples
