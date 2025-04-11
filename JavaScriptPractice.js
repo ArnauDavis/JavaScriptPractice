@@ -1,3 +1,21 @@
+// Write a function that takes a single non-empty string of only lowercase and uppercase ascii letters (word) as its argument, and returns an ordered list containing the indices of all capital (uppercase) letters in the string.
+// Example (Input --> Output)
+
+// "CodEWaRs" --> [0,3,4,6]
+
+var capitals = function (word) {
+	let ans = []
+  let p1 = word.split('')
+  p1.forEach((x,index)=>{
+    if(x.toUpperCase()===x){
+      ans.push(index)
+    }
+  })
+  return ans
+}
+
+
+
 // You are given two sorted arrays that contain only integers. These arrays may be sorted in either ascending or descending order. Your task is to merge them into a single array, ensuring that:
 
 //     The resulting array is sorted in ascending order.
