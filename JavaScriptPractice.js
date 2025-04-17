@@ -1,3 +1,65 @@
+// If you like Taco Bell, you will be familiar with their signature doritos locos taco. They're very good.
+
+// Why can't everything be a taco? We're going to attempt that here, turning every word we find into the taco bell recipe with each ingredient.
+
+// We want to input a word as a string, and return a list representing that word as a taco.
+
+// Key
+
+// all vowels (except 'y') = beef
+
+// t = tomato
+
+// l = lettuce
+
+// c = cheese
+
+// g = guacamole
+
+// s = salsa
+
+// NOTE
+// We do not care about case here. 'S' is therefore equivalent to 's' in our taco.
+
+// Ignore all other letters; we don't want our taco uneccesarily clustered or else it will be too difficult to eat.
+
+// Note that no matter what ingredients are passed, our taco will always have a shell.
+
+function tacofy(word) {
+  let p1 = word.toLowerCase().split('')
+  let ans = []
+  p1.forEach((x)=>{
+    switch(x){
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+        ans.push('beef')
+        break
+        case 't':
+        ans.push('tomato')
+        break
+        case 'l':
+        ans.push('lettuce')
+        break
+        case 'c':
+        ans.push('cheese')
+        break
+        case 'g':
+        ans.push('guacamole')
+        break
+        case 's':
+        ans.push('salsa')
+    }
+  })
+    ans.unshift('shell')
+    ans.push('shell')
+    return ans
+}
+
+
+
 // At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
 
 // You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. 
