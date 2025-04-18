@@ -1,3 +1,23 @@
+// In this simple exercise, you will write a function that takes two integers; n and limit; and returns a list of the multiples of n up to and possibly including limit.
+
+// It is guaranteed that n > 0 and limit >= n.
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+// Examples
+
+// n = 2; limit = 6 --> [2, 4, 6]
+// n = 2; limit = 5 --> [2, 4]
+
+function findMultiples(integer, limit) {
+  let ans = []
+  for(let i=1; i <= limit/integer; i++){
+    ans.push(integer*i)
+  }
+  return ans
+}
+
+
+
 // If you like Taco Bell, you will be familiar with their signature doritos locos taco. They're very good.
 
 // Why can't everything be a taco? We're going to attempt that here, turning every word we find into the taco bell recipe with each ingredient.
