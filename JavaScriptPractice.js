@@ -1,3 +1,21 @@
+// You must implement a function that returns the difference between the largest and the smallest value in a given list / array (lst) received as the parameter.
+
+//     lst contains integers, that means it may contain some negative numbers
+//     if lst is empty or contains a single element, return 0
+//     lst is not sorted
+
+// [1, 2, 3, 4]   //  returns 3 because 4 -   1  == 3
+// [1, 2, 3, -4]  //  returns 7 because 3 - (-4) == 7
+
+function maxDiff(list) {
+  let p1 = list.sort((a,b)=> a-b)
+  let p2 = p1[0]
+  let p3 = p1.pop()
+  return p3 - p2 ? p3-p2 : 0
+}
+
+
+
 // In this simple exercise, you will write a function that takes two integers; n and limit; and returns a list of the multiples of n up to and possibly including limit.
 
 // It is guaranteed that n > 0 and limit >= n.
