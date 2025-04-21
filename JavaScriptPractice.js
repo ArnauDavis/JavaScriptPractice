@@ -1,3 +1,17 @@
+// Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
+
+// The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+
+// Upper or lower case letter does not matter -- "eNglisH" is also correct.
+
+// Return value as boolean values, true for the string to contains "English", false for it does not.
+
+function spEng(sentence){
+  return sentence.toLowerCase().includes('english')? true : false
+}
+
+
+
 // You must implement a function that returns the difference between the largest and the smallest value in a given list / array (lst) received as the parameter.
 
 //     lst contains integers, that means it may contain some negative numbers
