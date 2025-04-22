@@ -1,3 +1,18 @@
+// In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. 
+// If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+function well(x){
+  let decider = 0
+  x.forEach((x)=>{
+    if(x=='good'){
+      decider += 1
+    }
+  })
+  return decider == 0 ? 'Fail!' : decider > 2 ? 'I smell a series!' : 'Publish!'
+}
+
+
+
 // Your task is to split the chocolate bar of given dimension n x m into small squares. Each square is of size 1x1 and unbreakable. Implement a function that will return minimum number of breaks needed.
 
 // For example if you are given a chocolate bar of size 2 x 1 you can split it to single squares in just one break, but for size 3 x 1 you must do two breaks.
