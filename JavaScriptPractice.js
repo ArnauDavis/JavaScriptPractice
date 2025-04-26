@@ -1,3 +1,20 @@
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+function abbrevName(name){
+  let p1 = name.split(' ')
+  return `${p1[0][0].toUpperCase()}.${p1[1][0].toUpperCase()}`
+}
+
+
+
 // Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
 // Examples
 
