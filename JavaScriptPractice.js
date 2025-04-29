@@ -1,3 +1,24 @@
+// Task
+
+// Given a Divisor and a Bound , Find the largest integer N , Such That ,
+// Conditions :
+
+//     N is divisible by divisor
+
+//     N is less than or equal to bound
+
+//     N is greater than 0.
+
+function maxMultiple(divisor, bound){
+  let p1 = []
+  for(let i=0;i<=bound;i+=divisor){
+    p1.push(i)
+  }
+  return p1[p1.length-1]
+}
+
+
+
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
