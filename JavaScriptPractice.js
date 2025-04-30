@@ -1,3 +1,21 @@
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+// The input will be a lowercase string with no spaces.
+
+function capitalize(s){
+  let p1 = s.split('')
+  let p2 = []
+  let p3 =[]
+  p1.forEach((x, i)=>i%2==0? p2.push(x.toUpperCase()):p2.push(x.toLowerCase()))
+  p1.forEach((x, i)=>i%2!=0? p3.push(x.toUpperCase()):p3.push(x.toLowerCase()))
+  let ans = [p2.join(''),p3.join('')]
+  return ans
+}
+
+
+
 // Task
 
 // Given a Divisor and a Bound , Find the largest integer N , Such That ,
