@@ -1,3 +1,11 @@
+// Determine offspring sex based on genes XX and XY chromosomes
+
+function chromosomeCheck(sperm) {
+  return sperm == 'XX' ? "Congratulations! You're going to have a daughter." : "Congratulations! You're going to have a son."
+}
+
+
+
 // Given a number n, return the number of positive odd numbers below n
 // Examples (Input -> Output)
 
