@@ -1,3 +1,11 @@
+// Complete the function which converts hex number (given as a string) to a decimal number.
+
+function hexToDec(hexString){
+  return parseInt(hexString, 16)
+}
+
+
+
 // Determine offspring sex based on genes XX and XY chromosomes
 
 function chromosomeCheck(sperm) {
