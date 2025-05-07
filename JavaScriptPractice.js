@@ -1,3 +1,11 @@
+// Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+
+function include(arr, item){
+  return arr.includes(item)? true : false
+}
+
+
+
 // Complete the function which converts hex number (given as a string) to a decimal number.
 
 function hexToDec(hexString){
