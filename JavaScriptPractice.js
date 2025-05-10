@@ -1,3 +1,11 @@
+// Create a function named combineNames/combine_names/CombineNames that accepts two parameters (first and last name). The function should return the full name.
+
+function combineNames(first,last){
+  return `${first} ${last}`
+}
+
+
+
 // Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
 
 // If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
