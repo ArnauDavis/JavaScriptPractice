@@ -1,3 +1,29 @@
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+//    12 --> "10 + 2"
+//    45 --> "40 + 5"
+// 70304 --> "70000 + 300 + 4"
+
+// NOTE: All numbers will be whole numbers greater than 0.
+
+function expandedForm(num) {
+  let p1 = num.toString().split('')
+  let ans =[]
+  p1.forEach((x,i)=>{
+    if(x!='0'){
+      let p2 = x
+      for(let j = 1;j<p1.length-i;j++){
+        p2+='0'
+      }
+      ans.push(p2)
+    }
+  })
+  let p3 = ans.join(' + ')
+  return p3
+}
+
+
+
 // Create a function named combineNames/combine_names/CombineNames that accepts two parameters (first and last name). The function should return the full name.
 
 function combineNames(first,last){
