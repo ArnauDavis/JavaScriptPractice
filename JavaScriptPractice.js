@@ -1,3 +1,12 @@
+// Write a function that accepts two integers and returns the remainder of dividing the larger value by the smaller value.
+
+function remainder(n, m){
+  let p1 = [n,m].sort((a,b)=>a-b)
+  return p1[1]%p1[0]
+}
+
+
+
 // Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. As Philip is getting more curious every day he may soon want to know how many 
 // 	years it was until he would be born, so your function needs to work with both dates in the future and in the past.
 
