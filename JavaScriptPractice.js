@@ -1,3 +1,12 @@
+// Find the mean (average) of a list of numbers in an array.
+
+function findAverage(nums) {
+  let p1 = nums.reduce((a,b)=>a+b,0)
+  return p1/nums.length
+}
+
+
+
 // Write a simple regex to validate a username. Allowed characters are:
 
 //     lowercase letters,
