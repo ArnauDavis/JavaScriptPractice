@@ -1,3 +1,25 @@
+// You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+
+// Our deck (is preloaded):
+
+// ('3♣') -> return 'clubs'
+// ('3♦') -> return 'diamonds'
+// ('3♥') -> return 'hearts'
+// ('3♠') -> return 'spades'
+
+function defineSuit(card) {
+  let p1 = card.split('')[card.length-1]
+  let ans = {
+    '♣': 'clubs',
+    '♦': 'diamonds',
+    '♥': 'hearts',
+    '♠': 'spades'
+  }
+  return ans[p1]
+}
+
+
+
 // Given a sequence of numbers, find the largest pair sum in the sequence.
 
 // For example
