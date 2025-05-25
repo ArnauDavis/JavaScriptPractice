@@ -1,3 +1,29 @@
+// Complete the function which returns the weekday according to the input number:
+
+//     1 returns "Sunday"
+//     2 returns "Monday"
+//     3 returns "Tuesday"
+//     4 returns "Wednesday"
+//     5 returns "Thursday"
+//     6 returns "Friday"
+//     7 returns "Saturday"
+//     Otherwise returns "Wrong, please enter a number between 1 and 7"
+
+function whatday(num) { 
+  let ans = {
+    1 : 'Sunday',
+    2: 'Monday',
+    3: 'Tuesday',
+    4: 'Wednesday',
+    5: 'Thursday',
+    6: 'Friday',
+    7: 'Saturday'
+  }
+  return ans[num] ? ans[num] : "Wrong, please enter a number between 1 and 7"
+}
+
+
+
 // In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
 
 // Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
