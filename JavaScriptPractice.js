@@ -1,3 +1,11 @@
+// Your task is simply to count the total number of lowercase letters in a string.
+
+function lowercaseCount(str){
+    return str.split('').filter((x)=>(/[a-z]/.test(x)===true)).length
+}
+
+
+
 // Write a small function that returns the values of an array that are not odd.
 
 // All values in the array will be integers. Return the good values in the order they are given.
