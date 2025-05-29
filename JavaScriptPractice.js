@@ -1,3 +1,18 @@
+/*
+Give you a function animal, accept 1 parameter:obj like this:
+
+{name:"dog",legs:4,color:"white"}
+and return a string like this:
+
+"This white dog has 4 legs."
+*/
+
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+
+
 // The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
 
 // You will be given the high street price (normPrice, in £ (Pounds)), the duty free discount (discount, in percent) and the cost of the holiday (in £).
