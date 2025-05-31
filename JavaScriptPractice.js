@@ -1,11 +1,43 @@
-/*
-Give you a function animal, accept 1 parameter:obj like this:
+// Complete the method which accepts an array of integers, and returns one of the following:
 
-{name:"dog",legs:4,color:"white"}
-and return a string like this:
+//     "yes, ascending" - if the numbers in the array are sorted in an ascending order
+//     "yes, descending" - if the numbers in the array are sorted in a descending order
+//     "no" - otherwise
 
-"This white dog has 4 legs."
-*/
+// You can assume the array will always be valid, and there will always be one correct answer.
+
+function isSortedAndHow(array) {
+  let p1 = array.map((x)=>x).sort((a,b)=>a-b)
+  let p2 = array.map((x)=>x).sort((a,b)=>b-a)
+  let d1 = true
+  let d2 = true
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== p1[i]) {
+      d1 = false
+    }
+  }
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== p2[i]) {
+      d2 = false
+    }
+  }
+  if(d1){
+    return 'yes, ascending'
+  }else if (d2){
+    return 'yes, descending'
+  }else{
+    return 'no'
+  } 
+}
+
+
+
+// Give you a function animal, accept 1 parameter:obj like this:
+
+// {name:"dog",legs:4,color:"white"}
+// and return a string like this:
+
+// "This white dog has 4 legs."
 
 function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
