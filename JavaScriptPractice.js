@@ -1,3 +1,34 @@
+// Write a function that will convert a string into title case, given an optional list of exceptions (minor words). The list of minor words will be given as a string with each word separated by a space. 
+// Your function should ignore the case of the minor words string -- it should behave in the same way even if the case of the minor word string is changed.
+	
+//     First argument (required): the original string to be converted.
+//     Second argument (optional): space-delimited list of minor words that must always be lowercase except for the first word in the string. The JavaScript/CoffeeScript tests will pass undefined when this argument is unused.
+
+// Example
+
+// titleCase('a clash of KINGS', 'a an the of') // should return: 'A Clash of Kings'
+// titleCase('THE WIND IN THE WILLOWS', 'The In') // should return: 'The Wind in the Willows'
+// titleCase('the quick brown fox') // should return: 'The Quick Brown Fox'
+
+function titleCase(title, minorWords) {
+  if (!title) {
+    return ''
+  }
+  let p1 = title.toLowerCase().split(' ')
+  let p2 = minorWords? minorWords.toLowerCase().split(' ') : []
+  let p3 = p1.map((x)=>{
+    if(p2.includes(x)){
+     return x = x.toLowerCase()
+    }else{
+     return x = x.charAt(0).toUpperCase() + x.slice(1)
+    }
+  })
+  p3[0] = p3[0].charAt(0).toUpperCase() + p3[0].slice(1)
+  return p3.join(' ')
+}
+
+
+
 // Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
 
 //   3 -->    15  (  3 * 5¹)
