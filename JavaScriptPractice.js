@@ -1,3 +1,22 @@
+// Write a function which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+
+function sumDigits(number) {
+  let p1 = number.toString().split('').filter((x)=>x!='-')
+  let ans = 0
+  p1.forEach((x)=>{
+    ans+=Number(x)
+  })
+  return ans
+}
+
+
+
 // You can print your name on a billboard ad. Find out how much it will cost you. Each character has a default price of £30, but that can be different if you are given 2 parameters instead of 1 (always 2 for Java).
 
 // You can not use multiplier "*" operator.
