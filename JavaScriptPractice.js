@@ -1,3 +1,26 @@
+// Your task is to return the sum of Triangular Numbers up-to-and-including the nth Triangular Number.
+
+// Triangular Number: "any of the series of numbers (1, 3, 6, 10, 15, etc.) obtained by continued summation of the natural numbers 1, 2, 3, 4, 5, etc."
+
+// [01]
+// 02 [03]
+// 04 05 [06]
+// 07 08 09 [10]
+// 11 12 13 14 [15]
+// 16 17 18 19 20 [21]
+
+// e.g. If 4 is given: 1 + 3 + 6 + 10 = 20.
+
+function sumTriangularNumbers(n) {
+  let ans = 0
+  for(let i = 0; i<=n; i++){
+    ans += (i*(i+1))/2
+  }
+  return ans
+}
+
+
+
 // Write a function which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
 
 // For example: (Input --> Output)
