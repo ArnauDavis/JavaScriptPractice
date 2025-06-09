@@ -1,3 +1,26 @@
+// Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+
+// If they are, change the array value to a string of that vowel.
+
+// input [100,100,116,105,117,121]=>[100,100,116,"i","u",121] output Return the resulting array.
+
+function isVow(a){
+  const p1 = {
+  97: 'a',
+  101: 'e',
+  105: 'i',
+  111: 'o',
+  117: 'u'
+}
+  let ans = []
+  a.forEach((x)=>{
+   return p1[x] ? ans.push(p1[x]) : ans.push(x)
+  })
+  return ans
+}
+
+
+
 // Your task is to return the sum of Triangular Numbers up-to-and-including the nth Triangular Number.
 
 // Triangular Number: "any of the series of numbers (1, 3, 6, 10, 15, etc.) obtained by continued summation of the natural numbers 1, 2, 3, 4, 5, etc."
