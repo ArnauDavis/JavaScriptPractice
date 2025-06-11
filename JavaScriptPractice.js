@@ -1,3 +1,14 @@
+// Your task is to return a number from a string.
+// Details
+
+// You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
+
+function filterString(value) {
+  return Number(value.split('').filter((x)=>Number(x)==x).join(''))
+}
+
+
+
 // Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
 
 // If they are, change the array value to a string of that vowel.
