@@ -1,3 +1,20 @@
+// Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+
+// Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
+
+function bump(x){
+  let p1 = x.split('')
+  let count = 0
+  p1.forEach((x)=>{
+    if(x=='n'){
+      count+=1
+    }
+  })
+  return count > 15 ? 'Car Dead' : 'Woohoo!'
+}
+
+
+
 // Your task is to return a number from a string.
 // Details
 
