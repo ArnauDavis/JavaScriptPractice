@@ -1,3 +1,26 @@
+// Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
+
+// Example:
+
+// 'acb' --> 'bca'
+// 'aabacbaa' --> 'bbabcabb'
+
+function switcheroo(x){
+  let p1 = x.split('')
+  let p2 = p1.map((x,i)=>{
+    if(x=='a'){
+      return 'b'
+    }else if(x=='b'){
+      return 'a'
+    }else if (x=='c'){
+      return 'c'
+    }
+  })
+  return p2.join('')
+}
+
+
+
 // Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
 
 // Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
