@@ -1,3 +1,17 @@
+//Input: Array of elements
+
+//["h","o","l","a"]
+
+//Output: String with comma delimited elements of the array in th same order.
+
+//"h,o,l,a"
+
+function printArray(array){
+  return array.join(",")
+}
+
+
+
 // Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
 
 // Example:
