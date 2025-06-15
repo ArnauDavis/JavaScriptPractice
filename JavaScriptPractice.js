@@ -1,3 +1,18 @@
+// Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+// Example:
+
+// "riley" --> "Hello Riley!"
+// "JACK"  --> "Hello Jack!"
+
+var greet = function(name) {
+  let n1 = name.toLowerCase().split('')
+  let p1 = n1[0].toUpperCase()+n1.slice(1).join('')
+  return `Hello ${p1}!`
+}
+
+
+
 // Complete the function, which calculates how much you need to tip based on the total amount of the bill and the service.
 
 // You need to consider the following ratings:
