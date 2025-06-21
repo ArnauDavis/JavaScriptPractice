@@ -1,3 +1,19 @@
+// We want to generate a function that computes the series starting from 0 and ending until the given number.
+// Example:
+
+// Input: 6
+// Output: 21
+
+function SequenceSum(n){
+  let ans = 0
+  for(let i=1;i<=n;i++){
+    ans+=i
+  }
+  return ans
+}
+
+
+
 // Given a year, return the century it is in.
 // Examples
 
