@@ -1,3 +1,31 @@
+// Given a string s, your task is to return another string such that even-indexed and odd-indexed characters of s are grouped and the groups are space-separated. 
+// Even-indexed group comes as first, followed by a space, and then by the odd-indexed part.
+// Examples
+
+// input:    "CodeWars" => "CdWr oeas"
+//            ||||||||      |||| ||||
+// indices:   01234567      0246 1357
+
+// Even indices 0, 2, 4, 6, so we have "CdWr" as the first group.
+// Odd indices are 1, 3, 5, 7, so the second group is "oeas".
+// And the final string to return is "Cdwr oeas".
+
+function sortMyString(S) {
+    let p1 = S.split('')
+    let s1 = []
+    let s2 = []
+    p1.forEach((x,i)=>{
+      if(i%2==0){
+        s1.push(x)
+      }else{
+        s2.push(x)
+      }
+    })
+  return `${s1.join('')} ${s2.join('')}`
+}
+
+
+
 // For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. 
 // If the input is anything else "the dog" ate the cookie. The way to return the statement is: "Who ate the last cookie? It was (name)!"
 
