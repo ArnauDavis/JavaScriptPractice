@@ -1,3 +1,22 @@
+// Write a function that takes a positive integer n, sums all the cubed values from 1 to n (inclusive), and returns that sum.
+
+// Assume that the input n will always be a positive integer.
+
+// Examples: (Input --> output)
+
+// 2 --> 9 (sum of the cubes of 1 and 2 is 1 + 8)
+// 3 --> 36 (sum of the cubes of 1, 2, and 3 is 1 + 8 + 27)
+
+function sumCubes(n){
+  let ans = 0
+  for(let i=0;i<=n;i++){
+    ans+=Math.pow(i,3)
+  }
+  return ans
+}
+
+
+
 // Given a string s, your task is to return another string such that even-indexed and odd-indexed characters of s are grouped and the groups are space-separated. 
 // Even-indexed group comes as first, followed by a space, and then by the odd-indexed part.
 // Examples
