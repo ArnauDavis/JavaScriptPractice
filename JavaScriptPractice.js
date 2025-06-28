@@ -1,3 +1,18 @@
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates). Only positive integers in the range of 1 to 9 will be passed to the function.
+// Examples
+
+// [1, 3, 1] ==> 13
+// [5, 7, 5, 9, 7] ==> 579
+// [1, 9, 3, 1, 7, 4, 6, 6, 7]  ==> 134679
+
+function minValue(values){
+  let p1 = new Set(values);
+  let a1 = [...p1].sort((a,b)=>a-b)
+  return Number(a1.join(''))
+}
+
+
+
 // Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
 
 // If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value (represented as a generic value NULL in the examples below).
