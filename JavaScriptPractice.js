@@ -1,3 +1,22 @@
+// Given an object ( meet ) containing team member names as keys, and their happiness rating out of 10 as the value, you need to assess the overall happiness rating of the group. 
+// 	If <= 5, return 'Get Out Now!'. Else return 'Nice Work Champ!'.
+
+// Happiness rating will be total score / number of people in the room.
+
+// Note that your boss is in the room ( boss ). Their score is worth double its face value (but they are still just one person!).
+
+function outed(meet, boss){
+  let p1 = 0
+  p1+=meet[boss]
+  for(const number in meet){
+    p1+=meet[number]
+  }
+  let p2 = p1/Object.keys(meet).length
+  return p2 > 5? 'Nice Work Champ!' : 'Get Out Now!'
+}
+
+
+
 // We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
 
 // So given a string "super", we should return a list of [2, 4].
