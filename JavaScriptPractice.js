@@ -1,3 +1,24 @@
+// Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
+
+// Note: no empty arrays will be given.
+// Examples
+
+// [12, 10, 8, 12, 7, 6, 4, 10, 12]              -->  12
+// [12, 10, 8, 12, 7, 6, 4, 10, 12, 10]          -->  12
+// [12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]  -->   3
+
+function highestRank(arr){
+  let p1 = arr.reduce((acc,cur)=>{
+    acc[cur] = (acc[cur] || 0) + 1
+    return acc
+  },{})
+  let p2 = Object.entries(p1).sort((a,b)=>a[1]-b[1])
+  let ans = Number(p2[p2.length-1][0])
+  return ans
+}
+
+
+
 // Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. 
 // If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D),
 // the return value must be true. Otherwise it should return false.
