@@ -1,3 +1,29 @@
+// Modify the kebabize function so that it converts a camel case string into a kebab case.
+
+// "camelsHaveThreeHumps"  -->  "camels-have-three-humps"
+// "camelsHave3Humps"  -->  "camels-have-humps"
+// "CAMEL"  -->  "c-a-m-e-l"
+
+// Notes:
+
+//     the returned string should only contain lowercase letters
+
+function kebabize(str) {
+  let p1 = str.split('').filter((x)=>!Number(x)&&x!=0)
+  let p2 = p1.map((x,i)=>{
+    if(i==0){
+      return x.toLowerCase()
+    }else if(x.toUpperCase()===x){
+      return x=`-${x.toLowerCase()}`
+    }else if(x.toLowerCase()===x){
+      return x =x
+    }
+  }).join('')
+  return p2
+}
+
+
+
 // Complete the method which returns the number which is most frequent in the given input array. If there is a tie for most frequent number, return the largest number among them.
 
 // Note: no empty arrays will be given.
