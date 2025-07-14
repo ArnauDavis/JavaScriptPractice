@@ -1,3 +1,16 @@
+// Two red beads are placed between every two blue beads. There are N blue beads. After looking at the arrangement below work out the number of red beads.
+
+// @ @@ @ @@ @ @@ @ @@ @ @@ @
+
+// Implement a function returning the number of red beads.
+// If there are less than 2 blue beads return 0. 
+
+function countRedBeads(n) {
+  return n>2? (n-1)*2:0
+}
+
+
+
 //Make multiple functions that will return the sum, difference, modulus, product, quotient, and the exponent respectively.
 
 //Please use the following function names:
