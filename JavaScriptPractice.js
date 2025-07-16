@@ -1,3 +1,23 @@
+// There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
+
+//     number of pillars (≥ 1);
+//     distance between pillars (10 - 30 meters);
+//     width of the pillar (10 - 50 centimeters).
+
+// Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
+
+function pillars(numPill, dist, width) {
+  const nP = numPill
+  const d = dist * 100
+  if(nP<3){
+    return d*(nP-1)
+  }else{
+    return (nP-2)*width + (nP-1)*d
+  }
+}
+
+
+
 // Two red beads are placed between every two blue beads. There are N blue beads. After looking at the arrangement below work out the number of red beads.
 
 // @ @@ @ @@ @ @@ @ @@ @ @@ @
