@@ -9,7 +9,7 @@ function squareArea(A){
   //we have a quater circle, we can use the forumla for the length of an arch L = radius * angle(radian)
   //solving for radius we get radius = L/angle(radians) which thanks to unit cirlce turns to radius = 2L/pi
   //the radius is equal to the length of the sides of the box, so we will square that to get our final answer
-  return Math.pow((2*A/Math.PI),2)
+  return Number(Math.pow((2*A/Math.PI),2).toFixed(2))
 }
 
 
