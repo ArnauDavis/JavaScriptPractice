@@ -1,3 +1,19 @@
+Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
+
+Graph
+
+Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
+
+function squareArea(A){
+  //okay we start by finding the radius of the circle here
+  //we have a quater circle, we can use the forumla for the length of an arch L = radius * angle(radian)
+  //solving for radius we get radius = L/angle(radians) which thanks to unit cirlce turns to radius = 2L/pi
+  //the radius is equal to the length of the sides of the box, so we will square that to get our final answer
+  return Math.pow((2*A/Math.PI),2)
+}
+
+
+
 // Your task is to write a function which returns the n-th term of the following series, which is the sum of the first n terms of the sequence (n is the input parameter).
 // Series:1+14+17+110+113+116+…\mathrm{Series:}\quad 1 + \frac14 + \frac17 + \frac1{10} + \frac1{13} + \frac1{16} + \dotsSeries:1+41​+71​+101​+131​+161​+…
 
