@@ -1,3 +1,32 @@
+// Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
+// Note
+
+//     If num is negative, ignore its sign and treat it as a positive value
+//     If nth is not positive, return -1
+//     Keep in mind that 42 = 00042. This means that findDigit(42, 5) would return 0
+
+// Examples(num, nth --> output)
+
+// 5673, 4 --> 5
+// 129, 2 --> 2
+// -2825, 3 --> 8
+// -456, 4 --> 0
+// 0, 20 --> 0
+// 65, 0 --> -1
+// 24, -8 --> -1
+
+function findDigit(num, nth) {
+    if(nth<=0){
+      return -1
+    }else{
+      let p1=Math.abs(num).toString().split('').filter((x)=>x!='-')
+      let p2 = Number(p1[p1.length-nth])
+      return p2? p2 : 0
+    }  
+}
+
+
+
 // Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, 
 // and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, 
 // he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his 
