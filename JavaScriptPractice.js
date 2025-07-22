@@ -1,3 +1,17 @@
+// Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+
+// (the dedicated builtin(s) functionalities are deactivated)
+
+function reverse(array) {
+  let ans = []
+  for(let i=array.length-1;i>=0;i--){
+    ans.push(array[i])
+  }
+  return ans
+}
+
+
+
 // Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
 // Note
 
