@@ -1,3 +1,31 @@
+// Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence.
+
+// If n == 0 return an empty sequence []
+// Examples
+
+// var arr = ['a', 'b', 'c', 'd', 'e'];
+// first(arr) //=> ['a'];
+// first(arr, 2) //=> ['a', 'b']
+// first(arr, 3) //=> ['a', 'b', 'c'];
+// first(arr, 0) //=> [];
+
+function first(arr, n) {
+  if(n==0){
+    return []
+  }else if(!n){
+    return [arr[0]]
+  }else if(n>arr.length){
+    return arr
+  }
+  let ans = []
+  for(let i=0;i<n;i++){
+    ans.push(arr[i])
+  }
+  return ans
+}
+
+
+
 // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. 
 // The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 // Example
