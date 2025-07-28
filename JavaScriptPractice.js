@@ -1,3 +1,21 @@
+// Given a string of lowercase letters and an array of integer indices, capitalize all letters at the given indices. If an index is beyond the string, it should be ignored.
+// Examples:
+
+// "abcdef", [1,2,5]     ==> "aBCdeF"
+// "abcdef", [1,2,5,100] ==> "aBCdeF" // There is no index 100.
+
+function capitalize(string, indices) {
+  let ans = string.split('')
+    indices.forEach((x)=>{
+      if(ans[x]){
+        ans[x] = ans[x].toUpperCase()
+      }
+    })
+  return ans.join('')
+}
+
+
+
 // Write a function that takes the website date/time in its original string format and returns the shortened format.
 // Input
 
