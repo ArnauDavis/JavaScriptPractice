@@ -1,3 +1,31 @@
+// Write a function that takes the website date/time in its original string format and returns the shortened format.
+// Input
+
+// Input will always be a string, e.g., "Friday May 2, 7pm". 
+// Output
+
+// Output will be the shortened string, e.g., "Friday May 2".
+
+function shortenToDate(longDate) {
+  const time = ['am','pm']
+  let p1 = longDate.split(' ')
+  let p2 = []
+  p1.forEach((x)=>{
+    if(!x.includes('pm')&&!x.includes('am'))
+      p2.push(x)
+  })
+  let p3 = p2.join(' ').split('')
+  p3.pop()
+  let p4 = p3.join('')
+  return p4
+}
+//or
+function shortenToDate2(longDate) {
+  return longDate.split(",")[0];
+}
+
+
+
 // Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.
 
 // For example:
