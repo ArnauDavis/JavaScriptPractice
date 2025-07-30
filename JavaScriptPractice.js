@@ -1,3 +1,24 @@
+// Remove the duplicates from a list of integers, keeping the last ( rightmost ) occurrence of each element.
+// Example:
+
+// For input: [3, 4, 4, 3, 6, 3]
+
+//     remove the 3 at index 0
+//     remove the 4 at index 1
+//     remove the 3 at index 3
+
+// Expected output: [4, 6, 3]
+
+function solve(arr) {
+  let ans = []
+  arr.reverse().forEach((x)=>{
+    !ans.includes(x)? ans.push(x):null
+  })
+  return ans.reverse()
+}
+
+
+
 // Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined if any of the values aren't numbers.
 
 function cubeOdd(arr) {
