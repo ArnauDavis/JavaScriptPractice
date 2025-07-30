@@ -1,3 +1,34 @@
+// Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined if any of the values aren't numbers.
+
+function cubeOdd(arr) {
+let ans = 0
+for(let i=0;i<arr.length;i++){
+  if(typeof arr[i]!='number'){
+    return undefined
+  }else if(arr[i]%2!=0){
+    ans+=Math.pow(arr[i],3)
+    }
+  }
+  return ans
+}
+
+//or
+
+function cubeOdd(arr){
+  let ans = 0
+  let ck = 0
+arr.forEach((x)=>{
+  if(typeof(x)!=='number'){
+    ck+=1
+  }else if(x%2!=0){
+    ans+=Math.pow(x,3)
+  }
+})
+  return ck>0? undefined : ans
+}
+
+
+
 // Given a string of lowercase letters and an array of integer indices, capitalize all letters at the given indices. If an index is beyond the string, it should be ignored.
 // Examples:
 
