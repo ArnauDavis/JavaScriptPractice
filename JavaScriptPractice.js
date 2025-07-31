@@ -1,3 +1,25 @@
+// Given an array/list [] of integers , Find the product of the k maximal numbers.
+// Notes
+
+//     Array/list size is at least 3 .
+
+//     Array/list's numbers Will be mixture of positives , negatives and zeros
+
+//     Repetition of numbers in the array/list could occur.
+
+// Input >> Output Examples
+
+// maxProduct ({4, 3, 5}, 2) ==>  return (20)
+
+function maxProduct(numbers, size){
+  let p1 = numbers.sort((a,b)=>b-a)
+  let p2 = p1.slice(0,size)
+  let ans = p2.reduce((acc,cur)=>acc*cur,1)
+  return ans
+}
+
+
+
 // Remove the duplicates from a list of integers, keeping the last ( rightmost ) occurrence of each element.
 // Example:
 
