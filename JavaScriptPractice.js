@@ -1,3 +1,23 @@
+// Given a string made of digits [0-9], return a string where each digit is repeated a number of times equals to its value.
+// Examples
+
+// "312" should return "333122"
+
+// "102269" should return "12222666666999999999"
+
+function explode(s) {
+  let p1=s.split('').map((x)=>Number(x))
+  let ans=[]
+  p1.forEach((x)=>{
+    for(let i=0;i<x;i++){
+      ans.push(x)
+    }
+  })
+  return ans.join('')
+}
+
+
+
 // Write a function that takes two arguments, ppg (points per game) and mpg (minutes per game) and returns a straight extrapolation of ppg per 
 // 48 minutes rounded to the nearest tenth. Return 0 if 0.
 
