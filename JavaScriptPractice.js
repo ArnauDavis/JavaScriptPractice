@@ -1,3 +1,20 @@
+// Reverse every other word in a given string, then return the string. Throw away any leading or trailing whitespace, while ensuring there is exactly one space between each word. 
+// Punctuation marks should be treated as if they are a part of the word in this kata.
+
+function reverse(str){
+  let p1 = str.split(' ')
+  let ans = p1.map((x,i)=>{
+    if(i%2!=0){
+     return x.split('').reverse().join('')
+    }else{
+      return x
+    }
+  })
+  return ans.join(' ').trim()
+}
+
+
+
 // There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
 
 // Your task is to change the letters with diacritics:
