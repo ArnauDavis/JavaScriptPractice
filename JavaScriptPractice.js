@@ -1,3 +1,52 @@
+// You will be provided with an object(staff) containing the staff names as keys, and the department they work in as values.
+
+// Each department has a different boredom assessment score, as follows:
+
+// accounts = 1
+// finance = 2
+// canteen = 10
+// regulation = 3
+// trading = 6
+// change = 6
+// IS = 8
+// retail = 5
+// cleaning = 4
+// pissing about = 25
+
+// Depending on the cumulative score of the team, return the appropriate sentiment:
+
+// <=80: 'kill me now'
+// < 100 & > 80: 'i can handle this'
+// 100 or over: 'party time!!'
+
+function boredom(staff){
+  let scores = {
+    'accounts' : 1,
+    'finance' : 2,
+    'canteen' : 10,
+    'regulation' : 3,
+    'trading' : 6,
+    'change' :6,
+    'IS' : 8,
+    'retail' : 5,
+    'cleaning' : 4,
+    'pissing about' : 25
+  }
+  let score = 0
+  Object.values(staff).forEach(x=>{
+    score +=scores[x]
+  })
+  if(score>=100){
+    return 'party time!!'
+  }else if(score>80){
+    return 'i can handle this'
+  }else{
+    return 'kill me now'
+  }  
+}
+
+
+
 // Reverse every other word in a given string, then return the string. Throw away any leading or trailing whitespace, while ensuring there is exactly one space between each word. 
 // Punctuation marks should be treated as if they are a part of the word in this kata.
 
