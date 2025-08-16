@@ -1,3 +1,31 @@
+// John has invited some friends. His list is:
+
+// s = "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill";
+
+// Could you make a program that
+
+//     makes this string uppercase
+//     gives it sorted in alphabetical order by last name.
+
+// When the last names are the same, sort them by first name. Last name and first name of a guest come in the result between parentheses separated by a comma.
+
+// So the result of function meeting(s) will be:
+
+// "(CORWILL, ALFRED)(CORWILL, FRED)(CORWILL, RAPHAEL)(CORWILL, WILFRED)(TORNBULL, BARNEY)(TORNBULL, BETTY)(TORNBULL, BJON)"
+
+// It can happen that in two distinct families with the same family name two people have the same first name too.
+
+function meeting(s) {
+    let p1 = s.split(';')
+    let p2 = p1.map((x)=>x.toUpperCase().replace(':',' ').split(' '))
+    p2.forEach((x)=>x.reverse())
+    let p3 = p2.map((x)=>x.join(', ')).sort()
+    let ans = p3.map((x)=>`(${x})`).join('')
+    return ans
+}
+
+
+
 // You will be provided with an object(staff) containing the staff names as keys, and the department they work in as values.
 
 // Each department has a different boredom assessment score, as follows:
