@@ -36,7 +36,6 @@ function nbYear(p0, percent, aug, p) {
       y1+= Math.floor(y1*(percent/100)+aug)
       count+=1
     }
-    console.log(y1, p0, percent, aug, p, count)
   return count 
 }
 
