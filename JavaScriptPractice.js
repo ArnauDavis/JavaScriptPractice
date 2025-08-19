@@ -1,3 +1,20 @@
+// Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+// Examples:
+
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  if(enteredCode !== correctCode){
+    return false
+  }
+  return new Date(currentDate) <= new Date(expirationDate)
+}
+
+
+
 // Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly 
 // notice that it throws in a lot of numbers at random places in the text.
 // Examples (input -> output)
