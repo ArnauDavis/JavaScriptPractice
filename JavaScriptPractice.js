@@ -1,3 +1,22 @@
+// Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it 
+// should return the value or the index.
+
+// Assume the first parameter will always be an array filled with at least 1 number and no duplicates. Assume the second parameter 
+// will be a string holding one of two values: 'value' and 'index'.
+
+// Some examples:
+
+// ([1,2,3,4,5], "value") should return 1
+// ([1,2,3,4,5], "index") should return 0
+
+function min(arr, toReturn) { 
+    let ar1 = [...arr].sort((a,b)=>a-b)
+    let ans = toReturn == 'value' ? ar1[0] : arr.indexOf(ar1[0])
+    return ans
+}
+
+
+
 // Given an unsorted array of 3 positive integers [ n1, n2, n3 ], determine if it is possible to form a Pythagorean Triple using those 3 integers.
 
 // A Pythagorean Triple consists of arranging 3 integers, such that:
