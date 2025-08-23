@@ -1,3 +1,18 @@
+// Sort the Gift Code
+
+// Write a function called sortGiftCode/sort_gift_code/SortGiftCode that accepts a string containing up to 26 unique alphabetical characters, and returns a string containing the same characters in alphabetical order.
+// Examples (Input -- => Output):
+
+// "abcdef"                      -- => "abcdef"
+// "pqksuvy"                     -- => "kpqsuvy"
+// "zyxwvutsrqponmlkjihgfedcba"  -- => "abcdefghijklmnopqrstuvwxyz"
+
+function sortGiftCode(code){
+  return code.split('').sort().join('')
+}
+
+
+
 // Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array. Note that the array size is at least 2 and consists a mixture of positive, negative integers and also zeroes.
 // Examples
 
