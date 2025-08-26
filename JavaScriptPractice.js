@@ -1,3 +1,23 @@
+// You need to define a Hero prototype to be used in a terminal game. The hero should have the following attributes:
+// attribute 	value
+// name 	user argument or 'Hero'
+// position 	'00'
+// health 	100
+// damage 	5
+// experience 	0
+
+class Hero {
+    constructor(name) {
+        this.name = name || 'Hero'
+        this.position = '00'
+        this.health = 100
+        this.damage = 5
+        this.experience = 0
+    }
+}
+
+
+
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
 // For example (Input --> Output):
