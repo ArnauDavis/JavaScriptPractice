@@ -1,3 +1,31 @@
+// Given a string, turn each character into its ASCII character code and join them together to create a number - let's call this number total1:
+
+// 'ABC' --> 'A' = 65, 'B' = 66, 'C' = 67 --> 656667
+
+// Then replace any incidence of the number 7 with the number 1, and call this number 'total2':
+
+// total1 = 656667
+//               ^
+// total2 = 656661
+//               ^
+
+// Then return the difference between the sum of the digits in total1 and total2:
+
+//   (6 + 5 + 6 + 6 + 6 + 7)
+// - (6 + 5 + 6 + 6 + 6 + 1)
+// -------------------------
+//                        6
+
+function calc(x){
+  let total1 = x.split('').map((x)=>x.charCodeAt(0).toString()).join('')
+  let total2 = total1.replaceAll('7','1')
+  let p1 = total1.split('').map((x)=>Number(x)).reduce((acc,cur)=>acc+cur,1)
+  let p2 = total2.split('').map((x)=>Number(x)).reduce((acc,cur)=>acc+cur,1)
+  return p1-p2
+}
+
+
+
 // You need to define a Hero prototype to be used in a terminal game. The hero should have the following attributes:
 // attribute 	value
 // name 	user argument or 'Hero'
