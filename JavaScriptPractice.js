@@ -1,3 +1,26 @@
+// You know that a piece of paper has a thickness of 0.0001m. Given distance in units of meters, calculate how many times you have to fold the paper to make the paper reach this distance.
+// (If you're not familiar with the concept of folding a paper: Each fold doubles its total thickness.)
+
+// Note: Of course you can't do half a fold. You should know what this means ;P
+
+// Also, if somebody is giving you a negative distance, it's clearly bogus and you should yell at them by returning null (or whatever equivalent in your language). 
+// In Shell please return None. In C and COBOL please return -1.
+
+function foldTo(distance) {
+  if(distance<0){
+    return null
+  }
+  let count = 0
+  let thicc = 0.0001
+  while(thicc<distance){
+    count+=1
+    thicc*=2
+  }
+  return count
+}
+
+
+
 // Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank in order for it to amount to a desired sum of money 'D'.
 
 // The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
