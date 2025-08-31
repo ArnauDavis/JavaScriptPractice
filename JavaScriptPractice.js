@@ -1,3 +1,25 @@
+// Your task is to sum the differences between consecutive pairs in the array in descending order.
+// Example
+
+// [2, 1, 10]  -->  9
+
+// In descending order: [10, 2, 1]
+
+// Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+// If the array is empty or the array has only one element the result should be 0
+
+function sumOfDifferences(arr) {
+  let p1 = arr.sort((a,b)=>b-a)
+  let ans = 0
+  for (let i=0;i<arr.length-1;i++){
+    ans+=(p1[i]-p1[i+1])
+  }
+  return ans
+}
+
+
+
 // You will have to write a function that takes litres and pricePerLitre (in dollar) as arguments.
 
 // Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per 
