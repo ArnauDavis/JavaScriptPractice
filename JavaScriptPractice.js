@@ -1,3 +1,26 @@
+// In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
+
+// The result should also be ordered from highest to lowest.
+
+// Examples:
+
+// [4, 10, 10, 9]  =>  [10, 9]
+// [1, 1, 1]  =>  [1]
+// []  =>  []
+
+function twoHighest(arr) {
+  let p1 = [...new Set(arr)].sort((a,b)=>b-a)
+  if(p1.length>=2){
+    return [p1[0],p1[1]]
+  }else if(p1.length==1){
+    return [p1[0]]
+  }else{
+    return []
+  }
+}
+
+
+
 // In John's car the GPS records every s seconds the distance travelled from an origin (distances are measured in an arbitrary but consistent unit). For example, below is part of a record with s = 15:
 
 // x = [0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25]
