@@ -1,3 +1,13 @@
+// Your job is simple, if x squared is more than 1000, return It's hotter than the sun!!, else, return Help yourself to a honeycomb Yorkie for the glovebox.
+
+// Note: Input will either be a positive integer (or a string for untyped languages).
+
+function apple(x){
+  return Math.pow(x,2)>1000?"It's hotter than the sun!!":"Help yourself to a honeycomb Yorkie for the glovebox."
+}
+
+
+
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
 
 // The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
