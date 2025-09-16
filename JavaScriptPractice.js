@@ -1,3 +1,21 @@
+// Make a function to test whether a period is late.
+
+// Our function will take three parameters:
+
+// last - The Date object with the date of the last period
+
+// today - The Date object with the date of the check
+
+// cycleLength - Integer representing the length of the cycle in days
+
+// Return true if the number of days passed from last to today is greater than cycleLength. Otherwise, return false.
+
+function periodIsLate(last, today, cycleLength) {
+    return (today-last)/(1000 * 3600 * 24)>cycleLength
+}
+
+
+
 // Write a function called calculate that takes 3 values. The first and third values are numbers. The second value is a character. If the character is "+" , "-", "*", or "/", 
 // the function will return the result of the corresponding mathematical function on the two numbers. If the string is not one of the specified characters, the function should return null (throw an ArgumentException in C#).
 
