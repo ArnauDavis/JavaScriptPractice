@@ -1,3 +1,11 @@
+// Return the type of the sum of the two arguments
+
+function typeOfSum(a, b) {
+  return typeof(a+b)
+}
+
+
+
 // Given a non-negative integer b, write a function which returns an integer d such that the binary representation of b is the same as the decimal representation of d.
 
 // Examples:
