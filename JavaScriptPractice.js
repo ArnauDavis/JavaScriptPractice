@@ -1,3 +1,26 @@
+// Task
+
+// Given a number, Find if it is Disarium or not . 
+// Input >> Output Examples
+
+// disariumNumber(89) ==> return "Disarium !!"
+
+// Explanation:
+
+//     Since , 81 + 92 = 89 , thus output is "Disarium !!"
+
+function disariumNumber(n){
+  let p1 = n.toString().split('').map((x)=>Number(x))
+  let p2 = []
+  for(let i=0;i<p1.length;i++){
+    p2.push(Math.pow(p1[i],i+1))
+  }
+  let p3 = p2.reduce((acc,cur)=>acc+cur,0)
+   return p3 == n? "Disarium !!" : "Not !!"
+}
+
+
+
 // Write a function that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
 // Examples:
 
