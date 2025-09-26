@@ -1,3 +1,13 @@
+// Function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. 
+// Note that an empty string, or no arguments, should return an empty string.
+
+function toFreud(string) {
+  let p1 = string.split(' ').filter((x)=>x!='sex').map((x)=>x.replace(x,'sex')).join(' ') 
+  return string? p1 : ""
+}
+	
+	
+
 // You and a friend have decided to play a game to drill your statistical intuitions. The game works like this:
 
 // You have a bunch of red and blue marbles. To start the game you grab a handful of marbles of each color and put them into the bag, keeping track of how many of each color go in. 
