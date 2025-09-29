@@ -1,3 +1,20 @@
+// It's a fight between the two legends: Conor McGregor vs George Saint Pierre in Madison Square Garden. Only one fighter will remain standing, 
+// and after the fight in an interview with Joe Rogan the winner will make his legendary statement. It's your job to return the right statement depending on the winner!
+
+// If the winner is George Saint Pierre he will obviously say:
+
+//     "I am not impressed by your performance."
+
+// If the winner is Conor McGregor he will most undoubtedly say:
+
+//     "I'd like to take this chance to apologize.. To absolutely NOBODY!"
+
+function quote(fighter) {
+  return fighter.toLowerCase() == 'conor mcgregor'? "I'd like to take this chance to apologize.. To absolutely NOBODY!" : "I am not impressed by your performance." 
+}
+
+
+
 // You are creating an "Escape the room" game. The first step is to create a hash table ( dict in Python) called rooms that contains all of the rooms of the game. 
 // There should be at least 3 rooms inside it, each room being a hash table with at least 3 properties (e.g. name, description, completed).
 
