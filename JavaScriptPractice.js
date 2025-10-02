@@ -7,7 +7,7 @@
 // "C...m" returns "Caught!" <-- as there are three characters between the two, the cat can jump.
 
 function catMouse(x){
-  return x.length>=5?"Escaped!":"Caught!"
+  return x.length>5?"Escaped!":"Caught!"
 }
 
 
