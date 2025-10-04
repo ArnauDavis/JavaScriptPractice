@@ -1,3 +1,25 @@
+// A number is a Special Number if its digits only consists of 0, 1, 2, 3, 4 or 5
+
+// Given a number, determine if it is a special number or not.
+// Notes
+
+// The number passed will be positive (N > 0)
+// All single-digit numbers within the interval [1:5] are considered special numbers
+
+function specialNumber(n){
+  let p1 = n.toString().split('')
+  let p2 = 0
+  let ch = ['0','1','2','3','4','5']
+  for(let i=0;i<p1.length;i++){
+    if(ch.includes(p1[i])==false){
+      p2+=1
+    }
+  }
+  return p2==0? "Special!!" : "NOT!!"
+}
+
+
+
 // You will be given a string featuring a cat 'C' and a mouse 'm'. The rest of the string will be made up of '.'. The string will start with the cat, and end with the mouse.
 
 // You need to find out if the cat can catch the mouse from its current position. The cat can jump over at most three characters. So:
