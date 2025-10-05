@@ -1,3 +1,16 @@
+// This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
+
+// Add the value "codewars" to the array websites 1,000 times.
+
+// add the value "codewars" to the websites array 1,000 times
+let websites = []
+
+for(let i=0;i<1000;i++){
+  websites.push('codewars')
+}
+
+
+
 // A number is a Special Number if its digits only consists of 0, 1, 2, 3, 4 or 5
 
 // Given a number, determine if it is a special number or not.
