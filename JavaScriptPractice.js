@@ -1,3 +1,25 @@
+// Complete the function to find the count of the most frequent item of an array. You can assume that input is an array of integers. For an empty array return 0
+// Example
+
+// input array: [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]
+// ouptut: 5 
+
+// The most frequent number in the array is -1 and it occurs 5 times.
+
+function mostFrequentItemCount(collection) {
+  if(collection.length==0){
+    return 0
+  }
+  let count = {};
+  for (let item of collection) {
+    count[item] = (count[item] || 0) + 1;
+}
+  const maxKey = Object.keys(count).reduce((a, b) => count[a] > count[b] ? a : b);
+  return count[maxKey]
+}
+
+
+
 // This is an easy twist to the example kata (provided by Codewars when learning how to create your own kata).
 
 // Add the value "codewars" to the array websites 1,000 times.
