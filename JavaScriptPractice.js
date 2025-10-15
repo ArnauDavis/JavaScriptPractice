@@ -1,3 +1,20 @@
+// Complete the solution so that it returns a formatted string. The return value should equal "Value is VALUE" where value is a 5 digit padded number.
+
+// Example:
+
+// solution(5); // should return "Value is 00005"
+
+function solution(value){
+  let p1 = value.toString().split('')
+  while(p1.length<5){
+    p1.unshift('0')
+  }
+  let p2 = p1.join('')
+  return `Value is ${p2}`
+}
+
+
+
 // Complete the function to find the count of the most frequent item of an array. You can assume that input is an array of integers. For an empty array return 0
 // Example
 
