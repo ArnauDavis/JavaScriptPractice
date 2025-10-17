@@ -1,3 +1,42 @@
+// A stream of data is received and needs to be reversed.
+
+// Each segment is 8 bits long, meaning the order of these segments needs to be reversed, for example:
+
+// 11111111  00000000  00001111  10101010
+//  (byte1)   (byte2)   (byte3)   (byte4)
+
+// should become:
+
+// 10101010  00001111  00000000  11111111
+//  (byte4)   (byte3)   (byte2)   (byte1)
+
+// The total number of bits will always be a multiple of 8.
+
+// The data is given in an array as such:
+
+// [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+
+function dataReverse(data) {
+  //we are receiving an array
+  //we want to return the array in reversed blocks, each with 8 numbers in the block
+  //first we will divide the length by 8 so we know how many blocks we will need
+  //we don't want the numbers reversed, just the order of the blocks
+  //so we need to make x amount of blocks with 8 digits in each
+  //once we have our blocks, we will just return the blocks in reverse order
+  let p1 = data.length/8
+  let p2 = data.map((x)=>x)
+  let container = []
+  for(let i=0;i<p1;i++){
+    let example = []
+    example.push(data.splice(0,8))
+    container.push(example.join())
+  }
+  let p3 = container.reverse().join().split(',').map((x)=>Number(x))
+  return p3 
+}
+
+
+
 // Your task is to write a function toLeetSpeak that converts a regular english sentence to Leetspeak.
 
 // More about LeetSpeak You can read at wiki -> https://en.wikipedia.org/wiki/Leet
