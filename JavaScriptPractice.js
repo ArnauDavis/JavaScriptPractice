@@ -1,3 +1,12 @@
+// Implement a function that returns the minimal and the maximal value of a list (in this order).
+
+function getMinMax(arr){
+  let p1 = arr.sort((a,b)=>a-b)
+  return [p1[0],p1[p1.length-1]]
+}
+
+
+
 // Find the difference between the square of the sum of the first n natural numbers (1 <= n <= 100) and the sum of their squares.
 // Example
 
