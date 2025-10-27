@@ -1,3 +1,12 @@
+// Disaster!! The boat has caught fire!!
+// You will be provided a string that lists many boat related items. If any of these items are "Fire" you must spring into action. Change any instance of "Fire" into "~~". Then return the string.
+
+function fireFight(s){
+    return s.replaceAll('Fire','~~')
+}
+
+
+
 // The function pickIt accepts 1 parameter, arr, which is an array of numbers. We need to traverse arr by using a for loop. If an element is an odd number, push it to the odd array, 
 // and if it's an even number, push it to the evenarray.
 
