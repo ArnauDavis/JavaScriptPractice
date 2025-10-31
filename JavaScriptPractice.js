@@ -1,3 +1,27 @@
+// The function giveMeFive accepts 1 parameter, obj, which is an object.
+
+// Create an array (which you will eventually return). Then, traverse obj, checking each key and value. If the length of the key is equal to 5, 
+// 	then push the key to your array. Separately, if the length of the value is equal to 5, then push the value to your array.
+
+// At the end, return your array.
+
+// You should use for..in in your code, otherwise your solution may not pass this kata.
+
+function giveMeFive(obj){
+  let ans = []
+  for (let key in obj) {
+    if(key.length === 5){
+      ans.push(key)
+    }
+    if(obj[key].length === 5){
+      ans.push(obj[key])
+    }
+  } 
+  return ans
+}
+
+
+
 // I've create three function, and defined some global variables, please select some variables that can make up the name of the function, and return them(Please note the uppercase and lowercase letters are different).
 
 // When you have finished the work, click "Run Tests" to see if your code is working properly.
