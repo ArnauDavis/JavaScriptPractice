@@ -1,3 +1,25 @@
+// Your job at E-Corp is both boring and difficult. It isn't made any easier by the fact that everyone 
+// constantly wants to have a meeting with you, and that the meeting rooms are always taken!
+
+// In this kata, you will be given an array. Each value represents a meeting room. Your job? Find the first 
+// empty one and return its index (N.B. There may be more than one empty room in some test cases).
+
+// 'X' --> busy
+// 'O' --> empty
+
+// If all rooms are busy, return "None available!"
+
+function meeting(x){
+  for(let i=0; i<x.length; i++){
+    if(x[i]=='O'){
+      return i
+    }
+  }
+  return 'None available!'
+}
+
+
+
 // Given an array of numbers (in string format), you must return a string. The 
 // numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. 
 // You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
