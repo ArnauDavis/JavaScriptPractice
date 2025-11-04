@@ -1,3 +1,32 @@
+// You are given a string of letters and an array of numbers.
+// The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
+// After each removal the size of the string decreases (there is no empty space).
+// Return the only letter left.
+
+// Example:
+
+// let str = "zbk", arr = [0, 1]
+//     str = "bk", arr = [1]
+//     str = "b", arr = []
+//     return 'b'
+
+// Notes
+
+//     The given string will never be empty.
+//     The length of the array is always one less than the length of the string.
+//     All numbers are valid.
+//     There can be duplicate letters and numbers.
+
+function lastSurvivor(letters, coords) {
+  let p1 = letters.split('')
+  for(let i=0;i<coords.length;i++){
+    p1.splice(coords[i],1)
+  }
+  return p1.join('')
+}
+
+
+
 // The medians of a triangle are the segments that unit the vertices with the midpoint of their opposite sides. 
 // The three medians of a triangle intersect at the same point, called the barycenter or the centroid. Given a triangle, 
 // defined by the cartesian coordinates of its vertices, we need to localize its barycenter or centroid.
