@@ -1,3 +1,27 @@
+// Jumping number is the number that All adjacent digits in it differ by 1.
+// Task
+
+// Given a number, Find if it is Jumping or not . 
+
+function jumpingNumber(n){
+  if(n<=9){
+    return "Jumping!!"
+  }
+  let p1 = n.toString().split('')
+  for(let i=0;i<p1.length-1;i++){
+    if(Number(p1[i])==Number(p1[i+1])+1){
+      
+    }else if(Number(p1[i])==Number(p1[i+1])-1){
+      
+    }else{
+      return "Not!!"
+    }
+  }
+  return 'Jumping!!'
+}
+
+
+
 // You are given a string of letters and an array of numbers.
 // The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the array.
 // After each removal the size of the string decreases (there is no empty space).
