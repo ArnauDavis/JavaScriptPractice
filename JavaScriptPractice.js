@@ -1,3 +1,18 @@
+// Write a program that outputs the top n elements from a list.
+
+// Example:
+
+// k = 2; list = [7, 6, 5, 4, 3, 2, 1]
+// ==> [6, 7]
+
+function largest(n, array) {
+  let p1 = array.sort((a,b)=>b-a)
+  let ans = p1.slice(0,n)
+  return ans.reverse()
+}
+
+
+
 // Jumping number is the number that All adjacent digits in it differ by 1.
 // Task
 
