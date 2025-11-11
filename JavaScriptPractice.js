@@ -1,3 +1,27 @@
+// The aim of this kata is to split a given string into different strings of equal size (note size of strings is passed to the method)
+
+// Example:
+
+// Split the below string into other strings of size #3
+
+// 'supercalifragilisticexpialidocious'
+
+// Will return a new string
+// 'sup erc ali fra gil ist ice xpi ali doc iou s'
+
+// Assumptions:
+
+// String length is always greater than 0
+// String has no spaces
+// Size is always positive
+
+var splitInParts = function(s, partLength){
+  let ans = s.match(new RegExp(`(.{1,${partLength}})`, 'g'))
+  return ans.join(' ')
+}
+
+
+
 // Write a function that converts any sentence into a V A P O R W A V E sentence. a V A P O R W A V E sentence converts all the letters into uppercase, and adds 2 spaces between each letter (or special character) to create this V A P O R W A V E effect.
 
 // Note that spaces should be ignored in this case.
