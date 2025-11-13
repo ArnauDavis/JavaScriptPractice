@@ -1,3 +1,31 @@
+// You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. Let x be any string in the first array and y be any string in the second array.
+
+// Find max(abs(length(x) − length(y)))
+
+// If a1 and/or a2 are empty return -1 in each language except in Haskell (F#) where you will return Nothing (None).
+// Example:
+
+// a1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+// a2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+// mxdiflg(a1, a2) --> 13
+
+function mxdiflg(a1, a2) {
+  if(a1.length==0 || a2.length==0){
+    return -1
+  }
+  let p1 = []
+  let p2 = []
+  a1.forEach((x)=>p1.push(x.length))
+  a2.forEach((x)=>p2.push(x.length))
+  let p3 = p1.sort((a,b)=>a-b)
+  let p4 = p2.sort((a,b)=>b-a)
+  let p5 = Math.abs(p3[0]-p4[0])
+  let p6 = Math.abs(p3[p3.length-1]-p4[p4.length-1])
+  return p5 > p6 ? p5 : p6
+}
+
+
+
 // The aim of this kata is to split a given string into different strings of equal size (note size of strings is passed to the method)
 
 // Example:
