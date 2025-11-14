@@ -1,6 +1,6 @@
 # JavaScript Practice
 This is a collection of daily code war challenges I practice with and solve to sharpen my JavaScript skills. 
-
+//be back tomorrow
 **Link to project:** https://github.com/ArnauDavis/JavaScriptPractice/blob/main/JavaScriptPractice.js
 
 
