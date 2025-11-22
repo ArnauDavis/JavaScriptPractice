@@ -1,3 +1,15 @@
+// Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+
+// You can assume the input will always be a number.
+
+function validateCode (code) {
+  let p1 = code.toString().split('')[0]
+  let p2 = /^[1-3]$/
+  return p2.test(String(p1))
+}
+
+
+
 // As you plunge out of the slide into the water, you see a shark hovering in the darkness under the pontoon... Crap!
 
 // You need to work out if the shark will get to you before you can get to the pontoon. To make it easier... as you do the mental calculations in the water you either freeze when you realise you are dead, or swim when you realise you can make it!
