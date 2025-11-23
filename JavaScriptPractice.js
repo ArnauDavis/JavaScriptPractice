@@ -1,3 +1,35 @@
+// Create a function that always returns True/true for every item in a given list.
+// However, if an element is the word 'flick', switch to always returning the opposite boolean value.
+// Examples
+
+// ['codewars', 'flick', 'code', 'wars'] ➞ [True, False, False, False]
+
+// ['flick', 'chocolate', 'adventure', 'sunshine'] ➞ [False, False, False, False]
+
+// ['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
+
+// Notes
+
+//     "flick" will always be given in lowercase.
+//     A list may contain multiple flicks.
+//     Switch the boolean value on the same element as the flick itself.
+
+function flickSwitch(arr){
+  let p1 = true
+  let ans = []
+  arr.forEach((x)=>{
+    if(x=='flick'){
+      p1=!p1
+      ans.push(p1)
+    }else{
+      ans.push(p1)
+    }
+  })
+  return ans
+}
+
+
+
 // Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
 
 // You can assume the input will always be a number.
