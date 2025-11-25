@@ -1,3 +1,52 @@
+// You have stumbled across the divine pleasure that is owning a dog and a garden. Now time to pick up all the cr@p! :D
+
+// Given a 2D array to represent your garden, you must find and collect all of the dog cr@p - represented by '@'.
+
+// You will also be given the number of bags you have access to (bags), and the capactity of a bag (cap). If there are no bags then you can't pick anything up, so you can ignore cap.
+
+// You need to find out if you have enough capacity to collect all the cr@p and make your garden clean again.
+
+// If you do, return 'Clean', else return 'Cr@p'.
+
+// Watch out though - if your dog is out there ('D'), he gets very touchy about being watched. If he is there you need to return 'Dog!!'.
+
+// For example:
+
+// bags = 2
+// cap = 2
+// x (or garden) =
+// [[ _ , _ , _ , _ , _ , _ ],
+//  [ _ , _ , _ , _ , @ , _ ],
+//  [ @ , _ , _ , _ , _ , _ ]]
+
+// returns 'Clean'
+
+function crap(x, bags, cap){
+  let p1 = 0
+  let p2 = 0
+  
+  x.forEach((b)=>{
+    b.forEach((y)=>{
+      if(y=='@'){
+        p1+=1
+      }else if(y=="D"){
+        p2+=1
+      }
+    })
+  })
+  if(p2>0){
+    return'Dog!!'
+  }else if(bags==0&&cap>=p1){
+    return'Clean'
+  }else if(bags*cap>=p1){
+    return'Clean'
+  }else{
+    return'Cr@p'
+  }
+}
+
+
+
 // Imagine you start on the 5th floor of a building, then travel down to the 2nd floor, then back up to the 8th floor. You have travelled a total of 3 + 6 = 9 floors of distance.
 
 // Given an array representing a series of floors you must reach by elevator, return an integer representing the total distance travelled for visiting each floor in the array in order.
