@@ -1,3 +1,37 @@
+// Given an array with exactly 5 strings "a", "b" or "c" (chars in Java, characters in Fortran, Chars in Haskell), check if the array contains three and two of the same values.
+// Examples
+
+// ["a", "a", "a", "b", "b"] ==> true  // 3x "a" and 2x "b"
+// ["a", "b", "c", "b", "c"] ==> false // 1x "a", 2x "b" and 2x "c"
+// ["a", "a", "a", "a", "a"] ==> false // 5x "a"
+
+function checkThreeAndTwo(array) {
+  const mp = {}
+    // stores [number, frequency]
+    const ans = []
+
+    // count frequency using object
+    for (let num of array) {
+        mp[num] = (mp[num] || 0) + 1
+    }
+
+    // Build the answer array from the frequency map
+    for (let num in mp) {
+        ans.push([parseInt(num), mp[num]])
+    }
+  let finalAns = []
+    ans.forEach((x)=>{
+      finalAns.push(x[1])
+    })
+  if(finalAns.includes(2)&&finalAns.includes(3)){
+    return true
+  }else{
+    return false
+  }
+}
+
+
+
 // You have stumbled across the divine pleasure that is owning a dog and a garden. Now time to pick up all the cr@p! :D
 
 // Given a 2D array to represent your garden, you must find and collect all of the dog cr@p - represented by '@'.
