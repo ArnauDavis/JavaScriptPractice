@@ -1,3 +1,47 @@
+// Haskell has some useful functions for dealing with lists:
+
+// $ ghci
+// GHCi, version 7.6.3: http://www.haskell.org/ghc/  :? for help
+// λ head [1,2,3,4,5]
+// 1
+// λ tail [1,2,3,4,5]
+// [2,3,4,5]
+// λ init [1,2,3,4,5]
+// [1,2,3,4]
+// λ last [1,2,3,4,5]
+// 5
+
+// Your job is to implement these functions in your given language. Make sure it doesn't edit the array; that would cause problems! Here's a cheat sheet:
+
+// | HEAD | <----------- TAIL ------------> |
+// [  1,  2,  3,  4,  5,  6,  7,  8,  9,  10]
+// | <----------- INIT ------------> | LAST |
+
+// head [x] = x
+// tail [x] = []
+// init [x] = []
+// last [x] = x
+
+// Here's how I expect the functions to be called in your language:
+
+// head([1,2,3,4,5]); => 1
+// tail([1,2,3,4,5]); => [2,3,4,5]
+
+function head(arr){
+  return arr[0]
+}
+function tail(arr){
+  return arr.length > 1? arr.slice(1,arr.length) : [] 
+}
+function init(arr){
+  return arr.slice(0,arr.length-1)
+}
+function last(arr){
+  return arr[arr.length-1]
+}
+
+
+
 // You are a(n) novice/average/experienced/professional/world-famous Web Developer (choose one) who owns a(n) simple/clean/slick/beautiful/complicated/professional/business website (choose one or more) 
 // which contains form fields so visitors can send emails or leave a comment on your website with ease. However, with ease comes danger. Every now and then, a hacker visits your website and attempts to compromise 
 // it through the use of XSS (Cross Site Scripting). This is done by injecting script tags into the website through form fields which may contain malicious code (e.g. a redirection to a malicious website that steals personal information).
