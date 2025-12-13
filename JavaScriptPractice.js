@@ -1,3 +1,19 @@
+// Implement a function that takes two numbers m and n and returns an array of the first m multiples of the real number n. Assume that m is a positive integer.
+
+// Ex.
+
+// (3, 5.0) --> [5.0, 10.0, 15.0]
+
+function multiples(m, n){
+  let ans = []
+  for(let i=1;i<=m;i++){
+    ans.push(n*i)
+  }
+  return ans
+}
+
+
+
 // Coding in function colorOf. function accept 3 parameter:r g b. It means value of color red green and blue. the value range is 0-255.
 
 // Use toString(16) Convert numbers r g b to hex string form. at last, combine them to a web color code and return it.
