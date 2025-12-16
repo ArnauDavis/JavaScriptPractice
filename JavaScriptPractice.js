@@ -1,3 +1,40 @@
+// Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
+// Notes:
+
+//     List size is at least 3.
+
+//     All numbers will be positive.
+
+//     Numbers could occur more than once , (Duplications may exist).
+
+//     Threshold K will always be reachable.
+//     Input >> Output Examples
+
+// minimumSteps({1, 10, 12, 9, 2, 3}, 6)  ==>  return (2)
+
+// Explanation:
+
+//     We add two smallest elements (1 + 2), their sum is 3 .
+
+//     Then we add the next smallest number to it (3 + 3) , so the sum becomes 6 .
+
+//     Now the result is greater or equal to 6 , Hence the output is (2) i.e (2) operations are required to do this .
+
+function minimumSteps(numbers, value){
+  let p1 = numbers.sort((a,b)=>a-b)
+  let c1 = 0
+  let count = 0
+  p1.forEach((x)=>{
+    if(c1<value){
+      c1+=x
+      count+=1
+    }
+  })
+  return count-1
+}
+
+
+
 // The accounts of the "Fat to Fit Club (FFC)" association are supervised by John as a volunteered accountant. The association is funded through financial donations from generous benefactors. 
 // John has a list of the first n donations: [14, 30, 5, 7, 9, 11, 15] He wants to know how much the next benefactor should give to the association so that the average of the first n + 1 donations 
 // should reach an average of 30. After doing the math he found 149. He thinks that he could have made a mistake.
