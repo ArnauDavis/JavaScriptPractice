@@ -1,3 +1,14 @@
+// If a number is even, convert it to binary.
+// If a number is odd, convert it to hex.
+
+// Numbers will be positive. The hexadecimal string should be lowercased.
+
+function evensAndOdds(num){
+	return num%2==0? num.toString(2) : num.toString(16)
+}
+
+
+
 // Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
 // Notes:
 
