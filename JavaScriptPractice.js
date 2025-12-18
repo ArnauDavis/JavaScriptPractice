@@ -1,3 +1,15 @@
+// Write a function that flattens an Array of Array objects into a flat Array. Your function must only do one level of flattening.
+
+// flatten([1,2,3])  ==> [1,2,3]
+// flatten([[1,2,3],["a","b","c"],[1,2,3]])  ==> [1,2,3,"a","b","c",1,2,3]
+// flatten([[[1,2,3]]])  ==> [[1,2,3]]
+
+function flatten(array) {
+  return array.flat()
+}
+
+
+
 // Given a lottery ticket (ticket), represented by an array of 2-value arrays, you must find out if you've won the jackpot.
 
 // Example ticket:
