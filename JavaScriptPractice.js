@@ -1,3 +1,33 @@
+// You will be given two strings a and b and your task will be to return the characters that are not common in the two strings.
+
+// For example:
+
+// solve("xyab","xzca") = "ybzc" 
+// --The first string has 'yb' which is not in the second string. 
+// --The second string has 'zc' which is not in the first string. 
+
+// Notice also that you return the characters from the first string concatenated with those from the second string.
+
+function solve(a,b){
+  let ans = []
+  let p1 = a.split('')
+  let p2 = b.split('')
+  p1.forEach((x)=>{
+    if(!p2.includes(x)){
+      ans.push(x)
+    }
+  }
+    )
+  p2.forEach((x)=>{
+    if(!p1.includes(x)){
+      ans.push(x)
+    }
+  }
+    )
+    return ans.join('')
+}
+
+
 // To find the volume (centimeters cubed) of a cuboid you use the formula:
 
 // volume = Length * Width * Height
