@@ -1,3 +1,13 @@
+// Create a function that returns the average of an array of numbers ("scores"), rounded to the nearest whole number. You are not allowed to use any loops (including for, for/in, while, and do/while loops).
+
+// The array will never be empty.
+
+function average(scores) {
+    return Math.round(scores.reduce((acc,cur)=>acc+cur,0)/scores.length)
+}
+
+
+
 // Write a function to find if a number is lucky or not. If the sum of all digits is 0 or multiple of 9 then the number is lucky.
 
 // 1892376 => 1+8+9+2+3+7+6 = 36. 36 is divisible by 9, hence number is lucky.
