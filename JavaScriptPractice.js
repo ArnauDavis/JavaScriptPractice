@@ -1,3 +1,23 @@
+// Given a string of space separated words, return the longest word.
+// If there are multiple longest words, return the rightmost longest word.
+// Examples
+
+// "red white blue"  =>  "white"
+// "red blue gold"   =>  "gold"
+
+function longestWord(stringOfWords) {
+  let p1 = stringOfWords.split(' ')
+  let ans = p1[0]
+  p1.forEach((x)=>{
+    if(x.length>=ans.length){
+      ans=x
+    }
+  })
+  return ans
+}
+
+
+
 // Write a function filterLucky/filter_lucky() that accepts a list of integers and filters the list to only include the elements that contain the digit 7.
 
 // For example,
