@@ -1,3 +1,27 @@
+// Bob is a lazy man.
+
+// He needs you to create a method that can determine how many letters (both uppercase and lowercase ASCII letters) and digits are in a given string.
+
+// Example:
+
+// "hel2!lo" --> 6
+
+// "wicked .. !" --> 6
+
+// "!?..A" --> 1
+
+function countLettersAndDigits(input) {
+  let ans = 0
+  input.split('').forEach((x)=>{
+    if((x.charCodeAt(0)>=48 && x.charCodeAt(0)<=57)||(x.charCodeAt(0)>=65&&x.charCodeAt(0)<=90)||(x.charCodeAt(0)>=97&&x.charCodeAt(0)<=122)){
+      ans+=1
+    }
+  })
+  return ans
+}
+
+
+
 // Your task is to complete this Class, the Person class has been created. You must fill in the Constructor method to accept a name as string and an age as number, 
 // complete the get Info property and getInfo method/Info getter which should return johns age is 34
 
