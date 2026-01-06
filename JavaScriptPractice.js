@@ -1,3 +1,26 @@
+// Coding in function firstToLast, function accept 2 parameters:str and c. str is a string. c is a char.
+
+// Please return the gap between the first position of c and the last position of c.
+
+// If there are a lot of c in the str, should return a positive integer; If there is only one c in str, should return 0; If there is no c in the str, should return -1. Retrieval should not ignored the case.
+
+// for example:
+
+// firstToLast("ababc","a") should return 2(2-0)
+// firstToLast("ababc","c") should return 0(4-4)
+// firstToLast("ababc","d") should return -1
+
+function firstToLast(str,c){
+  if(!str.split('').includes(c)){
+    return -1
+  }
+  let p1 = str.indexOf(c)
+  let p2 = str.lastIndexOf(c)
+  return p2-p1
+}
+
+
+
 // Complete the solution so that it takes the object (JavaScript/CoffeeScript) or hash (ruby) passed in and generates a human readable string from its key/value pairs.
 
 // The format should be "KEY = VALUE". Each key/value pair should be separated by a comma except for the last pair.
