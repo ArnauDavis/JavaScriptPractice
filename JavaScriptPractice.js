@@ -1,3 +1,11 @@
+// Write a function that merges two sorted arrays into a single one. The arrays only contain integers. Also, the final outcome must be sorted and not have any duplicate.
+
+function mergeArrays(a, b) {
+  return [...new Set(a.concat(b).sort((c,d)=>c-d))]
+}
+
+
+
 // Coding in function firstToLast, function accept 2 parameters:str and c. str is a string. c is a char.
 
 // Please return the gap between the first position of c and the last position of c.
