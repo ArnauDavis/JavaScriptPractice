@@ -1,3 +1,12 @@
+// Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a single digit (0-9), false otherwise.
+
+String.prototype.digit = function() {
+  let check = ['0','1','2','3','4','5','6','7','8','9']
+  return check.includes(this.toString())
+}
+
+
+
 // Each floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
 
 // Don't round the numbers! Just cut them after two decimal places!
