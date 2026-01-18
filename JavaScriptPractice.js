@@ -1,3 +1,22 @@
+// Complete the function to create backronyms. Transform the given string (without spaces) to a backronym, using the preloaded dictionary and return a string of words, separated with a single space (but no trailing spaces).
+
+// The keys of the preloaded dictionary are uppercase letters A-Z and the values are predetermined words, for example:
+
+// dict["P"] == "perfect"
+
+// Examples
+
+// "dgm" ==> "disturbing gregarious mustache"
+
+//preload variable: dict
+
+var makeBackronym = function(string){
+  let p1 = string.split('').map((x)=> dict[x.toUpperCase()]).join(' ')
+  return p1
+}
+
+
+
 // Write a function that will check if two given characters are the same case.
 
 //     If either of the characters is not a letter, return -1
