@@ -1,3 +1,18 @@
+// Given an array/list [] of n integers , Separate The even numbers from the odds Return an array/list where Even numbers come first then odds, then Even numbers in ascending order While odds in descending . 
+// Repetition of numbers in the array/list could occur , So (duplications are not included when separating).
+//     Input >> Output Examples:
+
+// menFromBoys ({7, 3 , 14 , 17}) ==> return ({14, 17, 7, 3}) 
+
+function menFromBoys(arr){
+  let e = []
+  let o = []
+  let p1 = [...new Set(arr)].map((x)=>x%2==0?e.push(x):o.push(x))
+  return e.sort((a,b)=>a-b).concat(o.sort((a,b)=>b-a)) 
+}
+
+
+
 // Complete the function to create backronyms. Transform the given string (without spaces) to a backronym, using the preloaded dictionary and return a string of words, separated with a single space (but no trailing spaces).
 
 // The keys of the preloaded dictionary are uppercase letters A-Z and the values are predetermined words, for example:
