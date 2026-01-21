@@ -1,3 +1,13 @@
+// HELP! Jason can't find his textbook! It is two days before the test date, and Jason's textbooks are all out of order! Help him sort a list (ArrayList in java) full of textbooks by subject, so he can study before the test.
+
+// The sorting should NOT be case sensitive
+
+function sorter(textbooks) {
+  return textbooks.sort((a, b)=> a.toLowerCase().localeCompare(b.toLowerCase()))
+}
+
+
+
 // You task is to implement an simple interpreter for the notorious esoteric language HQ9+ that will work for a single character input:
 
 //     If the input is 'H', return 'Hello World!'
