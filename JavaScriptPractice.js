@@ -1,3 +1,22 @@
+// Given an array/list [] of n integers , find maximum triplet sum in the array Without duplications .
+// Notes :
+
+//     Array/list size is at least 3 .
+
+//     Array/list numbers could be a mixture of positives , negatives and zeros .
+
+//     Repetition of numbers in the array/list could occur , So (duplications are not included when summing).
+//     Input >> Output Examples
+
+// 1- maxTriSum ({3,2,6,8,2,3}) ==> return (17)
+
+function maxTriSum(numbers){
+  let p1 = [...new Set(numbers)].sort((a,b)=>b-a).splice(0,3)
+  return p1.reduce((acc,cur)=>acc+cur,0)
+}
+
+
+
 // Write a function that returns the number of occurrences of an element in an array.
 
 // This function will be defined as a property of Array with the help of the method Object.defineProperty, which allows to define a new method directly on the object (more info about that you can find on MDN).
