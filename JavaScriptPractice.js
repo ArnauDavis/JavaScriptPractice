@@ -1,3 +1,23 @@
+// Move every letter in the provided string forward 10 letters through the alphabet.
+
+// If it goes past 'z', start again at 'a'.
+
+// Input will be a string with length > 0.
+
+function moveTen(s){
+  let p1 = s.split('').map((x)=>{
+    let p2=x.charCodeAt(0)
+    if(p2+10>122){
+      return String.fromCharCode(p2+10-122+96)
+    }else{
+      return String.fromCharCode(p2+10)
+    }
+  }).join('')
+  return p1
+}
+
+
+
 // Coding in function trueOrFalse, function accept 1 parameters:val, try to use the conditional statement if...else, if val value is false (val==false or it can convert to false), should return a string "false", if not, return a string "true".
 
 function trueOrFalse(val){
