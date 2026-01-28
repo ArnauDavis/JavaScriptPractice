@@ -1,3 +1,21 @@
+// Given 2 strings, a and b, return a string of the form: shorter+reverse(longer)+shorter.
+
+// In other words, the shortest string has to be put as prefix and as suffix of the reverse of the longest.
+
+// Strings a and b may be empty, but not null (In C# strings may also be null. Treat them as if they are empty.).
+// If a and b have the same length treat a as the longer producing b+reverse(a)+b
+
+function shorterReverseLonger(a,b){
+  if(a.length==b.length){
+    return `${b}${a.split('').reverse().join('')}${b}`
+  }
+  let p1 = a.length<b.length ? a : b
+  let p2 = a.length<b.length ? b : a
+  return `${p1}${p2.split('').reverse().join('')}${p1}`
+}
+
+
+
 // Coding in function bigToSmall. function accept 1 parameter arr(2D number array).
 
 // Your task is: First to all, refer to the example above, flat output arr to a one-dimensional array.
