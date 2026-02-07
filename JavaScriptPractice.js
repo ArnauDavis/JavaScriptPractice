@@ -1,3 +1,25 @@
+// Given an array (a list in Python) of integers and an integer n, find all occurrences of n in the given array and return another array containing all the index positions of n in the given array.
+
+// If n is not in the given array, return an empty array [].
+
+// Assume that n and all values in the given array will always be integers.
+
+// Example:
+
+// findAll([6, 9, 3, 4, 3, 82, 11], 3) => [2, 4]
+
+function findAll(array, n) {
+  let ans = []
+  array.forEach((x,i)=>{
+    if(x==n){
+      ans.push(i)
+    }
+  })
+  return ans
+}
+
+
+
 // We want to create a constructor function 'NameMe', which takes first name and last name as parameters. The function combines the first and last names and saves the value in "name" property.
 
 // We already implemented that function, but when we actually run the code, the "name" property is accessible, but the "firstName" and "lastName" is not accessible. 
