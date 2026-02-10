@@ -1,3 +1,29 @@
+// Return a string suggesting how many glasses of water you should drink to not be hungover.
+// Examples
+
+// "1 beer"  -->  "1 glass of water"
+// because you drank one standard drink
+
+// "1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"  -->  "10 glasses of water"
+// because you drank ten standard drinks
+
+// Note:
+
+// To keep the things simple, we'll consider that any "numbered thing" in the string is a drink. Even "1 bear" -> "1 glass of water"; or "1 chainsaw and 2 pools" -> "3 glasses of water"...
+
+function hydrate(s) {
+  let count = 0
+  s.split('').forEach((x)=>{
+    if(Number(x)){
+      count+=Number(x)
+    }
+  })
+  let plural = count>1? "glasses": "glass" 
+  return `${count.toString()} ${plural} of water`
+}
+
+
+
 // I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. 
 // I had expected it to be more discerning, but it's returning true for undefined right now.
 
