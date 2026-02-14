@@ -1,3 +1,30 @@
+// Given two words and a letter, return a single word that's a combination of both words, merged at the point where the given letter first appears in each word. 
+// The returned word should have the beginning of the first word and the ending of the second, with the dividing letter in the middle. You can 
+// assume both words will contain the dividing letter.
+// Examples
+
+// ("hello", "world", "l")       ==>  "held"
+// ("coding", "anywhere", "n")   ==>  "codinywhere"
+// ("jason", "samson", "s")      ==>  "jasamson"
+// ("wonderful", "people", "e")  ==>  "wondeople"
+
+function stringMerge(string1, string2, letter){
+  //find the index of where the letter is in each string
+  //use that index to slice where the the letter is
+  //combine the two sliced parts
+  let p1 = string1.indexOf(letter)
+  let p2 = string2.indexOf(letter)
+  let p3 = string1.slice(0,p1)
+  let p4 = string2.slice(p2,string2.length)
+  return p3+p4
+}
+//or
+function stringMerge(string1, string2, letter){
+  return(string1.slice(0,string1.indexOf(letter))+string2.slice(string2.indexOf(letter),string2.length))
+}
+
+
+
 // The task is to write a function that accepts two parameters: an array and a callback function (in Ruby: a block).
 
 // The function should return true if the callback function / block returns true for any item in the array, otherwise return false.
