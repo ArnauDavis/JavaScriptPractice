@@ -1,3 +1,15 @@
+// The task is to write a function that accepts two parameters: an array and a callback function (in Ruby: a block).
+
+// The function should return true if the callback function / block returns true for any item in the array, otherwise return false.
+
+// The function should return false if the array is empty.
+
+function any(arr, fun){
+  return arr.some(fun)
+}
+
+
+
 // Coding in function cutIt, function accept 1 parameter:arr. arr is a string array.
 
 // The first mission: Traversing arr, find the shortest string length.
