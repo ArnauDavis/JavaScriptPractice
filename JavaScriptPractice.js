@@ -1,3 +1,29 @@
+// Some people just have a first name; some people have first and last names and some people have first, middle and last names.
+
+// You task is to initialize the middle names (if there is any).
+// Examples
+
+// 'Jack Ryan'                   => 'Jack Ryan'
+// 'Lois Mary Lane'              => 'Lois M. Lane'
+// 'Dimitri'                     => 'Dimitri'
+// 'Alice Betty Catherine Davis' => 'Alice B. C. Davis'
+
+function initializeNames(name){
+  let p1 = name.split(' ')
+   if(p1.length<3){
+     return name
+   }else{
+     let p2 = [p1[0]]
+     for(let i=1;i<p1.length-1;i++){
+       p2.push(p1[i].slice(0,1).toUpperCase()+'.')
+     }
+     p2.push(p1[p1.length-1])
+     return p2.join(' ')
+   }
+}
+
+
+
 // There are two lists, possibly of different lengths. The first one consists of keys, the second one consists of values. 
 // Write a function createDict(keys, values) that returns a dictionary created from keys and values. If there are not enough values, the rest of keys should have a None (JS null)value.
 // If there not enough keys, just ignore the rest of values.
