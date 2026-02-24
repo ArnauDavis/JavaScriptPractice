@@ -1,3 +1,24 @@
+// Please write a function that sums a list, but ignores any duplicated items in the list.
+
+// For instance, for the list [3, 4, 3, 6] the function should return 10,
+// and for the list [1, 10, 3, 10, 10] the function should return 4.
+
+function sumNoDuplicates(numList) {
+  let ans = 0
+  const count = numList.reduce((accumulator, current) => {
+    accumulator[current] = (accumulator[current] || 0) + 1
+    return accumulator
+  }, {})
+  for (const key in count) {
+    if (count[key]==1) {
+      ans+=Number(key)
+    }
+  }
+  return ans
+}
+
+
+
 // My friend wants a new band name for her band. She like bands that use the formula: "The" + a noun with the first letter capitalized, for example:
 
 // "dolphin" -> "The Dolphin"
