@@ -1,3 +1,32 @@
+// Count the number of exclamation marks and question marks, return the product.
+// Examples
+
+// ""          --->   0
+// "!"         --->   0
+// "!ab? ?"    --->   2
+// "!!"        --->   0
+// "!??"       --->   2
+// "!???"      --->   3
+// "!!!??"     --->   6
+// "!!!???"    --->   9
+// "!???!!"    --->   9
+// "!????!!!?" --->  20
+
+function product (string) {
+  let p1 = 0
+  let p2 = 0
+  string.split('').forEach((x)=>{
+    if(x=='!'){
+      p1+=1
+    }else if(x=='?'){
+      p2+=1
+    }
+  })
+  return p1*p2
+}
+
+
+
 // Please write a function that sums a list, but ignores any duplicated items in the list.
 
 // For instance, for the list [3, 4, 3, 6] the function should return 10,
