@@ -1,3 +1,44 @@
+// Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+// Examples
+
+//     booleans = [True, True, False], operator = "AND"
+
+//     True AND True -> True
+//     True AND False -> False
+//     return False
+
+//     booleans = [True, True, False], operator = "OR"
+
+//     True OR True -> True
+//     True OR False -> True
+//     return True
+
+//     booleans = [True, True, False], operator = "XOR"
+
+//     True XOR True -> False
+//     False XOR False -> False
+//     return False
+
+// Input
+
+//     an array of Boolean values (1 <= array_length <= 50)
+//     a string specifying a logical operator: "AND", "OR", "XOR"
+
+// Output
+
+// A Boolean value (True or False).
+
+function logicalCalc(array, op){
+  const operations = {
+    "AND": (a, b) => a && b,
+    "OR":  (a, b) => a || b,
+    "XOR": (a, b) => a !== b
+  }
+  return array.reduce(operations[op])
+}
+
+
+
 // Given a string of digits confirm whether the sum of all the individual even digits are greater than the sum of all the indiviudal odd digits. Always a string of numbers will be given.
 
 //     If the sum of even numbers is greater than the odd numbers return: "Even is greater than Odd"
