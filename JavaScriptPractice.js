@@ -1,3 +1,31 @@
+// you have decided to write a function that will return the first n elements of the sequence with the given common difference d and first element a. Note that the difference may be zero!
+
+// The result should be a string of numbers, separated by comma and space.
+// Example
+
+// # first element: 1, difference: 2, how many: 5
+// arithmetic_sequence_elements(1, 2, 5) == "1, 3, 5, 7, 9"
+
+function arithmeticSequenceElements(a, d, n) {
+	let ans = [a]
+  for(let i=0;i<n-1;i++){
+    ans.push(ans[i]+d)
+  }
+  return ans.join(', ')
+}
+
+//or
+
+function arithmeticSequenceElements(a, d, n) {
+	let ans = []
+  for(let i=0;i<n;i++){
+    ans.push(a+(d*i))
+  }
+  return ans.join(', ')
+}
+
+
+
 // Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
 // Examples
 
