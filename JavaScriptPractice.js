@@ -1,3 +1,21 @@
+// Write function potatoes with
+
+//     int parameter p0 - initial percent of water-
+//     int parameter w0 - initial weight -
+//     int parameter p1 - final percent of water -
+
+// potatoesshould return the final weight coming out of the oven w1 truncated as an int.
+// Example:
+
+// potatoes(99, 100, 98) --> 50
+
+function potatoes(p0, w0, p1) {
+    let ans = (w0 * (100 - p0)) / (100 - p1)
+    return Math.floor(ans)
+}
+
+
+
 // Implement a function which accepts 2 arguments: string and separator.
 
 // The expected algorithm: split the string into words by spaces, split each word into separate characters and join them back with the specified separator, join all the resulting "words" back into a sentence with spaces.
