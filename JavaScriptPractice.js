@@ -1,3 +1,26 @@
+// Create a function that checks if the first argument n is divisible by all other arguments (return true if no other arguments)
+
+// Example:
+
+// (6,1,3)--> true because 6 is divisible by 1 and 3
+// (12,2)--> true because 12 is divisible by 2
+// (100,5,4,10,25,20)--> true
+// (12,7)--> false because 12 is not divisible by 7
+
+function isDivisible(n, ...arr){
+  if(arr.length==0){
+    return true
+  }
+  for(let i=0;i<arr.length;i++){
+    if(n%arr[i]!=0){
+      return false
+    }
+  }
+  return true
+}
+
+
+
 // Test your ability to extend the functionality of built-in classes. In this case, we want you to extend the built-in Array class with the following methods: square(), cube(), average(), sum(), even() and odd().
 
 // Explanation:
