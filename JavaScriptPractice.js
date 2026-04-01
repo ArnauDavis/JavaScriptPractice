@@ -1,3 +1,20 @@
+// Create a function that takes in the sum and age difference of two people, calculates their individual ages, and returns a pair of values (oldest age first) if those exist or null/None or {-1, -1} in C if:
+
+//     sum < 0
+//     difference < 0
+//     Either of the calculated ages come out to be negative
+
+function getAges(sum,difference){
+ if(difference<0 || sum<0 || difference>sum){
+   return null
+ }
+  let p1 = sum/2
+  let ans = [p1+difference/2,p1-difference/2]
+  return ans
+}
+
+
+
 // A Nice array is defined to be an array where for every value n in the array, there is also an element n - 1 or n + 1 in the array.
 
 // examples:
