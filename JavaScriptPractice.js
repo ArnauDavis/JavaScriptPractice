@@ -1,3 +1,22 @@
+// Write function heron which calculates the area of a triangle with sides a, b, and c.
+
+// Heron's formula:
+// s∗(s−a)∗(s−b)∗(s−c)\sqrt{s * (s - a) * (s - b) * (s - c)}s∗(s−a)∗(s−b)∗(s−c)
+// ​
+
+// where: s=a+b+c2 s = \dfrac{a + b + c} 2 s=2a+b+c​
+// Notes
+
+//     All inputs are valid triangles with integer sides.
+//     You do not need to round anything. Answers will be tested for correctness within a margin of 0.01.
+
+function heron(a, b, c) {
+  let p1 = (a+b+c)/2
+  return Math.sqrt(p1*(p1-a)*(p1-b)*(p1-c))
+}
+
+
+
 // Create a function that takes in the sum and age difference of two people, calculates their individual ages, and returns a pair of values (oldest age first) if those exist or null/None or {-1, -1} in C if:
 
 //     sum < 0
