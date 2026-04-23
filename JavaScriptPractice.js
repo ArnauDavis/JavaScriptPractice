@@ -1,3 +1,21 @@
+// Positive integers that are divisible exactly by the sum of their digits are called Harshad numbers. The first few Harshad numbers are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, ...
+
+// We are interested in Harshad numbers where the product of its digit sum s and s with the digits reversed, gives the original number n. For example consider number 1729:
+
+//     its digit sum, s = 1 + 7 + 2 + 9 = 19
+//     reversing s = 91
+//     and 19 * 91 = 1729 --> the number that we started with.
+
+// Complete the function which tests if a positive integer n is Harshad number, and returns True if the product of its digit sum and its digit sum reversed equals n; otherwise return False.
+
+function numberJoy(n) {
+    let p1 = n.toString().split('').map((x)=>Number(x)).reduce((acc,cur)=>acc+cur,0)
+    let p2 = Number(p1.toString().split('').reverse().join(''))
+    return p1*p2==n
+}
+
+
+
 // You will be given an array of objects representing data about developers who have signed up to attend the next coding meetup that you are organising.
 
 // Your task is to return an object which includes the count of food options selected by the developers on the meetup sign-up form..
