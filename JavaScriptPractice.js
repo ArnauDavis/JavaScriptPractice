@@ -1,3 +1,16 @@
+// Given an integer width and a string ratio written as WIDTH:HEIGHT, output the screen dimensions as a string written as WIDTHxHEIGHT.
+
+// Note: The calculated height should be represented as an integer. If the height is fractional, truncate it.
+
+function findScreenHeight(width, ratio) {
+  let p1=ratio.split(':')
+  let p2=p1[0]
+  let p3=p1[1]
+  return `${width}x${width/p2*p3}`
+}
+
+
+
 // Implement a function that takes two inputs, x and y, and returns the value of x raised to the power of y.
 
 // Simple, right? But you are NOT allowed to use Math.pow();
