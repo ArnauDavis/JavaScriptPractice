@@ -1,3 +1,11 @@
+// Implement the function which should return true if given object is a vowel (meaning a, e, i, o, u, uppercase or lowercase), and false otherwise.
+
+String.prototype.vowel = function() {
+  return ['a', 'e', 'i', 'o', 'u'].indexOf(this.toLowerCase()) !== -1
+}
+
+
+
 // Given an integer width and a string ratio written as WIDTH:HEIGHT, output the screen dimensions as a string written as WIDTHxHEIGHT.
 
 // Note: The calculated height should be represented as an integer. If the height is fractional, truncate it.
