@@ -1,3 +1,15 @@
+// Not all integers can be represented by JavaScript/TypeScript. It has space to to represent 53bit signed integers. In this Kata, we've to determine if it is safe to use the integer or not. Make use of the latest ES6 features to find this.
+
+// SafeInteger(9007199254740990) //true
+// SafeInteger(-90) //true
+// SafeInteger(9007199254740992) //false
+
+function SafeInteger(n) {
+  return n<9007199254740992
+}
+
+
+
 // Write a function that takes an array of unique integers and returns the minimum number of integers needed to make the values of the array consecutive from the lowest number to the highest number.
 // Example
 
