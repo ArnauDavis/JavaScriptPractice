@@ -1,3 +1,21 @@
+// Complete the function that takes a string of English-language text and returns the number of consonants in the string.
+
+// Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
+
+function consonantCount(str) {
+  let ans = 0
+  let p1 = ["a", "e", "i", "o", "u"]
+  let p2 = str.split('').filter(x => /^[a-zA-Z]+$/.test(x)).join('').toLowerCase().split('')
+  p2.forEach((x)=>{
+    if(!p1.includes(x)){
+      ans+=1
+    }
+  })
+  return ans
+}
+
+
+
 // Given a list of integers values, your job is to return the sum of the values; however, if the same integer value appears multiple times 
 // in the list, you can only count it once in your sum.
 
