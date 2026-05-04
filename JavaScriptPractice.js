@@ -1,3 +1,23 @@
+// Given a string, return true if the first instance of "x" in the string is immediately followed by the string "xx".
+
+// "abraxxxas" → true
+// "xoxotrololololololoxxx" → false
+// "softX kitty, warm kitty, xxxxx" → true
+// "softx kitty, warm kitty, xxxxx" → false
+
+// Note :
+
+//     capital X's do not count as an occurrence of "x".
+//     if there are no "x"'s then return false
+
+function tripleX(str){
+  let p1 = str.indexOf('x')
+  let p2 = str[p1+1]
+  return str[p1+1] == 'x' && str[p1+2] == 'x'
+}
+
+
+
 // Complete the function that takes a string of English-language text and returns the number of consonants in the string.
 
 // Consonants are all letters used to write English excluding the vowels a, e, i, o, u.
