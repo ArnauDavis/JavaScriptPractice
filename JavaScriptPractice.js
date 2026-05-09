@@ -1,3 +1,32 @@
+// Each exclamation mark's weight is 2; each question mark's weight is 3. Putting two strings left and right on the balance - are they balanced?
+
+// If the left side is more heavy, return "Left"; if the right side is more heavy, return "Right"; if they are balanced, return "Balance".
+// Examples
+
+// "!!", "??"     -->  "Right"
+// "!??", "?!!"   -->  "Left"
+// "!?!!", "?!?"  -->  "Left"
+// "!!???!????", "??!!?!!!!!!!"  -->  "Balance"
+
+function balance(left, right) {
+  let p1 = {
+    "!":2,
+    "?":3
+  }
+  let p2 = left.split('').map((x)=>Number(x.replace(x,p1[x]))).reduce((acc,cur)=>acc+cur,0)
+  let p3 = right.split('').map((x)=>Number(x.replace(x,p1[x]))).reduce((acc,cur)=>acc+cur,0)
+  
+  if(p3>p2){
+    return "Right"
+  }else if(p3<p2){
+    return "Left"
+  }else{
+    return "Balance"
+  }
+}
+
+
+
 // You have to extract a portion of the file name as follows:
 
 //     Assume it will start with date represented as long number
