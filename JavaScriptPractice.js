@@ -1,3 +1,15 @@
+// The bloody photocopier is broken... Just as you were sneaking around the office to print off your favourite binary code!
+
+// Instead of copying the original, it reverses it: '1' becomes '0' and vice versa.
+
+// Given a string of binary, return the version the photocopier gives you as a string.
+
+function broken(x){
+  return x.split('').map((x)=>x=='1'? '0':'1').join('')
+}
+
+
+
 // Each exclamation mark's weight is 2; each question mark's weight is 3. Putting two strings left and right on the balance - are they balanced?
 
 // If the left side is more heavy, return "Left"; if the right side is more heavy, return "Right"; if they are balanced, return "Balance".
