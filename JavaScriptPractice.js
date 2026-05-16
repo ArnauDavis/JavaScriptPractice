@@ -1,3 +1,15 @@
+// The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
+// Example
+
+// unscrambleEggs("Beggegeggineggneggeregg")  =>  "Beginner"
+// //             "B---eg---in---n---er---"
+
+function unscrambleEggs(word) {
+  return word.split('egg').join('')
+}
+
+
+
 // Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
 
 // If the array is invalid (empty, or contains negative integers or integers with more than 1 digit), return nil (or your language's equivalent).
