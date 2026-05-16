@@ -1,3 +1,21 @@
+// Create a function that accepts an array of names, and returns an array of each name with its first letter capitalized and the remainder in lowercase.
+// Examples
+
+// ["jo", "nelson", "jurie"] -->  ["Jo", "Nelson", "Jurie"]
+// ["KARLY", "DANIEL", "KELSEY"] --> ["Karly", "Daniel", "Kelsey"]
+
+function capMe(names) {
+  if(!names||names.length==0){
+    return null
+  }
+  let ans = names.map((x)=>{
+    return x[0].toUpperCase()+x.slice(1).toLowerCase()
+  })
+  return ans
+}
+
+
+
 // The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
 // Example
 
