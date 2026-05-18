@@ -1,3 +1,15 @@
+// Complete the code which should return true if the given object is a single ASCII letter (lower or upper case), false otherwise.
+
+String.prototype.isLetter = function() {
+  let p1 = this.valueOf()
+  if (typeof p1 !== 'string' || p1.length !== 1) {
+    return false
+  }
+  return p1.toLowerCase() !== p1.toUpperCase()
+}
+
+
+
 // Create a function that accepts an array of names, and returns an array of each name with its first letter capitalized and the remainder in lowercase.
 // Examples
 
