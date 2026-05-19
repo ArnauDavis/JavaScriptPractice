@@ -1,3 +1,22 @@
+// Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL), multiplied by the integer at the last index.
+
+// Indices in sequence start from 0.
+
+// If the sequence is empty, you should return 0.
+
+function evenLast(numbers) {
+  let p1 = numbers[0]
+  for(let i=1;i<numbers.length;i++){
+    if(i%2==0){
+      p1+=numbers[i]
+    }
+  }
+  let p2 = p1*numbers[numbers.length-1]
+  return p1? p2 : 0
+}
+
+
+
 // Complete the code which should return true if the given object is a single ASCII letter (lower or upper case), false otherwise.
 
 String.prototype.isLetter = function() {
