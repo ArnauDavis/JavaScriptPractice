@@ -1,3 +1,26 @@
+// Write a function that returns a sequence (index begins with 1) of all the even characters from a string. If the string is 
+// smaller than two characters or longer than 100 characters, the function should return "invalid string".
+
+// For example:
+
+// "abcdefghijklm" --> ["b", "d", "f", "h", "j", "l"]
+// "a"             --> "invalid string"
+
+function evenChars(string) {
+  if(string.length>100||string.length<2){
+    return "invalid string"
+  }
+  let ans = []
+  for(let i=1;i<string.length;i++){
+    if(i%2!=0){
+      ans.push(string[i])
+    }
+  }
+  return ans
+}
+
+
+
 // Given a sequence of integers, return the sum of all the integers that have an even index (odd index in COBOL), multiplied by the integer at the last index.
 
 // Indices in sequence start from 0.
