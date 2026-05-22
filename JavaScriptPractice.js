@@ -7,6 +7,15 @@
 
 // If the string to search for is "me", and the array to search is ["home", "milk", "Mercury", "fish"], the method should return ["home", "Mercury"].
 
+function wordSearch(query, seq){
+  let ans = []
+  seq.forEach((x)=>{
+    if(x.toLowerCase().includes(query.toLowerCase())){
+      ans.push(x)
+    }
+  })
+  return ans.length>0? ans: ["Empty"]
+}
 
 
 
