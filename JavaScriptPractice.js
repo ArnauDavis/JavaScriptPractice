@@ -1,3 +1,15 @@
+// AddExtra method adds a new item to the list and returns the list. The new item can be any object, and it does not matter. (lets say you add an integer value, like 13)
+
+// In our test case we check to assure that the returned list has one more item than the input list. However the method needs some modification to pass this test.
+
+// P.S. You have to create a new list and add a new item to that. 
+
+function addExtra( listOfNumbers ){
+    return [...listOfNumbers,1]
+}
+
+
+
 // Gordon Ramsay shouts. He shouts and swears. There may be something wrong with him.
 
 // Anyway, you will be given a string of four words. Your job is to turn them in to Gordon language.
