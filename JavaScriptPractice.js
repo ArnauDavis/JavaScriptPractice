@@ -1,3 +1,21 @@
+// Gordon Ramsay shouts. He shouts and swears. There may be something wrong with him.
+
+// Anyway, you will be given a string of four words. Your job is to turn them in to Gordon language.
+
+// Rules:
+
+// Obviously the words should be Caps, Every word should end with '!!!!', Any letter 'a' or 'A' should become '@', Any other vowel should become '*'.
+
+function gordon(a){
+  let p1 = ['E','I','O','U']
+  let p2 = a.toUpperCase().replaceAll('A',"@").split(' ').map((x)=>x+"!!!!").join(' ')
+  let p3 = new RegExp(p1.join("|"), "g")
+  let ans = p2.replaceAll(p3,'*')
+  return ans
+}
+
+
+
 // Write a method that will search an array of strings for all strings that contain another string, ignoring capitalization. Then return an array of the found strings.
 
 // The method takes two parameters, the query string and the array of strings to search, and returns an array.
