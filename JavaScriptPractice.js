@@ -1,3 +1,30 @@
+// Using n as a parameter in the function pattern, where n > 0, complete the code to get the pattern:
+
+// 1
+// 1*2
+// 1**3
+// 1***4
+// ... and so on...
+
+// Note: There is no newline in the end (after the pattern ends).
+// Examples
+
+// pattern(3) should return "1\n1*2\n1**3", e.g. the following:
+
+// 1
+// 1*2
+// 1**3
+
+function pattern(n){
+  let ans = ['1']
+  for(let i=1;i<n;i++){
+    ans.push(`\n1${"*".repeat(i)}${i+1}`)
+  }
+  return ans.join('')
+}
+
+
+
 // AddExtra method adds a new item to the list and returns the list. The new item can be any object, and it does not matter. (lets say you add an integer value, like 13)
 
 // In our test case we check to assure that the returned list has one more item than the input list. However the method needs some modification to pass this test.
