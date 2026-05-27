@@ -1,3 +1,25 @@
+// Is every value in the array an array?
+
+// This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
+
+// Examples:
+
+// [[1],[2]] => true
+// ['1','2'] => false
+// [{1:1},{2:2}] => false
+
+const arrCheck = value => {
+  let p1 = 0
+  value.forEach((x)=>{
+    if(!Array.isArray(x)){
+      p1+=1
+    }
+  })
+  return p1 == 0? true: false
+}
+
+
+
 // Using n as a parameter in the function pattern, where n > 0, complete the code to get the pattern:
 
 // 1
