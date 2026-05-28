@@ -1,3 +1,30 @@
+// Count Vowels in a String
+
+// Write a function that takes a string and returns the number of vowels in it.
+
+// Vowels are:
+
+// a
+// e
+// i
+// o
+// u
+
+// Treat uppercase and lowercase letters the same.
+
+function vowelCount(letters){
+	let p1 = ['a','e','i','o','u']
+	let ans = 0
+	letters.toLowerCase().split('').forEach((x)=>{
+		if(p1.includes(x)){
+			ans+=1
+		}
+	}
+	return ans
+}
+
+
+
 // Is every value in the array an array?
 
 // This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
