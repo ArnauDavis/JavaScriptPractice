@@ -1,3 +1,25 @@
+// Create a function called one that accepts two params:
+
+//     a sequence
+//     a function
+
+// and returns true only if the function in the params returns true for exactly one (1) item in the sequence.
+// Example
+
+// one([1, 3, 5, 6, 99, 1, 3], bigger_than_ten) -> true
+// one([1, 3, 5, 6, 99, 88, 3], bigger_than_ten) -> false
+// one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false
+
+function one(arr, fn) {
+  let p1 = 0
+  arr.forEach(x => {
+    if (fn(x)) p1+=1
+  })
+  return p1 === 1
+}
+
+
+
 // Count Vowels in a String
 
 // Write a function that takes a string and returns the number of vowels in it.
