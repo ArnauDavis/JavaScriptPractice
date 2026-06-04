@@ -1,3 +1,22 @@
+// Find the last element of the given argument(s). If a single argument is passed and is a list/array or a string, return its last element. 
+// It is guaranteed that there will be at least one argument and that single-argument arrays/lists/strings will not be empty.
+// Examples
+
+// last(5)               ==> 5
+// last([1, 2, 3, 4])    ==>  4
+// last("xyz")           ==> "z"
+// last(1, 2, 3, 4)      ==>  4
+// last([1, 2], [3, 4])  ==>  [3, 4]
+// last([[1, 2], [3, 4]])  ==>  [3, 4]
+
+function last() {
+  let p1 = arguments.length === 1 ? arguments[0] : arguments
+  if (p1.length === undefined) return p1
+  return p1[p1.length - 1]
+}
+
+
+
 // Write a function that takes two string parameters search_text and full_text and returns the number of times the search_text is found within the full_text.
 
 //     Overlap is not permitted: "aaa" contains 1 instance of "aa", not 2.
