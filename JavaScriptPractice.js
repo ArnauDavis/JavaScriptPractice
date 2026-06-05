@@ -1,3 +1,18 @@
+// Write a function that takes a string and returns the first character that appears only once.
+
+function firstUniqueChar(letters){
+  let ans = []
+  let p1 = letters.split('')
+  p1.forEach((x)=>{
+    if(p1.indexOf(x)==p1.lastIndexOf(x)){
+      ans.push(x)
+    }
+  })
+  return ans.length > 0 ? ans[0] : null
+}
+
+
+
 // Find the last element of the given argument(s). If a single argument is passed and is a list/array or a string, return its last element. 
 // It is guaranteed that there will be at least one argument and that single-argument arrays/lists/strings will not be empty.
 // Examples
