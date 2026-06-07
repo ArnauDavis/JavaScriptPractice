@@ -1,3 +1,22 @@
+// You are to write a function that takes a string as its first parameter. This string will be a string of words.
+// You are expected to then use the second parameter, which will be an integer, to find the corresponding word in the given string. The first word would be represented by 0.
+// Once you have the located string you are finally going to multiply by it the third provided parameter, which will also be an integer. You are additionally required to add a hyphen in between each word.
+
+// Example
+
+// modifyMultiply ("This is a string", 3, 5) returns "string-string-string-string-string"
+
+function modifyMultiply (str,loc,num) {
+  let ans = []
+  let p1 = str.split(' ')[loc]
+  for(let i=0;i<num;i++){
+    ans.push(p1)
+  }
+  return ans.join('-')
+} 
+
+
+
 // In this Kata your task will be to return the count of pairs that have consecutive numbers. The first pair consists of the first and second element of the input, the second pair is the next two elements (3rd and 4th), etc. If the input ends with an element without a pair, it should be ignored.
 
 // For example, [1,2,5,8,-4,-3,7,6,5] has 3 such pairs. Candidate pairs are selected as follows: [(1,2), (5,8), (-4,-3), (7,6), 5].
