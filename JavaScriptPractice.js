@@ -1,3 +1,36 @@
+// In this kata you are given a string for example:
+
+// "example(unwanted thing)example"
+
+// Your task is to remove everything inside the parentheses as well as the parentheses themselves.
+
+// The example above would return:
+
+// "exampleexample"
+
+// Notes
+
+//     Other than parentheses only letters and spaces can occur in the string. Don't worry about other brackets like "[]" and "{}" as these will never appear.
+//     There can be multiple parentheses.
+//     The parentheses can be nested.
+
+function removeParentheses(s){
+  let p1 = 0
+  let ans = ""
+  s.split('').forEach((x)=>{
+    if(x==='('){
+      p1+=1
+    }else if(x===')'){
+      p1-=1
+    }else if(p1===0){
+      ans+=x
+    }
+  })
+  return ans
+}
+
+
+
 // You are to write a function that takes a string as its first parameter. This string will be a string of words.
 // You are expected to then use the second parameter, which will be an integer, to find the corresponding word in the given string. The first word would be represented by 0.
 // Once you have the located string you are finally going to multiply by it the third provided parameter, which will also be an integer. You are additionally required to add a hyphen in between each word.
