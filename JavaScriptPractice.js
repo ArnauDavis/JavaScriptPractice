@@ -1,3 +1,28 @@
+// Given a dictionary with all the names of the suspects and everyone that they have seen on that day which may look like this:
+
+// {'James': ['Jacob', 'Bill', 'Lucas'],
+//  'Johnny': ['David', 'Kyle', 'Lucas'],
+//  'Peter': ['Lucy', 'Kyle']}
+
+// and also a list of the names of the dead people:
+
+// ['Lucas', 'Bill']
+
+// return the name of the one killer, in our case 'James' because he is the only person that saw both 'Lucas' and 'Bill'
+
+function killer(suspectInfo, dead) {
+  let ans
+  for (let key in suspectInfo){
+    let p1 = suspectInfo[key]
+    if(dead.every(person => suspectInfo[key].includes(person))){
+      ans=key
+    }
+  }
+  return ans
+}
+
+
+
 // Write a function that returns a sequence (index begins with 1) of all the even characters from a string. If the string is 
 // smaller than two characters or longer than 100 characters, the function should return "invalid string".
 
