@@ -1,3 +1,36 @@
+// Write a function that returns a sequence (index begins with 1) of all the even characters from a string. If the string is 
+// smaller than two characters or longer than 100 characters, the function should return "invalid string".
+
+// For example:
+
+// "abcdefghijklm" --> ["b", "d", "f", "h", "j", "l"]
+// "a"             --> "invalid string"
+
+// function evenChars(string) {
+//   if(string.length>100||string.length<2){
+//     return "invalid string"
+//   }
+//   let ans = []
+//   for(let i=1;i<string.length;i++){
+//     if(i%2!=0){
+//       ans.push(string[i])
+//     }
+//   }
+//   return ans
+// }
+
+function neutralise(s1, s2){
+  let ans = []
+  let p1 = s1.split('')
+  let p2 = s2.split('')
+  p1.forEach((x,i)=>{
+    return p1[i]==p2[i]? ans.push(x) : ans.push('0')
+  })
+  return ans.join('')
+}
+
+
+
 // Coding in function fiveLine, function accept 1 parameter:s. s is a string.
 
 // Please return a string of 5 lines(newline symbol is \n). The first line has one s; Second line have two s; and so on..Fifth line have five s;
