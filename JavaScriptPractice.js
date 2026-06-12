@@ -1,3 +1,28 @@
+// Create a method each_cons that accepts a list and a number n, and returns cascading subsets of the list of size n, like so:
+
+// each_cons([1,2,3,4], 2)
+//   #=> [[1,2], [2,3], [3,4]]
+
+// each_cons([1,2,3,4], 3)
+//   #=> [[1,2,3],[2,3,4]]
+  
+
+// As you can see, the lists are cascading; ie, they overlap, but never out of order.
+
+function eachCons(array, n) {
+	let ans = []
+  for(let i=0;i<=array.length-n;i++){
+    let p1 = []
+    for(let j=i;j<n+i;j++){
+      p1.push(array[j])
+    }
+    ans.push(p1)
+  }
+  return ans
+}
+
+
+
 // Given a dictionary with all the names of the suspects and everyone that they have seen on that day which may look like this:
 
 // {'James': ['Jacob', 'Bill', 'Lucas'],
