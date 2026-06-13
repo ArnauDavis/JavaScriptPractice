@@ -1,3 +1,30 @@
+// Coding in function roundIt. function accept 1 parameter n. It's a number with a decimal point. Please use different methods based on the location of the decimal point, turn the number into an integer.
+
+// If the decimal point is on the left side of the number (that is, the count of digits on the left of the decimal point is less than that on the right), Using ceil() method.
+
+// roundIt(3.45) should return 4
+
+// If the decimal point is on the right side of the number (that is, the count of digits on the left of the decimal point is more than that on the right), Using floor() method.
+
+// roundIt(34.5) should return 34
+
+// If the decimal point is on the middle of the number (that is, the count of digits on the left of the decimal point is equals that on the right), Using round() method.
+
+// roundIt(34.56) should return 35
+
+function roundIt(n){
+  let p1 = n.toString().split('.')
+  if(p1[0].length>p1[1].length){
+    return Math.floor(n)
+  }else if(p1[0].length<p1[1].length){
+    return Math.ceil(n)
+  }else{
+    return Math.round(n)
+  }
+}
+
+
+
 // Create a method each_cons that accepts a list and a number n, and returns cascading subsets of the list of size n, like so:
 
 // each_cons([1,2,3,4], 2)
@@ -12,7 +39,6 @@
 function eachCons(array, n) {
 	let ans = []
   for(let i=0;i<=array.length-n;i++){
-    let p1 = []
     for(let j=i;j<n+i;j++){
       p1.push(array[j])
     }
