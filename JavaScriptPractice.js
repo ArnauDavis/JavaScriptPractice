@@ -1,3 +1,23 @@
+// Complete the function that takes an array of words.
+
+// You must concatenate the nth letter from each word to construct a new word which should be returned as a string, where n is the position of the word in the list.
+
+// For example:
+
+// ["yoda", "best", "has"]  -->  "yes"
+//   ^        ^        ^
+//   n=0     n=1     n=2
+
+function nthChar(words){
+  let ans = ""
+ words.forEach((x,i)=>{
+   ans+=x[i]
+ })
+  return ans
+}
+
+
+
 // Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer.
 
 // Square all numbers k (0 <= k <= n) between 0 and n.
