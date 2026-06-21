@@ -1,3 +1,59 @@
+// Write a function that takes a sentence and returns an array containing the number of vowels in each word.
+
+// Examples
+// countVowelsPerWord("hello world")
+
+// returns
+
+// [2, 1]
+
+// because:
+
+// "hello" → 2 vowels
+// "world" → 1 vowel
+// countVowelsPerWord("JavaScript is fun")
+
+// returns
+
+// [3, 1, 1]
+// countVowelsPerWord("AEIOU")
+
+// returns
+
+// [5]
+// Rules
+// Vowels are: a, e, i, o, u
+// Case insensitive
+// Words are separated by a single space
+// Input will always be a non-empty string
+
+// Example
+
+// Input:
+
+// "cats and dogs"
+
+// Output:
+
+// [1, 1, 1]
+
+function countVowelsPerWord(sentence) {
+  let c1 = ['a','e','i','o','u']
+  let ans = []
+  let p1 = sentence.toLowerCase().split(' ').forEach((x)=>{
+    let count = 0
+    x.split('').forEach((y)=>{
+      if(c1.includes(y)){
+        count+=1
+      }
+    })
+    ans.push(count)
+  })
+  return ans
+}
+
+
+
 // Given a point in a Euclidean plane (x and y), return the quadrant the point exists in: 1, 2, 3 or 4 (integer). x and y are non-zero integers, therefore the given point never lies on the axes.
 // Examples
 
