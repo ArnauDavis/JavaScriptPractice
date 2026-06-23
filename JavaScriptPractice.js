@@ -1,3 +1,27 @@
+// The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. 
+// Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, 
+// return the length of the longest vowel substring. Vowels are any of aeiou. 
+
+function solve(s){
+  let c1 = ['a','e','i','o','u']
+  let ans = []
+  let p1 = s.split('')
+  let p2=0
+  for(let i=0;i<p1.length;i++){
+    if(c1.includes(p1[i])){
+      p2+=1
+    }else{
+      if(p2!=0){
+        ans.push(p2)
+      }
+      p2=0
+    }
+  }
+  return ans.sort((a,b)=>b-a)[0]
+}
+
+
+
 // Write a function that takes a sentence and returns an array containing the number of vowels in each word.
 
 // Examples
