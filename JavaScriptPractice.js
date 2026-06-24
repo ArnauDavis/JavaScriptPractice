@@ -1,3 +1,20 @@
+// Your job is to write a function, which takes three integers a, b, and c as arguments, and returns True if exactly two of the three integers are positive numbers (greater than zero), and False - otherwise.
+// Examples:
+
+// twoArePositive(2, 4, -3) == true
+// twoArePositive(-4, 6, 8) == true
+// twoArePositive(4, -6, 9) == true
+// twoArePositive(-4, 6, 0) == false
+// twoArePositive(4, 6, 10) == false
+// twoArePositive(-14, -3, -4) == false
+
+function twoArePositive(a, b, c) {
+  let p1=[a,b,c].filter((x)=>x>0)
+  return p1.length==2
+}
+
+
+
 // The vowel substrings in the word codewarriors are o,e,a,io. The longest of these has a length of 2. 
 // Given a lowercase string that has alphabetic characters only (both vowels and consonants) and no spaces, 
 // return the length of the longest vowel substring. Vowels are any of aeiou. 
