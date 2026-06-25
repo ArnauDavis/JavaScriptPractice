@@ -1,3 +1,55 @@
+// Given an input of an array of objects containing usernames, status and time since last activity (in mins), create a function to work out who is online, offline and away.
+
+// If someone is online but their lastActivity was more than 10 minutes ago they are to be considered away.
+
+// The input data has the following structure:
+
+// [{
+//   username: 'David',
+//   status: 'online',
+//   lastActivity: 10
+// }, {
+//   username: 'Lucy', 
+//   status: 'offline',
+//   lastActivity: 22
+// }, {
+//   username: 'Bob', 
+//   status: 'online',
+//   lastActivity: 104
+// }]
+
+// The corresponding output should look as follows:
+
+// {
+//   online: ['David'],
+//   offline: ['Lucy'],
+//   away: ['Bob']
+// }
+
+// If for example, no users are online the output should look as follows:
+
+// {
+//   offline: ['Lucy'],
+//   away: ['Bob']
+// }
+
+// username will always be a string, status will always be either 'online' or 'offline' (UserStatus enum in C#) and lastActivity will always be number >= 0.
+
+// Finally, if you have no friends in your chat application, the input will be an empty array []. In this case you should return an empty object {} (empty Dictionary in C#).
+
+const whosOnline = (friends) => {
+  let offline = friends.filter((x)=>x.status=="offline").map((x=>x.username))
+  let online = friends.filter((x)=>(x.status=="online"&&x.lastActivity<11)).map((x=>x.username))
+  let away = friends.filter((x)=>(x.status=="online"&&x.lastActivity>10)).map((x=>x.username))
+  let result = {}
+  if (online.length) result.online = online
+  if (offline.length) result.offline = offline
+  if (away.length) result.away = away
+  return result
+}
+
+
+
 // Your job is to write a function, which takes three integers a, b, and c as arguments, and returns True if exactly two of the three integers are positive numbers (greater than zero), and False - otherwise.
 // Examples:
 
