@@ -1,3 +1,31 @@
+// Write a function called evenOrOddSum that takes an array of integers as an argument.
+// The function should calculate the sum of all the even numbers and the sum of all the odd numbers.
+// It should return a string in the following exact format: "Evens: X, Odds: Y" (where X is the sum of evens, and Y is the sum of odds).
+// Examples
+// evenOrOddSum([1, 2, 3, 4, 5, 6]); 
+// // Should return: "Evens: 12, Odds: 9" (2+4+6 = 12; 1+3+5 = 9)
+
+// evenOrOddSum([0, -2, 5]); 
+// // Should return: "Evens: -2, Odds: 5"
+
+// evenOrOddSum([]); 
+// // Should return: "Evens: 0, Odds: 0"
+
+function evenOrOddSum(arr) {
+  let evens=0
+  let odds=0
+  arr.forEach((x)=>{
+    if(x%2==0){
+      evens+=x
+    }else{
+      odds+=x
+    }
+  })
+  return `Evens: ${evens}, Odds: ${odds}`
+}
+
+
+
 // You'll be given a list of two strings, and each will contain exactly one colon (":") in the middle (but not at beginning or end). The length of the strings, before and after the colon, are random.
 
 // Your job is to return a list of two strings (in the same order as the original list), but with the characters after each colon swapped.
