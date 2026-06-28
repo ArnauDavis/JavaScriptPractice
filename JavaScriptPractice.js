@@ -1,3 +1,11 @@
+// Write reverseList function that simply reverses lists.
+
+function reverseList(arr) {
+  return arr.reverse()
+}
+
+
+
 // Your job is to implement a function which returns the last D digits of an integer N as a list.
 // Special cases:
 
