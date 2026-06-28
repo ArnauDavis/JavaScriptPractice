@@ -1,3 +1,40 @@
+// Your job is to implement a function which returns the last D digits of an integer N as a list.
+// Special cases:
+
+//     If D > (the number of digits of N), return all the digits.
+//     If D <= 0, return an empty list.
+
+// Examples:
+
+// N = 1
+// D = 1
+// result = [1]
+
+// N = 1234
+// D = 2
+// result = [3, 4]
+
+// N = 637547
+// D = 6
+// result = [6, 3, 7, 5, 4, 7]
+
+function lastDigit(n, d) {
+  if(d<=0){
+    return []
+  }
+    let p1 = n.toString().split('')
+  if(d>=p1.length){
+    return p1.map((x)=>Number(x))
+  }
+  let ans = []
+  for(let i=p1.length-1;i>p1.length-d-1;i--){
+    ans.push(Number(p1[i]))
+  }
+  return ans.reverse()
+}
+
+
+
 // Write a function called evenOrOddSum that takes an array of integers as an argument.
 // The function should calculate the sum of all the even numbers and the sum of all the odd numbers.
 // It should return a string in the following exact format: "Evens: X, Odds: Y" (where X is the sum of evens, and Y is the sum of odds).
