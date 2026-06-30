@@ -1,3 +1,39 @@
+// An element is leader if it is greater than The Sum all the elements to its right side.
+// Given an array/list [] of integers , Find all the LEADERS in the array.
+// Notes
+//     Array/list size is at least 3 .
+//     Array/list's numbers Will be mixture of positives , negatives and zeros
+//     Repetition of numbers in the array/list could occur.
+//     Returned Array/list should store the leading numbers in the same order in the original array/list .
+// 	Note : The last element 0 is equal to right sum of its elements (abstract zero).
+// Input >> Output Examples
+
+// arrayLeaders ({1, 2, 3, 4, 0}) ==> return {4}
+// arrayLeaders ({16, 17, 4, 3, 5, 2}) ==> return {17, 5, 2}
+// arrayLeaders ({5, 2, -1}) ==> return {5, 2}
+// arrayLeaders ({0, -1, -29, 3, 2}) ==> return {0, -1, 3, 2}
+
+function arrayLeaders(numbers){
+  let ans = []
+//   for(let i=0;i<numbers.length;i++){
+//     let p1 = numbers.slice(i+1,numbers.length).reduce((acc,cur)=>acc+cur,0)
+//     if(numbers[i]>p1){
+//       ans.push(numbers[i])
+//     }
+//   }
+//   return ans
+  let p1 = numbers.reduce((acc,cur)=>acc+cur,0)
+  numbers.forEach((x)=>{
+    p1-=x
+    if(x>p1){
+      ans.push(x)
+    }
+  })
+  return ans
+}
+
+
+
 // Write a function that doubles every second integer in a list, starting from the left.
 
 // Example:
