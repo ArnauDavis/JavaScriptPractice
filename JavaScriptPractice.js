@@ -1,3 +1,28 @@
+// You will be given an array of unique elements, and your task is to rearrange the values so that the first max value is followed by the first minimum, followed by second max value then second min value, etc.
+
+// For example:
+
+// solve([15,11,10,7,12]) = [15,7,12,10,11]
+
+// The first max is 15 and the first min is 7. The second max is 12 and the second min is 10 and so on. 
+
+function solve(arr){
+    let p1 = arr.slice().sort((a,b)=>a-b)
+    let p2 = p1.slice().reverse()
+    let ans = []
+    for(let i=0;i<arr.length;i++){
+        if(!ans.includes(p2[i])){
+          ans.push(p2[i])
+        }
+      if(!ans.includes(p1[i])){
+          ans.push(p1[i])
+        }
+      }
+  return ans
+}
+
+
+
 // Write a generic function chainer that takes a starting value, and an array of functions to execute on it
 
 // The input for each function is the output of the previous function (except the first function, which takes the starting value as its input). Return the final value after execution is complete.
