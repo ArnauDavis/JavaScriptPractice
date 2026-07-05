@@ -1,3 +1,26 @@
+// You are given an array. Complete the function that returns the number of ALL elements within an array, including any nested arrays.
+// Examples
+
+// []                   -->  0
+// [1, 2, 3]            -->  3
+// ["x", "y", ["z"]]    -->  4
+// [1, 2, [3, 4, [5]]]  -->  7
+
+// The input will always be an array.
+
+function deepCount(a){
+  let ans = 0
+  for(let i=0;i<a.length;i++){
+    ans+=1
+    if(Array.isArray(a[i])){
+      ans+=deepCount(a[i])
+    }
+  }
+  return ans
+}
+
+
+
 // Write a function that returns true if the number is a "Very Even" number.
 
 // If a number is a single digit, then it is simply "Very Even" if it itself is even.
