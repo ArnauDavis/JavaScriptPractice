@@ -1,3 +1,15 @@
+// Your task is to complete the Cat class which extends Animal and replace the speak method to return the cats name + meows. e.g. 'Mr Whiskers meows.'
+
+// The name attribute is accessible in the class with this.name.
+
+class Cat extends Animal {
+  speak(){
+    return `${this.name} meows.`
+  }
+}
+
+
+
 // You are given an array. Complete the function that returns the number of ALL elements within an array, including any nested arrays.
 // Examples
 
