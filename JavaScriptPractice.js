@@ -1,3 +1,23 @@
+// Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
+
+// Note: numbers and their corresponding string representations should not be treated as duplicates (i.e., "1" != 1).
+// Examples
+
+// [1, 2, 4, 4, 3, 3, 1, 5, 3, "5"]  ==>  [4, 3, 1]
+// [0, 1, 2, 3, 4, 5]                ==>  []
+
+function duplicates(arr) {
+  let p1 = []
+  arr.forEach((x, i) => {
+    if (arr.indexOf(x) !== i && p1.indexOf(x) === -1) {
+      p1.push(x)
+    }
+  })
+  return p1
+}
+
+
+
 // Take a number: 56789. Rotate left, you get 67895.
 
 // Keep the first digit in place and rotate left the other digits: 68957.
