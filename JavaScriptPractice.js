@@ -1,3 +1,15 @@
+// You are given a program sumSquares that takes an array as input and returns the sum of the squares of each item in an array. For example:
+
+// sumSquares([1,2,3,4,5]) === 55 // 1 ** 2 + 2 ** 2 + 3 ** 2 + 4 ** 2 + 5 ** 2
+// sumSquares([7,3,9,6,5]) === 200
+// sumSquares([11,13,15,18,2]) === 843
+
+function sumSquares(array) {
+  return array.reduce((acc,cur)=>acc+Math.pow(cur,2),0)
+}
+
+
+
 // Given an array, find the duplicates in that array, and return a new array of those duplicates. The elements of the returned array should appear in the order when they first appeared as duplicates.
 
 // Note: numbers and their corresponding string representations should not be treated as duplicates (i.e., "1" != 1).
