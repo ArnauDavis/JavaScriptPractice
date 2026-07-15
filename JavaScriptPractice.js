@@ -1,3 +1,27 @@
+// You will be given a string representing the garden such as:
+
+// garden = 'gravel gravel gravel gravel snail gravel gravel rock gravel slug spider gravel gravel gravel gravel spider gravel rock gravel gravel'
+
+// Rake out any items that are not a rock or gravel and replace them with gravel such that:
+
+// garden = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
+
+// Returns a string with all items except a rock or gravel replaced with gravel:
+
+// garden = 'gravel gravel rock gravel gravel gravel gravel gravel gravel gravel'
+
+function rakeGarden(garden) {
+  return garden.split(' ').map((x)=>{
+    if(x!='rock' && x!='gravel'){
+      return x='gravel'
+    }else{
+      return x
+    }
+  }).join(' ')
+}
+
+
+
 // You have to create a function which receives 3 number arguments: 2 operands a and b, and the result of an unknown operation performed on them.
 
 // Based on those 3 values you have to return a string, that describes which operation was used to get the given result.
