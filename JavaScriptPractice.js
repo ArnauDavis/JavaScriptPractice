@@ -1,3 +1,28 @@
+// Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
+// Example
+
+// scrollingText("codewars") should return:
+
+// [ "CODEWARS",
+//   "ODEWARSC",
+//   "DEWARSCO",
+//   "EWARSCOD",
+//   "WARSCODE",
+//   "ARSCODEW"
+//   "RSCODEWA",
+//   "SCODEWAR" ]
+
+function scrollingText(text){
+  let p1 = text.toUpperCase()
+  let ans = []
+  for (let i = 0; i < text.length; i++) {
+    ans.push(p1.slice(i) + p1.slice(0, i));
+  }
+  return ans
+}
+
+
+
 // The Stanton measure of an array is defined as follows:
 // Let n be the number of times the value 1 appears in the array.
 // The Stanton measure is then the number of times n appears in the array.
