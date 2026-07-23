@@ -1,19 +1,57 @@
-/*
-Complete the method that takes a sequence of objects with two keys each: country or state, and capital. Keys may be symbols or strings.
+// Complete the function which takes a non-zero integer as its argument.
 
-The method should return an array of sentences declaring the state or country and its capital.
+// If the integer is divisible by 3, return the string "Java".
 
-Examples
+// If the integer is divisible by 3 and divisible by 4, return the string "Coffee"
 
-state_capitals = [{state: 'Maine', capital: 'Augusta'}]
-capital(state_capitals)[0] // returns "The capital of Maine is Augusta"
+// If one of the condition above is true and the integer is even, add "Script" to the end of the string.
 
-country_capitals = [{'country' : 'Spain', 'capital' : 'Madrid'}]
-capital(country_capitals)[0]  // returns "The capital of Spain is Madrid"
+// If none of the condition is true, return the string "mocha_missing!"
+// Examples
 
-mixed_capitals: [{"state" : 'Maine', capital: 'Augusta'}, {country: 'Spain', "capital" : "Madrid"}]
-capital(mixed_capitals)[1] // returns "The capital of Spain is Madrid"
-*/
+// 1   -->  "mocha_missing!"
+// 3   -->  "Java"
+// 6   -->  "JavaScript"
+// 12  -->  "CoffeeScript"
+
+function caffeineBuzz(n) {
+  let ans = ""
+    if(n%3===0&&n%4===0){
+      ans+="Coffee"
+      if(n%2===0){
+        ans+='Script'
+        return ans
+      }
+      return ans
+    }
+  if(n%3===0){
+    ans+="Java"
+    if(n%2===0){
+      ans+='Script'
+      return ans
+    }
+    return ans
+  }
+  return "mocha_missing!"
+}
+
+
+
+// Complete the method that takes a sequence of objects with two keys each: country or state, and capital. Keys may be symbols or strings.
+
+// The method should return an array of sentences declaring the state or country and its capital.
+
+// Examples
+
+// state_capitals = [{state: 'Maine', capital: 'Augusta'}]
+// capital(state_capitals)[0] // returns "The capital of Maine is Augusta"
+
+// country_capitals = [{'country' : 'Spain', 'capital' : 'Madrid'}]
+// capital(country_capitals)[0]  // returns "The capital of Spain is Madrid"
+
+// mixed_capitals: [{"state" : 'Maine', capital: 'Augusta'}, {country: 'Spain', "capital" : "Madrid"}]
+// capital(mixed_capitals)[1] // returns "The capital of Spain is Madrid"
+
 
 function capital(capitals) {
   return capitals.map(({ state, country, capital }) => `The capital of ${state ? state : country} is ${capital}`);
