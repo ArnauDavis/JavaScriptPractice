@@ -1,3 +1,29 @@
+// Write a function that takes an integer num (num >= 0) and inserts dashes ('-') between each two odd digits in num.
+// Examples
+
+// 454793 ---> "4547-9-3"
+//      0 ---> "0"
+//      1 ---> "1"
+// 13579  ---> "1-3-5-7-9"
+//  86420 ---> "86420"
+
+function insertDash(num) {
+   let p1 = num.toString().split('')
+   let ans = []
+  for(let i=0;i<p1.length-1;i++){
+    let p2 = Number(p1[i])
+     let p3 = Number(p1[i+1])
+     ans.push(p1[i])
+     if(p2%2!==0&&p3%2!==0){
+       ans.push('-')
+     }
+  }
+  ans.push(p1[p1.length - 1])
+   return ans.join('')
+}
+
+
+
 // Complete the function which takes a non-zero integer as its argument.
 
 // If the integer is divisible by 3, return the string "Java".
