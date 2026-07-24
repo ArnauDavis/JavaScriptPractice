@@ -1,3 +1,25 @@
+// Given a varying number of integer arguments, return the digits that are not present in any of them.
+
+// Example:
+
+// [12, 34, 56, 78]  =>  "09"
+// [2015, 8, 26]     =>  "3479"
+
+// Note: the digits in the resulting string should be sorted.
+
+function unusedDigits(...params) {
+  let p1 = params.join('').split('').sort()
+  let ans = []
+  for(let i=0;i<=9;i++){
+    if(!p1.includes(i.toString())){
+      ans.push(i)
+    }
+  }
+  return ans.join('')
+}
+
+
+
 // Write a function that takes an integer num (num >= 0) and inserts dashes ('-') between each two odd digits in num.
 // Examples
 
