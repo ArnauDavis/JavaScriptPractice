@@ -1,3 +1,27 @@
+// Write a function that takes an input string of lowercase letters and returns true/false depending on whether the string is in alphabetical order or not.
+// Examples (input -> output)
+
+//     "kata" -> false ('a' comes after 'k')
+//     "ant" -> true (all characters are in alphabetical order)
+
+function alphabetic(s) {
+  let ans = 0
+  for(let i=0;i<s.length-1;i++){
+    if(s.charCodeAt(i)>s.charCodeAt(i+1)){
+      return false
+    }
+  }
+  return true
+}
+
+//or
+
+function alphabetic(s) {
+  return s === [...s].sort().join('')
+}
+
+
+
 // Given a varying number of integer arguments, return the digits that are not present in any of them.
 
 // Example:
