@@ -1,3 +1,35 @@
+// Write a function that combines two arrays by alternatingly taking elements from each array in turn.
+
+// Examples:
+
+// [a, b, c, d, e], [1, 2, 3, 4, 5] becomes  [a, 1, b, 2, c, 3, d, 4, e, 5]
+
+// [1, 2, 3], [a, b, c, d, e, f] becomes [1, a, 2, b, 3, c, d, e, f]
+
+// Points:
+
+//     The arrays may be of different lengths, with at least one character/digit.
+//     One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
+
+function mergeArrays(a, b) {
+  let p1 = 0
+  let p2 = 0
+  let ans =[]
+  while(p1<a.length||p2<b.length){
+    if(p1<a.length){
+    ans.push(a[p1])
+    p1++
+    }
+    if(p2<b.length){
+    ans.push(b[p2])
+    p2++
+    }
+  }
+  return ans
+}
+
+
+
 // Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n3 n^3 n3, the cube above will have volume of (n−1)3 (n-1)^3 (n−1)3 and so on until the top which will have a volume of 13 1^3 13.
 
 // You are given the total volume m of the building. Being given m can you find the number n of cubes you will have to build?
