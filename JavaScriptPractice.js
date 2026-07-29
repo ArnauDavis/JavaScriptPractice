@@ -1,3 +1,28 @@
+// Create a function that accepts a string argument and returns an array of strings with each letter from the input string being rotated to the end.
+// Examples:
+
+// "Hello" --> ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+
+// Note:
+
+//     The original string should be included in the output array.
+
+//     The order matters. Each element of the output array should be the rotated version of the previous element.
+
+//     The output array SHOULD be the same length as the input string.
+
+//     The function should return an empty array with an empty string ('') as input.
+
+function rotate(str){
+  let ans = []
+  for(let i=1; i<=str.length; i++){
+    ans.push(str.split('').reverse().join('').slice(0,str.length-i).split('').reverse().join('')+str.slice(0,i))
+  }
+  return ans
+}
+
+
+
 // Write a function that combines two arrays by alternatingly taking elements from each array in turn.
 
 // Examples:
