@@ -1,3 +1,13 @@
+// Point objects have x, y attributes. Circle objects have center which is a Point, and radius, which is a number.
+
+// Write a function calculating circumference of a Circle.
+
+function circleCircumference(circle) {
+  return circle.radius*2*Math.PI
+}
+
+
+
 // Given an array/list [] of n integers , Arrange them in a way similar to the to-and-fro movement of a Pendulum
 
 //     The Smallest element of the list of integers , must come in center position of array/list.
