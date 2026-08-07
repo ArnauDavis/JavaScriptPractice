@@ -1,3 +1,23 @@
+// Compare each pair of integers from two arrays, and return a new array of large numbers.
+
+// Note: Both arrays have the same dimensions.
+// Example:
+
+// let arr1 = [13, 64, 15, 17, 88];
+// let arr2 = [23, 14, 53, 17, 80];
+// getLargerNumbers(arr1, arr2); // Returns [23, 64, 53, 17, 88]
+
+function getLargerNumbers(a, b) {
+  let ans = []
+  for(let i=0;i<a.length;i++){
+    let p1 = a[i]>b[i]? a[i] : b[i]
+    ans.push(p1)
+  }
+  return ans
+}
+
+
+
 // Point objects have x, y attributes. Circle objects have center which is a Point, and radius, which is a number.
 
 // Write a function calculating circumference of a Circle.
