@@ -1,3 +1,32 @@
+// Write a function that:
+
+//     returns true  / True if every element in an array is an integer or a float with no decimals.
+//     returns true  / True if array is empty.
+//     returns false / False for every other input.
+
+function isIntArray(arr) {
+   if (!Array.isArray(arr)) {
+        return false;
+    }
+  if(arr.length===0){
+    return true
+  }
+  for(let i=0;i<arr.length;i++){
+    if(!Number.isInteger(arr[i])){
+      return false
+    }
+  }
+  return true
+}
+
+//or
+
+function isIntArray(arr) {
+    return Array.isArray(arr) && arr.every(Number.isInteger);
+}
+
+
+
 // Compare each pair of integers from two arrays, and return a new array of large numbers.
 
 // Note: Both arrays have the same dimensions.
