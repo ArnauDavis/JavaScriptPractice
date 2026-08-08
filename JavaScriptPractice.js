@@ -1,3 +1,19 @@
+//Write a function called countVowels that takes a string and returns the number of vowels (a, e, i, o, u, y) in the string.
+
+function countVowels(str) {
+    let vowels = ['a', "e", "i", "o", "u", "y"]
+    let p1 = str.toLowerCase().split('')
+    let count = 0
+    p1.forEach((x)=>{
+      if(vowels.includes(x)){
+        count++
+      }
+    })
+    return count
+}
+
+
+
 // Write a function that:
 
 //     returns true  / True if every element in an array is an integer or a float with no decimals.
