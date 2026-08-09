@@ -1,3 +1,31 @@
+// Write a function named findLongestWord(str) that takes a string of text as an argument and returns the length of the longest word in that string.
+
+//     Words are separated by single spaces.
+
+//     Punctuation attached to words (like commas or periods) should be included in the length
+
+// findLongestWord("The quick brown fox jumped over the lazy dog"); 
+// // Expected output: 6 (because "jumped" has 6 letters)
+
+// findLongestWordspan("May the force be with you"); 
+// // Expected output: 5 (because "force" has 5 letters)
+
+// findLongestWord("JavaScript is an awesome programming language"); 
+// // Expected output: 11 (because "programming" has 11 letters)
+
+function findLongestWord(str){
+  let p1 = str.split(' ')
+  let ans = p1[0]
+  for(let i=1;i<p1.length;i++){
+    if(p1[i].length>ans.length){
+      ans=p1[i]
+    }
+  }
+  return ans.length
+}
+
+
+
 //Write a function called countVowels that takes a string and returns the number of vowels (a, e, i, o, u, y) in the string.
 
 function countVowels(str) {
