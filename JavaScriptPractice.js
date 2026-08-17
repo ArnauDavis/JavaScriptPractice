@@ -1,3 +1,20 @@
+// You are given an array of strings representing words. Your task is to use reduce() to return a single number: the length of the longest word in the array.
+// const words = ['apple', 'banana', 'strawberry', 'kiwi', 'blueberry']
+// Expected Output
+// 10
+
+function getLongestWordLength(arr) {
+  let ans = 0
+  for(let i=0;i<arr.length;i++){
+    if(arr[i].length>ans){
+        ans = arr[i].length
+    }
+  }
+  return ans
+}
+
+
+
 // Write a function named findLongestWord(str) that takes a string of text as an argument and returns the length of the longest word in that string.
 
 //     Words are separated by single spaces.
