@@ -1,3 +1,17 @@
+// Your task is to create a method, Math.roundTo(number, precision) which rounds a given number to precision decimal places.
+
+// You may find the following Math methods useful:
+
+//     Math.round(x) (of course)
+//     Math.pow(x,y) (returns x to the power of y - e.g. Math.pow(3,4) == 81)
+
+Math.roundTo = function (number, precision) {
+  const p1 = Math.pow(10, precision)
+  return Math.round(number * p1) / p1
+}
+
+
+
 // You are given an array of strings representing words. Your task is to use reduce() to return a single number: the length of the longest word in the array.
 // const words = ['apple', 'banana', 'strawberry', 'kiwi', 'blueberry']
 // Expected Output
