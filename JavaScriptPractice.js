@@ -1,3 +1,11 @@
+// Write a function called reverseString that takes a single string as an argument and returns that string in reverse.
+
+function reverseString(str){
+	return str.split('').reverse().join('')
+}
+
+
+
 // Your task is to create a method, Math.roundTo(number, precision) which rounds a given number to precision decimal places.
 
 // You may find the following Math methods useful:
