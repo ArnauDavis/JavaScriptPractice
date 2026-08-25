@@ -22,6 +22,23 @@ function solution(n){
   }
 }
 
+//
+
+function solution(n){
+  let p1 = Number(n.toString().split('.')[1])
+  let c1 = p1.toString().length
+  let p2 = c1 > 2 ? p1/(Math.pow(10,c1-2)) : c1<2 ? p1 * 10 : p1 
+  if(!n.toString().split('').includes('.')){
+    return n
+  }else if(p2<25){
+    return Math.floor(n)
+    }else if(p2<75){
+    return Math.floor(n)+0.5
+  }else{
+    return Math.ceil(n)
+  }
+}
+
 
 
 // Write a function called reverseString that takes a single string as an argument and returns that string in reverse.
