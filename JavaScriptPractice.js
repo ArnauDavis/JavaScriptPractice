@@ -1,3 +1,21 @@
+// Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. You can assume 
+// that the input data is always a non empty string, no need to verify it.
+// Examples
+
+// "Hi!"     ---> "Hi!"
+// "Hi!!!"   ---> "Hi!"
+// "!Hi"     ---> "Hi!"
+// "!Hi!"    ---> "Hi!"
+// "Hi! Hi!" ---> "Hi Hi!"
+// "Hi"      ---> "Hi!"
+
+function remove (string) {
+  let p1 = string.split('!').join('')+'!'
+  return p1
+}
+
+
+
 // John knows that the rectangular room has a length of l meters, a width of w meters, a height of h meters. The standard width of the rolls he wants to buy is 52 centimeters. The length of a roll is 10 meters. He bears in mind however, 
 // that it’s best to have an extra length of wallpaper handy in case of mistakes or miscalculations so he wants to buy a length 15% greater than the one he needs.
 
