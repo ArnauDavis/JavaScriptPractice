@@ -1,3 +1,35 @@
+// Given the angle (in degrees) of the hour-hand, return the time in 12 hour HH:MM format. Round down to the nearest minute.
+// Examples
+
+//     12:00 = 0 degrees
+
+//     03:00 = 90 degrees
+
+//     06:00 = 180 degrees
+
+//     09:00 = 270 degrees
+
+//     12:00 = 360 degrees
+
+// Notes
+
+//     0 <= angle <= 360
+
+//     Do not make any AM or PM assumptions for the HH:MM result. They are indistinguishable for this Kata.
+//         3 o'clock is 03:00, not 15:00
+//         7 minutes past midnight is 12:07
+//         7 minutes past noon is also 12:07
+
+var whatTimeIsIt = function(angle) {
+  let p1 = Math.floor(angle*2)%720
+  let hour = Math.floor(p1 / 60)
+  let minute = p1 % 60
+  let shownHour = hour === 0 ? 12 : hour
+  return `${shownHour.toString().padStart(2, '0')}:${String(minute).padStart(2, '0')}`
+}
+
+
+
 // Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. You can assume 
 // that the input data is always a non empty string, no need to verify it.
 // Examples
