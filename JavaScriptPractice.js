@@ -1,3 +1,25 @@
+// Given 3 positive parameters a, b, limit, return all positive numbers that are a multiple of both a and b up to and including limit.
+// Examples
+
+// 1, 5, 15 --> [5, 10, 15]
+// 3, 5, 15 --> [15]
+// 3, 5, 40 --> [15, 30]
+// 2, 4, 40 --> [4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
+
+function multiples(a, b, limit) {
+  let x = a>b? a : b
+  let y = a<b? a : b
+  let ans = []
+  for (let i = y; i <= limit; i += y) {
+    if(i%a===0&&i%b===0){
+      ans.push(i)
+    }
+  }
+  return ans
+}
+
+
+
 // Given the angle (in degrees) of the hour-hand, return the time in 12 hour HH:MM format. Round down to the nearest minute.
 // Examples
 
