@@ -1,3 +1,23 @@
+// Correct the code so negative values will be switched to positive ones!
+
+// The constructor taking no arguments should assign 0 to Cube's Side property.
+
+class Cube {
+  constructor(data) {
+    this.side = data === undefined ? 0 : Math.abs(data)
+  }
+
+  getSide() {
+    return this.side
+  }
+
+  setSide(n) {
+    this.side = Math.abs(n)
+  }
+}
+
+
+
 // Given 3 positive parameters a, b, limit, return all positive numbers that are a multiple of both a and b up to and including limit.
 // Examples
 
