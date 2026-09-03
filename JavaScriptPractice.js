@@ -1,3 +1,31 @@
+// you need to write a function that takes a string and a letter as input and then returns the index of the second occurrence of that letter in the string. 
+// If there is no such letter in the string, or if the letter occurs only once in the string, -1 should be returned.
+
+// Examples:
+
+// for inputs  "Hello world!!!", 'l'  ->  return 3
+// for inputs  "Hello world!!!", 'A'  ->  return -1
+
+function secondSymbol(s, symbol) {
+  if(!s.includes(symbol)){
+    return -1
+  }
+  let count = 0
+  let ans = 0
+  let p1 = s.split('')
+  for (let i=0; i<s.length; i++) {
+    if (count===2){ 
+      break
+    }else if(p1[i]===symbol){
+      count+=1
+      ans = i
+    }
+  }
+   return count === 2 ? ans : -1
+}
+
+
+
 // Correct the code so negative values will be switched to positive ones!
 
 // The constructor taking no arguments should assign 0 to Cube's Side property.
