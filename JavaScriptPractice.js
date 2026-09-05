@@ -1,3 +1,21 @@
+// An element in an array is dominant if it is greater than the sum of all elements to its right. You will be given an array and your task will be to return a list of all dominant elements. For example:
+
+// solve([1,21,4,7,5]) = [21,7,5] because 21, 7 and 5 are greater than the sum of elments to their right.
+
+function solve(arr) {
+  let ans = [arr[arr.length-1]]
+  let check = 0
+  for(let i=arr.length-2;i>=0;i--){
+    check+=arr[i+1]
+    if(arr[i]>check){
+      ans.push(arr[i])
+    }
+  }
+  return ans.reverse()
+}
+
+
+
 // One suggestion to build a satisfactory password is to start with a memorable phrase or sentence and make a password by extracting the first letter of each word.
 
 // Even better is to replace some of those letters with numbers (e.g., the letter O can be replaced with the number 0):
