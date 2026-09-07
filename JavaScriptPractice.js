@@ -1,3 +1,17 @@
+// There exist two zeroes: +0 (or just 0) and -0.
+
+// Write a function that returns true if the input number is -0 and false otherwise (True and False for Python).
+
+// In JavaScript / TypeScript / Coffeescript the input will be a number.
+
+// In Python / Java / C / NASM / Haskell / the input will be a float.
+
+function isNegativeZero(n) {
+  return Object.is(n, -0) 
+}
+
+
+
 // An element in an array is dominant if it is greater than all elements to its right. You will be given an array and your task will be to return a list of all dominant elements. For example:
 
 // solve([1,21,4,7,5]) = [21,7,5] because 21, 7 and 5 are greater than elments to their right. 
