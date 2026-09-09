@@ -1,3 +1,22 @@
+// Count the number of occurrences of each character and return them sorted and counted in separate arrays
+
+const orderedCount = function (text) {
+  let p1 = text.split('').sort()
+  let ans = []
+  for(let i=0;i<p1.length;i++){
+    let p2 = p1[i]
+    let count = 1
+    while (p1[i + 1] === p2) {
+      count += 1
+      i += 1
+    }
+    ans.push([p2, count])
+  }
+  return ans
+}
+
+
+
 // A zero-indexed array arr consisting of n integers is given. The dominator of array arr is the value that occurs in more than half of the elements of arr.
 // For example, consider array arr such that arr = [3,4,3,2,3,1,3,3]
 // The dominator of arr is 3 because it occurs in 5 out of 8 elements of arr and 5 is more than a half of 8.
