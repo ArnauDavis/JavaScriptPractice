@@ -1,3 +1,41 @@
+// Write a function:
+
+// findMissingNumber(numbers)
+
+// You are given an array containing unique numbers from 1 to n, but one number is missing. Return the missing number.
+// Examples
+
+// findMissingNumber([1, 2, 3, 5])
+// // 4
+
+// findMissingNumber([1, 2, 4, 5, 6])
+// // 3
+
+// findMissingNumber([2, 3, 4, 5])
+// // 1
+
+// findMissingNumber([1])
+// // 2
+
+// Rules
+
+//     Don't use regex.
+//     Don't sort the array.
+//     Try to solve it in O(n) time.
+//     You may assume there is exactly one missing number.
+
+// Hint
+
+// Think about the mathematical formula for the sum of all numbers from 1 to n:
+
+// n × (n + 1) / 2
+
+function findMissingNumber(numbers){
+    return ((numbers.length+1) * (numbers.length + 2) / 2)-numbers.reduce((sum, num) => sum + num, 0)
+}
+
+
+
 // Write a function that counts how many numbers in an array are even.
 
 function whosOdd(arr){
