@@ -1,5 +1,39 @@
 // Write a function:
 
+// moveZeroes(numbers)
+
+// that moves all zeroes to the end of the array, while keeping the relative order of the non-zero numbers.
+// Examples
+
+// moveZeroes([0, 1, 0, 3, 12])
+// // [1, 3, 12, 0, 0]
+
+// moveZeroes([1, 0, 2, 0, 3])
+// // [1, 2, 3, 0, 0]
+
+// moveZeroes([0, 0, 1])
+// // [1, 0, 0]
+
+// moveZeroes([1, 2, 3])
+// // [1, 2, 3]
+
+// Rules
+
+//     Don't use .sort().
+//     Try to solve it in O(n) time.
+//     You can create a new array, or try modifying the original array.
+
+function moveZeroes(numbers){
+    let p1 = numbers.filter((x)=>x!==0)
+    let ans = [...p1]
+    ans.push(...Array(numbers.length-p1.length).fill(0))
+    return ans
+}
+
+
+
+// Write a function:
+
 // findMissingNumber(numbers)
 
 // You are given an array containing unique numbers from 1 to n, but one number is missing. Return the missing number.
