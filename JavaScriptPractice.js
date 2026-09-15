@@ -1,3 +1,16 @@
+// Given a string, you must decide whether or not it contains a valid phone number. If it does, return the corrected phone number as a string ie. '02078834982' 
+// with no whitespace or special characters, else return "Not a phone number".
+
+function isItANum(str) {
+  let p1 = str.split('').filter(x => !isNaN(Number(x))&&x!==' ').join('')
+  if (p1.length === 11 && p1[0] === '0') {
+    return p1
+  }
+  return "Not a phone number"
+}
+
+
+
 // Write a function:
 
 // moveZeroes(numbers)
