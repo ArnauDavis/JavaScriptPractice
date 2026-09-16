@@ -1,3 +1,16 @@
+// In JavaScript, there is a special case where strict comparison of the same variable returns false! Try to find out what must be done to get such result!
+
+// var x = something;
+// x === x // returns false!
+
+// Write a function which will return value for which strict comparison will give false!
+
+function findStrangeValue(arg) {
+  return NaN
+}
+
+
+
 // Given a string, you must decide whether or not it contains a valid phone number. If it does, return the corrected phone number as a string ie. '02078834982' 
 // with no whitespace or special characters, else return "Not a phone number".
 
