@@ -1,3 +1,20 @@
+// Impliment the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. 
+// You should do this without converting the inputted number into a string.
+
+// // Please do not use
+// const forbidden = "',`,string,fixed,precision,.keys"
+
+function reverse(n){
+    let revNum = 0
+    while (n > 0) {
+        revNum = revNum * 10 + n % 10
+        n = Math.floor(n / 10)
+    }
+    return revNum
+}
+
+
+
 // In JavaScript, there is a special case where strict comparison of the same variable returns false! Try to find out what must be done to get such result!
 
 // var x = something;
