@@ -1,3 +1,43 @@
+// Find how long I have owned each of my pets and return as a list [ownedCat, ownedDog]
+
+// NOTES:
+
+//     Results are truncated whole numbers of "human" years
+
+// Cat Years
+
+//     15 cat years for first year
+//     +9 cat years for second year
+//     +4 cat years for each year after that
+
+// Dog Years
+
+//     15 dog years for first year
+//     +9 dog years for second year
+//     +5 dog years for each year after that
+
+var ownedCatAndDog = function(catYears, dogYears) {
+  let ans = [0,0]
+  console.log(catYears, dogYears)
+  if(catYears<15){
+    ans[0]=0
+  }else if(catYears<24){
+    ans[0]=1
+  }else{
+    ans[0]=Math.floor((catYears-24)/4)+2
+  }
+  if(dogYears<15){
+    ans[1]=0
+  }else if(dogYears<24){
+    ans[1]=1
+  }else{
+    ans[1]=Math.floor((dogYears-24)/5)+2
+  }
+  return ans
+}
+
+
+
 // Our loose definition of Vampire Numbers can be described as follows:
 
 // 6 * 21 = 126
