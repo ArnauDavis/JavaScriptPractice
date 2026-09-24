@@ -1,3 +1,33 @@
+// Write a function called findGreaterNumbers that:
+
+//     Takes an array of numbers as the first argument.
+
+//     Takes a number as the second argument.
+
+//     Finds all numbers in the array that are greater than the second argument.
+
+//     Returns a new array containing those numbers.
+
+// For example:
+
+// findGreaterNumbers([4, 12, 7, 19, 3, 15, 8], 10);
+
+// Should return:
+
+// [12, 19, 15]
+
+function findGreaterNumbers(arr, threshold) {
+  let ans = []
+  arr.forEach((x) => {
+    if (x > threshold) {
+      ans.push(x)
+    }
+  })
+  return ans
+}
+
+
+
 // Find how long I have owned each of my pets and return as a list [ownedCat, ownedDog]
 
 // NOTES:
