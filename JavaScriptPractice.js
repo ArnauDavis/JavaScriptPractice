@@ -1,3 +1,25 @@
+// Write a function called findLongestWord that:
+
+//     Takes an array of strings.
+
+//     Uses .forEach().
+
+//     Finds the longest word in the array.
+
+//     Returns that word.
+
+function findLongestWord(arr){
+  let ans = arr[0]
+  arr.forEach((x)=>{
+    if(x.length>ans.length){
+      ans=x
+    }
+  })
+  return ans
+}
+
+
+
 // Write a function called findGreaterNumbers that:
 
 //     Takes an array of numbers as the first argument.
