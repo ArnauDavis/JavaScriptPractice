@@ -1,3 +1,31 @@
+// Write a function frog_jump(n).
+
+// A frog starts at position 0. Each jump moves it forward by 2 spaces, except every 3rd jump moves it forward by 3 spaces.
+
+// Return the frog's final position after n jumps.
+// Examples
+
+// frog_jump(1) → 2
+// frog_jump(2) → 4
+// frog_jump(3) → 7
+// frog_jump(4) → 9
+// frog_jump(5) → 11
+// frog_jump(6) → 14
+
+function frog_jump(n){
+  let ans = 0
+  for(let i=1;i<=n;i++){
+    if(i%3===0){
+      ans+=3
+    }else{
+      ans+=2
+    }
+  }
+  return ans
+}
+
+
+
 // Given a string and an array of indices, rearrange the characters of the string so that each character is placed at the position specified by the corresponding index in the array.
 // Example
 
