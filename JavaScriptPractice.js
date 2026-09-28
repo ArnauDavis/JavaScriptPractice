@@ -1,3 +1,28 @@
+// Write a function findLargest(arr) that returns the largest number in an array.
+
+// findLargest([3, 7, 2, 9, 4])    // 9
+// findLargest([-5, -2, -10, -1])  // -1
+// findLargest([42])               // 42
+
+// Rules
+
+//     Don't use Math.max().
+
+//     Don't sort the array.
+
+//     Assume the array contains at least one number.
+function findLargest(arr){
+  let ans = arr[0]
+  for(let i=0;i<arr.length;i++){
+    if(ans<arr[i]){
+      ans=arr[i]
+    } 
+  }
+  return ans
+}
+
+
+
 // Given a string, return how many vowels it contains.
 
 // count_vowels("hello") // 2
