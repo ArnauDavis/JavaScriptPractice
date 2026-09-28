@@ -1,3 +1,28 @@
+// Given a string, return how many vowels it contains.
+
+// count_vowels("hello") // 2
+// count_vowels("javascript") // 3
+// count_vowels("rhythm") // 0
+
+// Count:
+
+// a, e, i, o, u
+
+// Ignore capitalization:
+
+// count_vowels("HeLLo") // 2
+
+function count_vowels(str){
+  let p1 = ['a','e','i','o','u']
+  let ans = 0
+  str.toLowerCase().split('').forEach((x)=>{
+    p1.includes(x)? ans+=1:ans+=0
+  })
+  return ans
+}
+
+
+
 // Write a function frog_jump(n).
 
 // A frog starts at position 0. Each jump moves it forward by 2 spaces, except every 3rd jump moves it forward by 3 spaces.
