@@ -1,3 +1,19 @@
+// Write a JavaScript function called capitalizeWords(str) that takes a string as input and returns a new string where the first letter of every word is capitalized, and the remaining letters are lowercase.
+// Example
+// JavaScript
+
+// console.log(capitalizeWords("hello world from javascript")); 
+// // Output: "Hello World From JavaScript"
+
+// console.log(capitalizeWords("the quick brown fox")); 
+// // Output: "The Quick Brown Fox"
+
+function capitalizeWords(str){
+  return str.split(' ').map((x)=>x.charAt(0).toUpperCase()+x.slice(1).toLowerCase()).join(' ')
+}
+
+
+
 // Write a function findLargest(arr) that returns the largest number in an array.
 
 // findLargest([3, 7, 2, 9, 4])    // 9
