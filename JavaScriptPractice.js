@@ -1,3 +1,27 @@
+// Write a JavaScript function called chunkArray(arr, size) that takes an array and a chunk size as input, and splits the array into multiple smaller sub-arrays where each sub-arrays has a maximum length of size.
+// Example
+// JavaScript
+
+// console.log(chunkArray([1, 2, 3, 4, 5], 2)); 
+// // Output: [[1, 2], [3, 4], [5]]
+
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3)); 
+// // Output: [[1, 2, 3], [4, 5, 6], [7]]
+
+// console.log(chunkArray(['a', 'b', 'c', 'd'], 2)); 
+// // Output: [['a', 'b'], ['c', 'd']]
+
+function chunkArray(arr, size){
+if (size <= 0) return []
+  let ans = []
+  for (let i = 0; i < arr.length; i += size) {
+    ans.push(arr.slice(i, i + size))
+  }
+  return ans
+}
+
+
+
 // Write a JavaScript function called capitalizeWords(str) that takes a string as input and returns a new string where the first letter of every word is capitalized, and the remaining letters are lowercase.
 // Example
 // JavaScript
