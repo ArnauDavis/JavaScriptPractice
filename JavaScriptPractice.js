@@ -1,3 +1,23 @@
+//Given an array of numbers and a target, return the indices of the two numbers that add up to target.
+
+// For example:
+
+// nums = [2, 7, 11, 15]
+// target = 9
+
+// 2 + 7 = 9
+// → return [0, 1]
+
+function twoSum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.slice(i + 1).includes(target - arr[i])) {
+      return [i, arr.indexOf(target - arr[i])]
+    }
+  }
+}
+
+
+
 // Write a JavaScript function called chunkArray(arr, size) that takes an array and a chunk size as input, and splits the array into multiple smaller sub-arrays where each sub-arrays has a maximum length of size.
 // Example
 // JavaScript
