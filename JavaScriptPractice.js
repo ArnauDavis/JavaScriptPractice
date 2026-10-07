@@ -1,3 +1,33 @@
+// Write a function that takes an array and returns a new array with all duplicate values removed.
+
+// Example:
+
+// removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
+// // [1, 2, 3, 4, 5]
+
+// removeDuplicates(["a", "b", "a", "c", "b"]);
+// // ["a", "b", "c"]
+
+// Rules:
+
+//     Don't modify the original array.
+
+//     Don't use set
+
+//     Preserve the original order.
+
+function removeDuplicates(arr){
+  let ans = []
+  arr.forEach((x)=>{
+    if(!ans.includes(x)){
+      ans.push(x)
+    }
+  })
+  return ans
+}
+
+
+
 //Given an array of numbers and a target, return the indices of the two numbers that add up to target.
 
 // For example:
