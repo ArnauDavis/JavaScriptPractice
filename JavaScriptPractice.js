@@ -1,3 +1,38 @@
+// Problem: Find the First Duplicate
+
+// Write a function that takes an array and returns the first value that appears twice.
+
+// Examples:
+
+// firstDuplicate([2, 1, 3, 5, 3, 2]);
+// // 3
+
+// firstDuplicate(["a", "b", "c", "b", "a"]);
+// // "b"
+
+// firstDuplicate([1, 2, 3, 4]);
+// // null
+
+// Rules
+
+//     Don't modify the original array.
+
+//     Return null if there are no duplicates.
+
+//     Preserve the order in which you encounter values.
+
+//     Don't use Set or Map.
+
+function firstDuplicate(arr){
+  for(let i=0;i<arr.length;i++){
+    if(arr.indexOf(arr[i])!=arr.lastIndexOf(arr[i])){
+      return arr[i]
+    }
+  }
+}
+
+
+
 // Write a function that takes an array and returns a new array with all duplicate values removed.
 
 // Example:
