@@ -1,3 +1,39 @@
+// Write a function called firstNonRepeating(str) that returns the first character in a string that appears only once.
+// Examples
+// javascript
+
+// console.log(firstNonRepeating("aabbcdd")); 
+// // Expected: "c"
+
+// console.log(firstNonRepeating("swiss")); 
+// // Expected: "w"
+
+// console.log(firstNonRepeating("aabb"));
+// // Expected: null
+
+// console.log(firstNonRepeating("javascript"));
+// // Expected: "j"
+
+// Rules
+
+//     Return the character itself, not its index.
+
+//     If every character repeats, return null.
+
+//     Treat uppercase and lowercase letters as different characters.
+
+function firstNonRepeating(str) {
+  let p1 = str.split('')
+  for(let i=0;i<p1.length;i++){
+    if(p1.indexOf(p1[i])===p1.lastIndexOf(p1[i])){
+      return p1[i]
+    }
+  }
+  return null
+}
+
+
+
 // Your task: Write a JavaScript function that takes an array of numbers and returns the second-largest distinct number.
 // Examples
 
