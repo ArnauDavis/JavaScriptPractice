@@ -1,3 +1,47 @@
+// Your task: Write a JavaScript function that takes an array of numbers and returns the second-largest distinct number.
+// Examples
+
+// console.log(secondLargest([10, 5, 8, 20, 15]));
+// // Expected: 15
+
+// console.log(secondLargest([4, 4, 2, 1]));
+// // Expected: 2
+
+// console.log(secondLargest([7, 7, 7]));
+// // Expected: null
+
+// console.log(secondLargest([-5, -2, -10]));
+// // Expected: -5
+
+// Rules
+
+//     Don't use .sort().
+
+//     The second-largest number must be distinct from the largest.
+
+//     If there is no second-largest distinct number, return null.
+
+//     Try to solve it in one pass through the array.
+
+function secondLargest(numbers) {
+  let p1 = Array.from(new Set(numbers))
+  if(p1.length===1||numbers.length===0){
+    return null
+  }
+  let largest = p1[0]>p1[1]? p1[0]:p1[1]
+  let secondLargest = p1[0]>p1[1]? p1[1]:p1[0]
+  for(let i=2;i<p1.length;i++){
+    if(p1[i]>largest){
+      largest=p1[i]
+    }else if(p1[i]<largest&&p1[i]>secondLargest){
+      secondLargest=p1[i]
+    }
+  }
+  return secondLargest
+}
+
+
+
 // Problem: Find the First Duplicate
 
 // Write a function that takes an array and returns the first value that appears twice.
