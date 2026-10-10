@@ -1,3 +1,39 @@
+// You're given an array of unique integers containing numbers from 1 to n, but one number is missing. Your task is to find the missing number.
+// Examples
+
+// findMissingNumber([1, 2, 4, 5]); 
+// // Output: 3
+
+// findMissingNumber([2, 3, 1, 5]); 
+// // Output: 4
+
+// findMissingNumber([1]); 
+// // Output: 2
+
+// Your task
+
+// Write a function called findMissingNumber(arr) that returns the missing number.
+
+// Rules:
+
+//     The array contains unique positive integers.
+
+//     The numbers originally range from 1 to n, where n is one greater than the array's length.
+
+//     Exactly one number is missing.
+
+//     Try to solve it without using .sort().
+
+function findMissingNumber(arr) {
+  for(let i=1;i<arr.length+2;i++){
+    if(!arr.includes(i)){
+      return i
+    }
+  }
+}
+
+
+
 // Write a function called firstNonRepeating(str) that returns the first character in a string that appears only once.
 // Examples
 // javascript
