@@ -1,3 +1,19 @@
+// Write a JavaScript function that reverses a string without using .reverse().
+// javascript
+
+// reverseString("hello"); // "olleh"
+// reverseString("cat");   // "tac"
+
+function reverseString(str) {
+  let ans = []
+  for (let i = str.length - 1; i >= 0; i--) {
+    ans.push(str[i])
+  }
+  return ans.join('')
+}
+
+
+
 // You're given an array of unique integers containing numbers from 1 to n, but one number is missing. Your task is to find the missing number.
 // Examples
 
