@@ -1,3 +1,51 @@
+// Write a function called firstUniqueNumber(arr) that returns the first number in an array that appears exactly once.
+// Examples
+// javascript
+
+// firstUniqueNumber([4, 5, 1, 2, 1, 4, 5]);
+// // Expected: 2
+
+// firstUniqueNumber([1, 2, 3, 2, 1]);
+// // Expected: 3
+
+// firstUniqueNumber([7, 7, 8, 8, 9, 9]);
+// // Expected: null
+
+// firstUniqueNumber([-1, 2, -1, 3, 2]);
+// // Expected: 3
+
+// firstUniqueNumber([5]);
+// // Expected: 5
+
+// Rules
+
+//     Don't modify the original array.
+
+//     Return null if every number appears more than once.
+
+//     Preserve the original order when deciding which number is first.
+
+//     Don't use .sort().
+
+//     Challenge: Try to solve it without using Set or Map.
+
+function firstUniqueNumber(arr) {
+    for (let i = 0; i < arr.length; i++) {
+    let count = 0
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++
+      }
+    }
+    if (count === 1) {
+      return arr[i]
+    }
+  }
+  return null
+}
+
+
+
 // Write a JavaScript function that reverses a string without using .reverse().
 // javascript
 
