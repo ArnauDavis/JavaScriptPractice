@@ -1,3 +1,22 @@
+// Write a function called reverseString(str) that takes a single string as input and returns that string in reverse.
+// Examples:
+
+//     reverseString("hello") should return "olleh"
+
+//     reverseString("javascript") should return "tpircsavaj"
+
+//     reverseString("12345") should return "54321"
+
+function reverseString(str){
+  let ans = []
+  for(let i=str.length-1;i>=0;i++){
+    ans.push(str[i])
+  }
+  return ans.join('')
+}
+
+
+
 // Write a function called firstUniqueNumber(arr) that returns the first number in an array that appears exactly once.
 // Examples
 // javascript
