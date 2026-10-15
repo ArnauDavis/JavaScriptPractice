@@ -1,3 +1,36 @@
+// Write a function called flattenArray(arr) that takes a nested array (which may contain arrays nested to any depth) and returns a single flattened array.
+
+// Examples
+
+// flattenArray([1, [2, [3, 4], 5], 6]);
+// // Expected: [1, 2, 3, 4, 5, 6]
+
+// flattenArray([[1, 2], [3, [4, 5]]]);
+// // Expected: [1, 2, 3, 4, 5]
+
+// flattenArray([1, 2, 3]);
+// // Expected: [1, 2, 3]
+
+// Rules
+
+//      Don't use Array.prototype.flat() or Array.prototype.flatMap().
+//      Preserve the original order of elements.
+//      The input array can contain numbers, strings, or mixed types.
+
+function flattenArray(arr) {
+  let ans = []
+  for(let i=0;i<arr.length;i++){
+    if(Array.isArray(arr[i])){
+      ans = ans.concat(flattenArray(arr[i]))
+    }else{
+      ans.push(arr[i])
+    }
+  }
+  return ans
+}
+
+
+
 // Write a function called reverseString(str) that takes a single string as input and returns that string in reverse.
 // Examples:
 
