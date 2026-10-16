@@ -1,3 +1,47 @@
+// Write a function called sumNestedArray(arr) that returns the sum of all numbers in an array that may contain nested arrays of any depth.
+// javascript
+
+// sumNestedArray([1, [2, [3, 4], 5], 6]);
+// // Expected: 21
+
+// sumNestedArray([[1, 2], [3, [4, 5]]]);
+// // Expected: 15
+
+// sumNestedArray([1, 2, 3]);
+// // Expected: 6
+
+// sumNestedArray([]);
+// // Expected: 0
+
+// sumNestedArray([[], [1, []], 2]);
+// // Expected: 3
+
+// Rules
+
+//     You must use recursion.
+
+//     Don't use .flat() or .flatMap().
+
+//     Don't modify the original array.
+
+//     Nested arrays can have any depth.
+
+//     Assume every non-array element is a number.
+
+function sumNestedArray(arr){
+  let ans = 0
+  for(let i=0;i<arr.length;i++){
+    if(Array.isArray(arr[i])){
+      ans+=sumNestedArray(arr[i])
+    }else{
+      ans+=arr[i]
+    }
+  }
+  return ans
+}
+
+
+
 // Write a function called flattenArray(arr) that takes a nested array (which may contain arrays nested to any depth) and returns a single flattened array.
 
 // Examples
