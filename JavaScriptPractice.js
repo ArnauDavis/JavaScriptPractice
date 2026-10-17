@@ -1,3 +1,40 @@
+// Write a function called rotateArray(arr, k) that takes an array and a non-negative integer k, and returns a new array where the elements are rotated to the right by k steps.
+// Examples
+
+// rotateArray([1, 2, 3, 4, 5, 6, 7], 3);
+// // Expected: [5, 6, 7, 1, 2, 3, 4]
+
+// rotateArray([-1, -100, 3, 99], 2);
+// // Expected: [3, 99, -1, -100]
+
+// rotateArray([1, 2], 3);
+// // Expected: [2, 1]
+
+// Rules
+
+//     Don't modify the original array.
+
+//     k can be larger than the length of the array.
+
+//     Preserve the relative order of the elements.
+
+function rotateArray(arr, k) {
+  let ans = []
+  let n = arr.length
+  if (n === 0) return []
+  let effectiveK = k % n
+  
+  for (let i = n - effectiveK; i < n; i++) {
+    ans.push(arr[i])
+  }
+  for (let i = 0; i < n - effectiveK; i++) {
+    ans.push(arr[i])
+  }
+  return ans
+}
+
+
+
 // Write a function called sumNestedArray(arr) that returns the sum of all numbers in an array that may contain nested arrays of any depth.
 // javascript
 
