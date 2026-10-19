@@ -1,3 +1,28 @@
+// Given a square matrix (i.e. an array of subarrays), find the sum of values from the first value of the first array, the second value of the second array, the third value of the third array, and so on...
+// Examples
+
+// array = [[1, 2],
+//          [3, 4]]
+
+// diagonal sum: 1 + 4 = 5
+
+// array = [[5, 9, 1, 0],
+//          [8, 7, 2, 3],
+//          [1, 4, 1, 9],
+//          [2, 3, 8, 2]]
+
+// diagonal sum: 5 + 7 + 1 + 2 = 15
+
+function diagonalSum(matrix){
+  let ans = 0
+  matrix.forEach((x,i)=>{
+    ans+=x[i]
+  })
+  return ans
+}
+
+
+
 // Write a function called rotateArray(arr, k) that takes an array and a non-negative integer k, and returns a new array where the elements are rotated to the right by k steps.
 // Examples
 
