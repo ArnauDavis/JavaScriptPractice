@@ -1,3 +1,29 @@
+// You will be given a string and your task will be to return a list of ints detailing the count of uppercase letters, lowercase, numbers and special characters (everything else), as follows.
+
+// The order is: uppercase letters, lowercase letters, numbers and special characters.
+
+// "*'&ABCDabcde12345" --> [ 4, 5, 5, 3 ]
+
+function solve(s){
+  let ans = [0,0,0,0]
+  let p1 = s.split('')
+  p1.forEach((x)=>{
+    let p2 = x.charCodeAt(0)
+    if(p2>= 65 && p2 <= 90){
+      ans[0]+=1
+    }else if(p2 >= 97 && p2 <= 122){
+      ans[1]+=1
+    }else if(p2 >= 48 && p2 <= 57){
+      ans[2]+=1
+    }else{
+      ans[3]+=1
+    }
+  })
+  return ans
+}
+
+
+
 // Given a square matrix (i.e. an array of subarrays), find the sum of values from the first value of the first array, the second value of the second array, the third value of the third array, and so on...
 // Examples
 
