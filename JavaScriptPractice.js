@@ -1,3 +1,16 @@
+// You need to create a function that converts the input into this format, with the output being the same string expect there is a pattern of uppercase and lowercase letters.
+
+// Example:
+
+// input:  "stop Making spongebob Memes!"
+// output: "StOp mAkInG SpOnGeBoB MeMeS!"
+
+function spongeMeme(sentence) {
+	return sentence.split('').map((v,i) => i % 2 ? v.toLowerCase(): v.toUpperCase()).join('')
+}
+
+
+
 // You will be given a string and your task will be to return a list of ints detailing the count of uppercase letters, lowercase, numbers and special characters (everything else), as follows.
 
 // The order is: uppercase letters, lowercase letters, numbers and special characters.
