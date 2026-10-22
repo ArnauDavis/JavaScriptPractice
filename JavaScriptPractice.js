@@ -1,3 +1,28 @@
+// Given a positive integer n: 0 < n < 1e6, remove the last digit until you're left with a number that is a multiple of three.
+
+// Return n if the input is already a multiple of three, and if no such number exists, return null, a similar empty value, or -1.
+// Examples
+
+// 1      => null
+// 25     => null
+// 36     => 36
+// 1244   => 12
+// 952406 => 9
+
+const prevMultOfThree = n => {
+  let p1 = n.toString().split('')
+  while(p1.length>0){
+    let p2 = Number(p1.join(''))
+    if(p2%3===0){
+      return p2
+    }
+    p1.pop()
+  }
+  return null
+}
+
+
+
 // You need to create a function that converts the input into this format, with the output being the same string expect there is a pattern of uppercase and lowercase letters.
 
 // Example:
