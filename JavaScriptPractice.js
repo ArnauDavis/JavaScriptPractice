@@ -1,3 +1,14 @@
+// Given an array of strings, write a function that returns an array containing only the elements of the given array whose length is an even number.
+// Example
+
+// ["One", "Two", "Three", "Four"] --> ["Four"]
+
+function filterEvenLengthWords(words) {
+  return words.filter((x)=>x.length%2==0)
+}
+
+
+
 // Given a positive integer n: 0 < n < 1e6, remove the last digit until you're left with a number that is a multiple of three.
 
 // Return n if the input is already a multiple of three, and if no such number exists, return null, a similar empty value, or -1.
