@@ -1,3 +1,58 @@
+// Write a function called longestIncreasingSequence(arr) that takes an array of numbers and returns the length of the longest sequence of consecutive elements that are strictly increasing.
+
+// Examples:
+// javascript
+
+// longestIncreasingSequence([1, 2, 3, 1, 2, 3, 4]);
+// // Expected: 4
+
+// longestIncreasingSequence([5, 4, 3, 2, 1]);
+// // Expected: 1
+
+// longestIncreasingSequence([1, 3, 5, 7, 2, 4, 6]);
+// // Expected: 4
+
+// longestIncreasingSequence([1, 2, 2, 3, 4]);
+// // Expected: 3
+
+// longestIncreasingSequence([10, 20, 30, 40]);
+// // Expected: 4
+
+// longestIncreasingSequence([]);
+// // Expected: 0
+
+// Rules
+
+//     Don't modify the original array.
+
+//     A sequence must consist of consecutive elements in the original array.
+
+//     Each number must be strictly greater than the previous number.
+
+//     If the array is empty, return 0.
+
+//     Try to solve it using a loop without .sort().
+
+
+function longestIncreasingSequence(arr) {
+  if (arr.length === 0) return 0
+  let currentValue = 0
+  let largestValue = 0
+  for(let i=0;i<arr.length;i++){
+    if(arr[i+1]>arr[i]){
+      currentValue++
+    }else{
+      if(currentValue>largestValue){
+       largestValue=currentValue
+        currentValue=0
+      }
+    }
+  }
+  return largestValue>currentValue? largestValue+1 : currentValue+1
+}
+
+
+
 // Given an array of strings, write a function that returns an array containing only the elements of the given array whose length is an even number.
 // Example
 
