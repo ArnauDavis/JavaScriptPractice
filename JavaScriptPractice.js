@@ -1,3 +1,32 @@
+// You are given an initial 2-value array (x). You will use this to calculate a score.
+
+// If both values in (x) are numbers, the score is the sum of the two. If only one is a number, the score is that number. If neither is a number, return 'Void!'.
+
+// Once you have your score, you must return an array of arrays. Each sub array will be the same as (x) and the number of sub arrays should be equal to the score.
+
+// For example:
+
+// if (x) == ['a', 3]  you should return [['a', 3], ['a', 3], ['a', 3]].
+
+function explode(x){
+  let ans = []
+  if(typeof x[0]==='number'&& typeof x[1]==='number'){
+      for(let i=0;i<x[1]+x[0];i++){
+        ans.push([x[0],x[1]])
+        }
+      return ans
+  }else if(typeof x[0]==='number'|| typeof x[1]==='number'){
+      let p1 = x.filter((x)=>typeof x === 'number')
+      for(let i=0;i<p1[0];i++){
+        ans.push([x[0],x[1]])
+        }
+      return ans
+  }
+      return 'Void!'
+}
+
+
+
 // Write a function called longestIncreasingSequence(arr) that takes an array of numbers and returns the length of the longest sequence of consecutive elements that are strictly increasing.
 
 // Examples:
