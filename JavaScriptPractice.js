@@ -1,3 +1,30 @@
+// Write a function called chunkArray(arr, size) that splits an array into smaller subarrays of the specified size. 
+// If the original array cannot be evenly divided, the final subarray will contain the remaining elements.
+
+// Examples:
+
+// chunkArray([1, 2, 3, 4, 5], 2);
+// // Expected: [[1, 2], [3, 4], [5]]
+
+// chunkArray([1, 2, 3, 4, 5, 6, 7, 8], 3);
+// // Expected: [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+// chunkArray([1, 2, 3], 5);
+// // Expected: [[1, 2, 3]]
+
+// chunkArray([], 3);
+// // Expected: []
+
+function chunkArray(arr, size) {
+  let ans = []
+  for (let i = 0; i < arr.length; i += size) {
+    ans.push(arr.slice(i, i + size))
+  }
+  return ans
+}
+
+
+
 // You are given an initial 2-value array (x). You will use this to calculate a score.
 
 // If both values in (x) are numbers, the score is the sum of the two. If only one is a number, the score is that number. If neither is a number, return 'Void!'.
