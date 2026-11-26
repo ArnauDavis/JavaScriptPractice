@@ -1,3 +1,21 @@
+// Write a function that takes the full name of a person, and returns the initials, separated by dots ('.'). The initials must be uppercase. 
+// The last name of the person must appear in full, with its first letter in uppercase as well.
+
+// See the pattern below:
+
+// "code wars"            ---> "C.Wars"
+// "Barack hussein obama" ---> "B.H.Obama"
+
+// Names in the full name are separated by exactly one space (' ' ) ; without leading or trailing spaces. Names will always be lowercase, except optionally their first letter.
+
+function initials(n){
+  return n.split(' ').map((x,i)=>{
+    return i<n.split(' ').length-1? x[0].toUpperCase()+'.': x[0].toUpperCase() + x.slice(1)
+  }).join('')
+}
+
+
+
 // Digital Cypher assigns to each letter of the alphabet unique number. For example:
 
 //  a  b  c  d  e  f  g  h  i  j  k  l  m
